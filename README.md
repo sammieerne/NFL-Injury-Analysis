@@ -14,9 +14,12 @@ https://miamioh.edu/fsb/news-events/2023/04/fsb-undergrads-show-off-research-ski
 <img src=https://user-images.githubusercontent.com/89548548/220659703-a34e79a9-116d-4ced-859a-5b54594f49c9.jpg width=75% height=75%>
 <img src=https://user-images.githubusercontent.com/89548548/234596162-d6a15411-43f1-4f95-8828-3e19c888c2ac.jpg width=75% height=75%>
 
-Brendan Beattie- beattibs@miamioh.edu, 
-Samantha Erne- ernesm@miamioh.edu, 
-Jake Holroyd- holroyjm@miamioh.edu, 
+Brendan Beattie- beattibs@miamioh.edu
+
+Samantha Erne- ernesm@miamioh.edu
+
+Jake Holroyd- holroyjm@miamioh.edu
+
 Peter Walsh- walshpd2@miamioh.edu
 
 
