@@ -7,4 +7,8 @@ We will also analyze the data and search for patterns that lead to injury based 
 We are currently writing 2 research papers to submit to the American Journal of Sports Medicine
 detailing our findings.
 
+We showcased our research at the Miami University Undergraduate Research Forum in mid-April. An article
+featuring our team is linked below.
+https://miamioh.edu/fsb/news-events/2023/04/fsb-undergrads-show-off-research-skills-at-miami-university-forum.html
+
 ![nfl-logo](https://user-images.githubusercontent.com/89548548/220659703-a34e79a9-116d-4ced-859a-5b54594f49c9.jpg)
