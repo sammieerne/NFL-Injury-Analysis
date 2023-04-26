@@ -19,7 +19,6 @@ Brendan Beattie- beattibs@miamioh.edu
 Samantha Erne- ernesm@miamioh.edu
 
 Jake Holroyd- holroyjm@miamioh.edu
-
 Peter Walsh- walshpd2@miamioh.edu
 
 
