@@ -1,0 +1,1172 @@
+---
+title: "NFL Injuries"
+author:
+  - name: "Samantha Erne ^[Email: ernesm@miamioh.edu]"
+    affiliation: Farmer School of Business, Miami University
+  - name: "Brendan Beattie ^[Email: beattibs@miamioh.edu]"
+    affiliation: Farmer School of Business, Miami University
+  - name: "Jake Holroyd 2 ^[Email: holroyjm@miamioh.edu]"
+    affiliation: Farmer School of Business, Miami University
+  - name: "Peter Walsh ^[Email: walshpd2@miamioh.edu]"
+    affiliation: Farmer School of Business, Miami University
+  - name: "Dr. Fadel Megahed ^[Email: fmegahed@miamioh.edu]"
+    affiliation: Farmer School of Business, Miami University
+date: "2023-03-30"
+output:
+  html_document:
+    code_folding: show
+    code_download: TRUE
+    number_sections: TRUE
+    paged_df: TRUE
+    toc: TRUE
+    toc_float: TRUE
+    theme: readable
+---
+NFL Injuries
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE,
+                      progress = FALSE,
+                      verbose = TRUE,
+                      cache = TRUE)
+
+```
+
+## Required R Packages
+```{r}
+if(require(pacman)== FALSE) install.packages("pacman")
+pacman::p_load(tidyverse, 
+               tidycensus, # for getting the census data
+               httr, jsonlite, # pkgs that we might use for API,
+               janitor,
+               lubridate,# for making a column name from row 1
+               magrittr, rvest, nflreadr, nflfastR, reticulate, geosphere, stringr, devtools)
+```
+
+
+
+## Required Python Packages
+```{r }
+reticulate::py_install('bs4')
+reticulate::py_install('pandas')
+reticulate::py_install('lxml')
+reticulate::py_install('requests')
+
+```
+
+---
+
+## Importing NFL Schedule from 2019 to 2023 and Adding Home and Away Columns to the Dataframe
+
+```{python complete_game_schedule_2019_23}
+from bs4 import BeautifulSoup
+import pandas as pd
+import requests
+import lxml.html as lh
+
+# Loop through years 2019 to 2022
+for year in range(2019, 2023):
+    url_scores = f'https://www.pro-football-reference.com/years/{year}/games.htm'
+    # Create object page
+    page = requests.get(url_scores)
+    doc = lh.fromstring(page.content)
+    # Parse data that are stored between <tr>..</tr> of HTML
+    tr_elements = doc.xpath('//table[@id="games"]/tbody/tr')
+
+    # Extract required columns by their index
+    required_columns = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+    # Create empty list to hold the rows of data
+    data_rows = []
+
+    # Process game data for each row
+    for j in range(len(tr_elements)):
+        T = tr_elements[j]
+        # Check if row is a game row
+        if len(T) == 14:
+            # Iterate through each element of the row
+            row_data = []
+            for i in required_columns:
+                data = T[i].text_content().strip()
+                # Convert numerical values to integers
+                if i in (7, 8, 9, 10, 11, 12, 13):
+                    try:
+                        data = int(data)
+                    except:
+                        pass
+                # Append the data to the row list
+                row_data.append(data)
+            # Append the row to the data list
+            data_rows.append(row_data)
+
+    # Create a Pandas DataFrame from the processed data
+    df_scores = pd.DataFrame(data_rows, columns=['week', 'day', 'date', 'time', 'winner/tie', 'at', 'loser/tie', 'boxscore', 'pts_w', 'pts_l', 'yds_w', 'tov_w', 'yds_l', 'tov_l'])
+
+    # Add a season column with the year value
+    df_scores['season'] = year
+
+    # Append the DataFrame to a master DataFrame
+    if year == 2019:
+        df_master = df_scores
+    else:
+        df_master = pd.concat([df_master, df_scores], ignore_index=True)
+
+def is_home_team(row):
+  matchup = row["at"]
+  winner_name = row['winner/tie']
+  loser_name = row['loser/tie']
+  if "@" in matchup:
+    #home_team == loser_name
+    home_team = loser_name
+    return home_team == loser_name
+  
+  else:
+    return False
+
+# Apply the custom function to each row of the DataFrame
+df_master["loser_is_home"] = df_master.apply(lambda row: is_home_team(row), axis=1)
+
+df_master.drop(['at', 'boxscore'], axis = 1, inplace = True)
+df_master = df_master[df_master["week"] != "Week"]
+df_master = df_master[df_master["date"] != "Playoffs"]
+
+## had to make changes to the "week" values that were strings: "WildCard", "Division", "ConfChamp", "SuperBowl"
+df_master.to_csv("df_master_playoff_week_fix.csv", index = False)
+
+from tkinter import Tk
+from tkinter.filedialog import askopenfilename
+
+# create a Tkinter root window
+root = Tk()
+root.withdraw()
+
+# open a file dialog box to select the CSV file
+file_path = askopenfilename(filetypes=[("CSV Files", "*.csv")])
+
+# read the CSV file into a Pandas DataFrame
+df_master_updated = pd.read_csv(file_path)
+
+# close the root window
+root.destroy()
+
+
+
+## updated name of csv to make sure its not over written
+#df_master_updated = pd.read_csv("df_master_playoff_week_fix_update.csv")
+
+
+# Create empty lists for home and away teams
+home_teams = []
+away_teams = []
+
+# Iterate over each row of the DataFrame
+for index, row in df_master.iterrows():
+    # Check if loser is home
+    if row['loser_is_home'] == True:
+        home_team = row['loser/tie']
+        away_team = row['winner/tie']
+    else:
+        home_team = row['winner/tie']
+        away_team = row['loser/tie']
+    # Append home and away teams to the lists
+    home_teams.append(home_team)
+    away_teams.append(away_team)
+
+# Add the new columns to the DataFrame
+df_master_updated['Home_Team'] = home_teams
+df_master_updated['Away_Team'] = away_teams
+
+pd.set_option('display.max_columns', 50)
+#df_master_updated
+team_abbr = {
+    'Arizona Cardinals': 'ARI',
+    'Atlanta Falcons': 'ATL',
+    'Baltimore Ravens': 'BAL',
+    'Buffalo Bills': 'BUF',
+    'Carolina Panthers': 'CAR',
+    'Chicago Bears': 'CHI',
+    'Cincinnati Bengals': 'CIN',
+    'Cleveland Browns': 'CLE',
+    'Dallas Cowboys': 'DAL',
+    'Denver Broncos': 'DEN',
+    'Detroit Lions': 'DET',
+    'Green Bay Packers': 'GB',
+    'Houston Texans': 'HOU',
+    'Indianapolis Colts': 'IND',
+    'Jacksonville Jaguars': 'JAX',
+    'Kansas City Chiefs': 'KC',
+    'Las Vegas Raiders': 'LV',
+    'Los Angeles Chargers': 'LAC',
+    'Los Angeles Rams': 'LAR',
+    'Miami Dolphins': 'MIA',
+    'Minnesota Vikings': 'MIN',
+    'New England Patriots': 'NE',
+    'New Orleans Saints': 'NO',
+    'New York Giants': 'NYG',
+    'New York Jets': 'NYJ',
+    'Philadelphia Eagles': 'PHI',
+    'Pittsburgh Steelers': 'PIT',
+    'San Francisco 49ers': 'SF',
+    'Seattle Seahawks': 'SEA',
+    'Tampa Bay Buccaneers': 'TB',
+    'Tennessee Titans': 'TEN',
+    'Washington Football Team': 'WAS',
+    'Washington Redskins': 'WAS',
+    'Washington Commanders': 'WAS',
+    'Oakland Raiders': 'OAK'
+}
+abbr_team = {v: k for k, v in team_abbr.items()}
+
+
+def get_abbr(team_name):
+    return team_abbr.get(team_name)
+
+# Create new columns for home and away team abbreviations
+df_master_updated['Home_abbr'] = df_master_updated.apply(lambda row: get_abbr(row['Home_Team']), axis=1)
+df_master_updated['Away_abbr'] = df_master_updated.apply(lambda row: get_abbr(row['Away_Team']), axis=1)
+
+# format the "week" column with leading zeros
+df_master_updated['week'] = df_master_updated['week'].apply(lambda x: f'0{x}' if x < 10 else str(x))
+
+# Create the new column
+df_master_updated['game_id'] = df_master_updated['season'].astype(str) + '_' + df_master_updated['week'].astype(str).str.zfill(2) + '_' + df_master_updated['Away_abbr'] + '_' + df_master_updated['Home_abbr']
+
+# Insert the new column at the beginning of the DataFrame
+df_master_updated.insert(0, 'game_id', df_master_updated.pop('game_id'))
+# Print the updated DataFrame
+
+
+## for overwriting purposes
+df_master_updated.to_csv('Master_Schedule_2019_23_updated_Rmd1.csv', index = False)
+df_master_updated.head(20)
+```
+
+
+Created a `game_id` variable in order to join with the `injury_plays` table created using `nflfastR`. `game_id` formatted the same was as nflfastR encodes them is as follows: `season`_`week`_`away_abbr`_`home_abbr`. Finally, I had to change the playoff weeks that had names (e.g., WildCard, Division, ConfChamp, SuperBowl) manually because the NFL has changed the playoff format over the past few years.
+
+
+## Joining the `master_schedule` with the `injury_plays` from the `nflfastR` package 
+
+```{r pbp_injured_players_2019_23}
+
+#setwd("Google Drive/Independent Study/final_files")
+## this is equivalent to Master_Schedule_2019_23_updated_Rmd but did not want overwritten 
+master_schedule = read_csv('Independent Study/final_files/Master_Schedule_2019_23_updated_Rmd1_update.csv')
+
+start_season = 2019
+end_season = 2022
+
+pbp = nflfastR::load_pbp(start_season:end_season)
+
+injury_plays = pbp %>% filter(grepl("injured", desc, ignore.case = TRUE))
+injury_plays = injury_plays %>% unique()
+injury_plays= injury_plays %>% select(game_id,home_team,away_team,season_type,week ,posteam,posteam_type,defteam,
+                                      side_of_field,yardline_100,game_date,quarter_seconds_remaining,half_seconds_remaining,
+                                      game_seconds_remaining,game_half,qtr,down, time,yrdln,ydstogo,desc)
+injury_plays$injured_player = sub(".*(\\b\\w+\\.\\w+\\b) was injured.*", "\\1", injury_plays$desc)
+injury_plays$injured_team = sub(".*(\\b\\w+-\\d+).*(\\b\\w+\\.\\w+\\b) was injured.*", "\\1", injury_plays$desc)
+
+
+injury_plays = injury_plays %>% distinct()
+#write_csv(injury_plays, "Rmd_files/fixing_injury_plays_manual.csv")
+
+## manual changes made to names in order to make them properly merge later in the script
+## issues with suffixes, hypenated names, etc.
+injury_plays3 = read_csv("Independent Study/final_files/fixing_injury_plays_manual_update.csv")
+
+
+combined_data = left_join(master_schedule, injury_plays3, by = "game_id")
+## dropped 37 observations from the merge (3462 --> 3425)
+
+combined_data %>% group_by(game_id) -> combined_grouped
+
+counter_fun = function(x){
+  ifelse(is.na(x), 0, length(x)) %>% unique()
+}
+
+combined_grouped %<>% 
+  nest() %>%
+  mutate(injured_players = map(.x = data, .f = magrittr::extract2, 'injured_player'),
+         num_injuries = map_dbl(.x= injured_players, .f = counter_fun))
+
+combined_grouped$injured_players <- ifelse(combined_grouped$injured_players == "NANA", "No Injury", combined_grouped$injured_players)
+combined_grouped$injured_players <- ifelse(combined_grouped$injured_players == "NA", "No Injury", combined_grouped$injured_players)
+
+## separates the names to only include player names that got injured during the game
+combined_grouped$injured_players <- sapply(combined_grouped$injured_players, function(x) ifelse(is.character(x), paste(sapply(strsplit(x, ", "), function(y) trimws(y)), collapse = ", "), x))
+
+combined_grouped = combined_grouped[,-2]
+
+schedule_injury_2019_23_complete = left_join(master_schedule, combined_grouped, by = "game_id")
+#write_csv(schedule_injury_2019_23_complete, "schedule_injury_2019_23_complete.csv")
+## change weeks variable to have playoffs encoded as numbers instead of "WildCard", "Division", "ConfChamp", "SuperBowl
+
+new = read_csv("Independent Study/final_files/schedule_injury_2019_23_complete_numeric_weeks.csv")
+
+## Adding the number of snaps that took place in a game
+
+play_counts = as.data.frame(table(pbp$game_id))
+names(play_counts) = c("game_id", "num_plays")
+#play_counts <- play_counts[-c(267, 536, 821, 1105), ]
+## Reset index
+row.names(play_counts) <- NULL
+play_counts <- data.frame(play_counts)
+
+## Main Issue: one data set has the Los Angeles Rams abbreviation as LA and the other dataset has the abbreviation of LAR (71 observations)
+# Some lines were not properly reading (duplicate games with all NAs in one duplicate besides the num_plays and other duplicate has all the information and NAs for num_play)
+
+#write_csv(play_counts, "play_counts_LA_to_LAR.csv")
+
+play_counts4 = read_csv("Independent Study/final_files/play_counts_LA_to_LAR_update.csv")
+### May not need this line, causing problems in later sections
+#play_counts$game_id <- gsub("(^|_)LA(_|$)", "\\1LAR\\2", play_counts$game_id)
+
+
+schedule_injury_2019_23_complete_combined = merge(new, play_counts4, by = "game_id")
+#rows_dropped = anti_join(schedule_injury_2019_23_complete, play_counts4, by = "game_id")
+## two rows dropped after this merge
+
+## Manually changing some of the injury_players because some of them are not formatted in a proper way (i.e., hyphens and spaces in name, different formatting than the rest, etc.)
+#write_csv(schedule_injury_2019_23_complete_combined, 'schedule_injury_2019_23_complete_upated.csv')
+
+```
+
+
+## Adding Stadium Name, Surface, Surface_Type, and whether or not the stadium has a dome
+
+```{r adding_surface_stadium_name_and_dome}
+## this is equivalent of schedule_injury_2019_23_complete_upated but made new copy to make sure the manual changes to names was not overwritten
+schedule_injury_2019_23_complete_updated = read_csv('Independent Study/final_files/schedule_injury_2019_23_complete_upated_Rmd.csv')
+## changing LAR to LA to match the rest of the dataset
+#schedule_injury_2019_23_complete_updated$game_id <- gsub("LAR", "LA", schedule_injury_2019_23_complete_updated$game_id)
+
+
+# Create a list of dictionaries that maps team abbreviations to the surface, stadium, dome, and surface_type they play on
+team_surface <- list(
+  ARI = list(surface = "Bermuda Grass", surface_type = "Grass", stadium = "State Farm Stadium", dome = TRUE),
+  ATL = list(surface = "FieldTurf Revolution", surface_type = "Turf", stadium = "Mercedes-Benz Stadium", dome = TRUE),
+  BAL = list(surface = "Bermuda Grass", surface_type = "Grass", stadium = "M&T Bank Stadium", dome = FALSE),
+  BUF = list(surface = "A-Turf Titan", surface_type = "Turf", stadium = "Highmark Stadium", dome = FALSE),
+  CAR = list(surface = "Bermuda Grass", surface_type = "Grass", stadium = "Bank of America Stadium", dome = FALSE),
+  CHI = list(surface = "Kentucky Bluegrass", surface_type = "Grass", stadium = "Soldier Field", dome = FALSE),
+  CIN = list(surface = "UBU Sports Speed S5-M Synthetic Turf", surface_type = "Turf", stadium = "Paul Brown Stadium", dome = FALSE),
+  CLE = list(surface = "Kentucky Bluegrass", surface_type = "Grass", stadium = "FirstEnergy Stadium", dome = FALSE),
+  DAL = list(surface = "Hellas Matrix Turf", surface_type = "Turf", stadium = "AT&T Stadium", dome = TRUE),
+  DEN = list(surface = "Kentucky Bluegrass", surface_type = "Grass", stadium = "Empower Field at Mile High", dome = FALSE),
+  DET = list(surface = "FieldTurf Classic HD", surface_type = "Turf", stadium = "Ford Field", dome = TRUE),
+  GB = list(surface = "Desso GrassMaster", surface_type = "Hybrid", stadium = "Lambeau Field", dome = FALSE),
+  HOU = list(surface = "Hellas Matrix Turf", surface_type = "Turf", stadium = "NRG Stadium", dome = TRUE),
+  IND = list(surface = "Shaw Sports Momentum Pro", surface_type = "Turf", stadium = "Lucas Oil Stadium", dome = TRUE),
+  JAX = list(surface = "Bermuda Grass", surface_type = "Grass", stadium = "TIAA Bank Field", dome = FALSE),
+  KC = list(surface = "Bermuda Grass", surface_type = "Grass", stadium = "Arrowhead Stadium", dome = FALSE),
+  LV = list(surface = "Bermuda Grass", surface_type = "Grass", stadium = "Allegiant Stadium", dome = TRUE),
+  LAC = list(surface = "Hellas Matrix Turf", surface_type = "Turf", stadium = "SoFi Stadium", dome = TRUE),
+  LAR = list(surface = "Hellas Matrix Turf", surface_type = "Turf", stadium = "SoFi Stadium", dome = TRUE),
+  MIA = list(surface = "Bermuda Grass", surface_type = "Grass", stadium = "Hard Rock Stadium", dome = TRUE),
+  MIN = list(surface = "UBU Sports Speed S5-M", surface_type = "Turf", stadium = "U.S. Bank Stadium", dome = TRUE),
+  NE = list(surface = "FieldTurf CORE", surface_type = "Turf", stadium = "Gillette Stadium", dome = FALSE),
+  NO = list(surface = "FieldTurf Revolution 360", surface_type = "Turf", stadium = "Caesars Superdome", dome = TRUE),
+  NYG = list(surface = "FieldTurf Classic HD", surface_type = "Turf", stadium = "MetLife Stadium", dome = FALSE),
+  NYJ = list(surface = "FieldTurf Classic HD", surface_type = "Turf", stadium = "MetLife Stadium", dome = FALSE),
+  PHI = list(surface = "Desso GrassMaster", surface_type = "Hybrid", stadium = "Lincoln Financial Field", dome = FALSE),
+  PIT = list(surface = "Kentucky Bluegrass", surface_type = "Grass", stadium = "Heinz Field", dome = FALSE),
+  SF = list(surface = "Bermuda Grass,Perennial Ryegrass Mixture", surface_type = "Grass", stadium = "Levi's Stadium", dome = FALSE),
+  SEA = list(surface = "FieldTurf Revolution 360", surface_type = "Turf", stadium = "Lumen Field", dome = FALSE),
+  TB = list(surface = "Bermuda Grass", surface_type = "Grass", stadium = "Raymond James Stadium", dome = FALSE),
+  TEN = list(surface = "Bermuda Grass", surface_type = "Grass", stadium = "Nissan Stadium", dome = FALSE),
+  WAS = list(surface = "Bermuda Grass", surface_type = "Grass", stadium = "FedExField", dome = FALSE),
+  OAK = list(surface = "Bermuda Grass", surface_type = "Grass", stadium = "Oakland Coliseum", dome = FALSE)
+)
+
+team_surface_df <- map_df(team_surface, ~.x %>% as_tibble() %>% set_names(c("surface", "surface_type", "stadium", "dome")), .id = "team")
+
+
+team_surface_df <- team_surface_df %>%
+  rename(Home_abbr = team)
+
+library(dplyr)
+
+#schedule_injury_2019_23_complete_updated <- schedule_injury_2019_23_complete_updated %>% select(-Home_abbr, everything(), Home_abbr)
+
+#schedule_injury_2019_23_complete_updated$Home_abbr <- ifelse(schedule_injury_2019_23_complete_updated$Home_abbr == "LAR", "LA", schedule_injury_2019_23_complete_updated$Home_abbr)
+#schedule_injury_2019_23_complete_updated$Away_abbr <- ifelse(schedule_injury_2019_23_complete_updated$Away_abbr == "LAR", "LA", schedule_injury_2019_23_complete_updated$Away_abbr)
+
+
+df_master_schedule_injury_surface_2019_23 <- schedule_injury_2019_23_complete_updated %>%
+  left_join(team_surface_df, by = "Home_abbr")
+
+colSums(is.na(df_master_schedule_injury_surface_2019_23))
+## checking to make sure there are no NAs present after merge is complete
+#write_csv(df_master_schedule_injury_surface_2019_23, 'df_master_schedule_injury_surface_2019_23_Rmd.csv')
+head(df_master_schedule_injury_surface_2019_23,20)
+
+
+```
+
+## Adding Weather Script to `df_master_schedule_injury_surface_2019_23`
+
+```{r adding_weather_to_df_master_above}
+pacman::p_load(tidyverse, rvest, stringr)
+
+## this is the equivalent of df_master_schedule_injury_surface_2019_23_Rmd.csv but made copy to make sure it was not overwritten during knitting process
+
+## changing playoff weeks from numbers to "Wildcard", "Division", etc.
+schedule = read.csv('Independent Study/final_files/df_master_schedule_injury_surface_2019_23_Rmd_no_weather.csv')
+schedule$date = schedule$date %>% as.Date(format = "%m/%d/%y")
+
+results <- list()
+
+# loop through each row of the data frame
+for (i in 1:nrow(schedule)) {
+  # extract the variables for the current row
+  season = schedule$season[[i]]
+  week = schedule$week[[i]]
+  date = schedule$date[[i]]
+  away = tail(strsplit(schedule$Away_Team[i], " ")[[1]], 1)
+  away = ifelse(away == 'Team' & date >= '2020-09-13' & date <= '2020-09-20', 
+                'redskins',
+                ifelse(away == 'Team' & date > '2020-09-20' & date <= '2020-11-22', 
+                       'football%20team',
+                       ifelse(away == 'Team' & date > '2020-11-22' & date <= '2020-12-13',
+                              'Washington',
+                              ifelse(away == 'Team' & date == '2020-12-20',
+                                     'football%20team',
+                                     ifelse((away == 'Team' | away == 'Commanders') & date > '2020-12-20',
+                                            'Washington',
+                                            tail(strsplit(schedule$Away_Team[i], " ")[[1]], 1))))))
+  
+  home = tail(strsplit(schedule$Home_Team[i], " ")[[1]], 1)
+  home = ifelse(home == 'Team' & date >= '2020-09-13' & date <= '2020-09-20', 
+                'redskins',
+                ifelse(home == 'Team' & date > '2020-09-20' & date <= '2020-11-22', 
+                       'football%20team',
+                       ifelse(home == 'Team' & date > '2020-11-22' & date <= '2020-12-13',
+                              'washington',
+                              ifelse(home == 'Team' & date == '2020-12-20',
+                                     'football%20team',
+                                     ifelse((home == 'Team' | home == 'Commanders') & date > '2020-12-20',
+                                            'washington',
+                                            tail(strsplit(schedule$Home_Team[i], " ")[[1]], 1))))))
+  
+  
+  # construct the URL and read the HTML
+  url = ifelse(week == 'WildCard', 
+               paste0('https://www.nflweather.com/game/', season, '/',  week,'-weekend/', away, '-at-', home),
+               ifelse(week == 'Division', paste0('https://www.nflweather.com/game/', season, '/',  week,'al-playoffs/', away, '-at-', home),
+                      ifelse(week == 'ConfChamp', paste0('https://www.nflweather.com/game/', season, '/%20conf-championships/', away, '-at-', home),
+                             ifelse(week == 'SuperBowl' & season == '2021', paste0('https://www.nflweather.com/game/', season, '/',  week, '/', home, '-at-', away),
+                                    ifelse(week == 'SuperBowl', paste0('https://www.nflweather.com/game/', season, '/', week, '/', away, '-at-', home),
+                                           paste0('https://www.nflweather.com/game/', season, '/week-',  week, '/', away, '-at-', home))))))
+  
+  read_url <- read_html(url)
+  
+  # extract the weather data from each quarter
+  q1_temp <- html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(1) > p:nth-child(5) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q2_temp <- html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(2) > p:nth-child(5) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q3_temp <- html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(3) > p:nth-child(5) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q4_temp <- html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(4) > p:nth-child(5) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  
+  q1_feels_like = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(1) > p:nth-child(6) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q2_feels_like = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(2) > p:nth-child(6) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q3_feels_like = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(3) > p:nth-child(6) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q4_feels_like = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(4) > p:nth-child(6) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  
+  
+  q1_wind = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(1) > p:nth-child(7) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q2_wind = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(2) > p:nth-child(7) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q3_wind = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(3) > p:nth-child(7) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q4_wind = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(4) > p:nth-child(7) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  
+  q1_humidity = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(1) > p:nth-child(8) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q2_humidity = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(2) > p:nth-child(8) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q3_humidity = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(3) > p:nth-child(8) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q4_humidity = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(4) > p:nth-child(8) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  
+  q1_percipitation_prob = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(1) > p:nth-child(13) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q2_percipitation_prob = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(2) > p:nth-child(13) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q3_percipitation_prob = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(3) > p:nth-child(13) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  q4_percipitation_prob = html_text2(html_elements(read_url, 'body > div > div:nth-child(4) > div > div.span10 > div:nth-child(7) > div:nth-child(4) > p:nth-child(13) > b')) |> 
+    str_extract("\\d+") |> 
+    as.numeric()
+  
+  # calculate the average weather data for the game
+  avg_temp = mean(c(q1_temp, q2_temp, q3_temp, q4_temp))
+  avg_feels_like = mean(c(q1_feels_like, q2_feels_like, q3_feels_like, q4_feels_like))
+  avg_wind_mph = mean(c(q1_wind, q2_wind, q3_wind, q4_wind))
+  avg_humidity_percent = mean(c(q1_humidity, q2_humidity, q3_humidity, q4_humidity))
+  avg_percipitation_prob_percent = mean(c(q1_percipitation_prob, q2_percipitation_prob, q3_percipitation_prob, q4_percipitation_prob))
+  
+  
+  
+  # create a data frame with the results for the current row
+  result <- data.frame(week, season, date, away, home, avg_temp, avg_feels_like, avg_wind_mph, avg_humidity_percent, avg_percipitation_prob_percent)
+  
+  # add the data frame to the results list
+  results[[i]] = result
+}
+
+# combine the results into a single data frame
+weather = do.call(rbind, results)
+
+#write.csv(weather, "Game_Weather_2019-23.csv")
+
+schedule = schedule |> 
+  dplyr::mutate(
+    Avg_Temp = weather$avg_temp,
+    Avg_Feels_Like = weather$avg_feels_like,
+    Avg_Wind_MPH = weather$avg_wind_mph,
+    Avg_Humidity_Percent = weather$avg_humidity_percent,
+    Avg_Percipitation_Prob_Percent = weather$avg_percipitation_prob_percent
+  )
+
+#write.csv(schedule, "df_master_schedule_injury_surface_2019_23_weather_Rmd.csv")
+## fix the last SuperBowl Info
+head(schedule, 20)
+
+```
+
+## Adding Latitude & Longitude based on Distance from Away Team's Stadium to the Home Team's Stadium (distance traveled for away games)
+
+```{r}
+library(purrr)
+df_master_schedule_injury_surface_2019_23_weather = read_csv("Independent Study/final_files/df_master_schedule_injury_surface_2019_23_weather_Rmd_update.csv")
+df_master_schedule_injury_surface_2019_23_weather = df_master_schedule_injury_surface_2019_23_weather[,-1]
+
+## changing LAR to LA in the game_id
+#df_master_schedule_injury_surface_2019_23_weather$game_id <- gsub("LAR", "LA", df_master_schedule_injury_surface_2019_23_weather$game_id)
+
+
+#df_master_schedule_injury_surface_2019_23_weather$Away_abbr <- ifelse(df_master_schedule_injury_surface_2019_23_weather$Away_abbr == "LAR", "LA", df_master_schedule_injury_surface_2019_23_weather$Away_abbr)
+
+#df_master_schedule_injury_surface_2019_23_weather$Home_abbr <- ifelse(df_master_schedule_injury_surface_2019_23_weather$Home_abbr == "LAR", "LA", df_master_schedule_injury_surface_2019_23_weather$Home_abbr)
+
+colSums(is.na(df_master_schedule_injury_surface_2019_23_weather))
+
+
+nfl_coordinates = read_csv("Independent Study/final_files/NFL_Latitude_Longitude_trial.csv")
+
+nfl_coordinates <- nfl_coordinates %>%
+  mutate(team_abbr = case_when(
+    Team == "Arizona Cardinals" ~ "ARI",
+    Team == "Atlanta Falcons" ~ "ATL",
+    Team == "Baltimore Ravens" ~ "BAL",
+    Team == "Buffalo Bills" ~ "BUF",
+    Team == "Carolina Panthers" ~ "CAR",
+    Team == "Chicago Bears" ~ "CHI",
+    Team == "Cincinnati Bengals" ~ "CIN",
+    Team == "Cleveland Browns" ~ "CLE",
+    Team == "Dallas Cowboys" ~ "DAL",
+    Team == "Denver Broncos" ~ "DEN",
+    Team == "Detroit Lions" ~ "DET",
+    Team == "Green Bay Packers" ~ "GB",
+    Team == "Houston Texans" ~ "HOU",
+    Team == "Indianapolis Colts" ~ "IND",
+    Team == "Jacksonville Jaguars" ~ "JAX",
+    Team == "Kansas City Chiefs" ~ "KC",
+    Team == "Las Vegas Raiders" ~ "LV",
+    Team == "Los Angeles Chargers" ~ "LAC",
+    Team == "Los Angeles Rams" ~ "LAR",
+    Team == "Miami Dolphins" ~ "MIA",
+    Team == "Minnesota Vikings" ~ "MIN",
+    Team == "New England Patriots" ~ "NE",
+    Team == "New Orleans Saints" ~ "NO",
+    Team == "New York Giants" ~ "NYG",
+    Team == "New York Jets" ~ "NYJ",
+    Team == "Philadelphia Eagles" ~ "PHI",
+    Team == "Pittsburgh Steelers" ~ "PIT",
+    Team == "San Francisco 49ers" ~ "SF",
+    Team == "Seattle Seahawks" ~ "SEA",
+    Team == "Tampa Bay Buccaneers" ~ "TB",
+    Team == "Tennessee Titans" ~ "TEN",
+    Team == "Washington Redskins" | 
+    Team == "Washington Football Team" | 
+    Team == "Washington Commanders" ~ "WAS",
+    Team == "Oakland Raiders" ~ "OAK",
+    TRUE ~ NA_character_
+  ))
+
+library(dplyr)
+duplicated(nfl_coordinates$team_abbr)
+
+# Create a lookup table for team abbreviations, latitude, and longitude
+team_lookup <- nfl_coordinates %>% 
+  select(team_abbr, Latitude, Longitude)
+
+# Join the team_lookup to the master schedule
+df_master_surface_coords <- df_master_schedule_injury_surface_2019_23_weather %>%
+  left_join(team_lookup, by = c("Home_abbr" = "team_abbr")) %>%
+  rename(Home_latitude = Latitude, Home_longitude = Longitude) %>%
+  left_join(team_lookup, by = c("Away_abbr" = "team_abbr")) %>%
+  rename(Away_latitude = Latitude, Away_longitude = Longitude)
+
+
+colSums(is.na(df_master_surface_coords))
+library(geosphere)
+
+haversine_distance <- function(lat1, lon1, lat2, lon2) {
+  # Convert latitudes and longitudes from degrees to radians
+  lat1_rad <- lat1 * (pi / 180)
+  lon1_rad <- lon1 * (pi / 180)
+  lat2_rad <- lat2 * (pi / 180)
+  lon2_rad <- lon2 * (pi / 180)
+
+  # Haversine formula
+  delta_lat <- lat2_rad - lat1_rad
+  delta_lon <- lon2_rad - lon1_rad
+
+  a <- sin(delta_lat / 2)^2 + cos(lat1_rad) * cos(lat2_rad) * sin(delta_lon / 2)^2
+  c <- 2 * asin(sqrt(a))
+
+  # Earth's radius in miles (approximately 3,958.8 miles)
+  earth_radius <- 3958.8
+
+  # Calculate the distance
+  distance <- earth_radius * c
+
+  return(distance)
+}
+Home_latitude <- round(df_master_surface_coords[["Home_latitude"]],4)
+Home_longitude <- round(df_master_surface_coords[["Home_longitude"]],4)
+Away_latitude <- round(df_master_surface_coords[["Away_latitude"]],4)
+Away_longitude <- round(df_master_surface_coords[["Away_longitude"]],4)
+
+
+df_master_surface_coords$distance_miles <- haversine_distance(Home_latitude, Home_longitude, Away_latitude, Away_longitude)
+
+#df_master_surface_coords$distance_miles <- distHaversine(
+  #p1 = df_master_surface_coords[, c("Home_longitude", "Home_latitude")],
+  #p2 = df_master_surface_coords[, c("Away_longitude", "Away_latitude")],
+  #r = 3959  # Earth radius in miles
+#)
+#df_master_surface_coords = df_master_surface_coords[,-1]
+
+#write.csv(df_master_surface_coords, "Rmd_files/df_master_schedule_injury_surface_2019_23_weather_distance2.csv")
+## STILL NEED TO CHANGE THE GAMES THAT WERE INTERNATIONAL OR PLAYED AT NEUTRAL SITES (SUPERBOWL)
+
+## ADD BACK THE TWO SUPERBOWL GAMES THAT WERE DROPPED AND ASSOCIATED INJURIES (2019 AND 2020 SB)
+head(df_master_surface_coords,20)
+#write_csv(df_master_surface_coords,"df_master_schedule_injury_surface_2019_23_weather_distance_update.csv")
+
+
+```
+
+
+## Adding Days since both teams played their last game
+
+```{r days_since_last_game_merge}
+
+library(dplyr)
+
+# read in the tables
+df_master_surface_coords <- read_csv("Independent Study/final_files/df_master_schedule_injury_surface_2019_23_weather_distance_update.csv")
+NFL_Days_Since_Last_Game <- read_csv("Independent Study/final_files/NFL_Days_Since_Last_Game.csv")
+
+
+NFL_Days_Since_Last_Game$date = NFL_Days_Since_Last_Game$Date %>% as.Date(format = "%m/%d/%y")
+
+# join the tables
+df_master_surface_coords <- df_master_surface_coords %>%
+  # join with NFL_Days_Since_Last_Game by home_team, away_team and date_of_game
+  left_join(NFL_Days_Since_Last_Game, by = c("Home_Team" = "Home", "Away_Team" = "Away", "date" = "date"))
+colSums(is.na(df_master_surface_coords))
+#df_master_surface_coords = df_master_surface_coords[,-1]
+df_master_surface_coords = df_master_surface_coords[,-37]
+df_master_surface_coords = df_master_surface_coords[,-37]
+
+head(df_master_surface_coords,20)
+#write_csv(df_master_surface_coords, "df_master_schedule_injury_surface_2019_23_weather_distance_days_since_last_game.csv")
+
+```
+
+```{r players_missing_games_from_injury}
+# Define the URL template
+url_template <- "https://www.prosportstransactions.com/football/Search/SearchResults.php?Player=&Team=&BeginDate=2019-09-08&EndDate=2023-01-29&InjuriesChkBx=yes&submit=Search&start=%d"
+
+# Specify the starting value for the start parameter
+start_value <- 0
+
+# Initialize an empty data.frame to store the data
+games_missed_from_injury <- data.frame()
+
+# Repeat the loop until you have scraped all pages (105 pages)
+while (start_value <= 2600) {
+  # Define the URL
+  url <- sprintf(url_template, start_value)
+  
+  # Read the HTML content from the URL
+  html_content <- read_html(url)
+  
+  # Extract the table from the HTML content
+  table_html <- html_content %>%
+    html_node("table") %>%
+    html_table()
+  
+  # Check if the table is empty (no more pages)
+  if (nrow(table_html) == 0) {
+    break
+  }
+  
+  # Specify the column names
+  colnames(table_html) <- c("Date", "Team","Acquired" ,"Relinquished", "Notes")
+  
+  # Store the table data in a data.frame
+  df <- as.data.frame(table_html)
+  
+  # Append the data to the all-data data.frame
+  games_missed_from_injury <- rbind(games_missed_from_injury, df)
+  
+  # Update the start value to scrape the next page
+  start_value <- start_value + 25
+}
+
+## removing additional rows with no information
+games_missed_from_injury = subset(games_missed_from_injury, Date != "Date")
+## removing Acquired variable because it contains no information
+games_missed_from_injury = subset(games_missed_from_injury, select = -Acquired)
+
+library(stringr)
+
+## removing the bullet in front of the plays name who was injured 
+games_missed_from_injury$Relinquished <- str_remove(games_missed_from_injury$Relinquished, "• ")
+## removing parenthesis after name (usually containing the players full name or their birthdate) to ensure that all names are formatted the same way
+games_missed_from_injury$Relinquished <- sub("\\(.*\\)", "", games_missed_from_injury$Relinquished)
+## removing the slashes after the name of the player who was injury (usually contains the players nickname(s)) to ensure that all names are formatted the same way
+games_missed_from_injury$Relinquished <- sapply(strsplit(games_missed_from_injury$Relinquished, "/"), "[", 1)
+## formatting 'Date' variable as a date in order to count the number of days since last game was played
+games_missed_from_injury$Date <- as.Date(games_missed_from_injury$Date)
+
+## adding year column in order to create unique id to merge tables
+#games_missed_from_injury$Year = year(games_missed_from_injury$Date)
+
+
+## splitting the relinquished column to have a first_name and last_name column
+games_missed_from_injury$first_name <- gsub("^(\\S+)\\s.*$", "\\1", games_missed_from_injury$Relinquished)
+games_missed_from_injury$last_name <- gsub("^\\S+\\s(.*)$", "\\1", games_missed_from_injury$Relinquished)
+
+## removing suffixes to have the data structured the same way as those from fast_scraper_roster function within nflfastR
+#games_missed_from_injury$last_name <- gsub("\\s.*", "", games_missed_from_injury$last_name)
+games_missed_from_injury$last_name <- sapply(games_missed_from_injury$last_name, function(x) {
+  if (grepl(" ", x)) {
+    parts <- strsplit(x, " ")[[1]]
+    if (parts[length(parts)] %in% c("Jr.", "Sr.","II" ,"III", "IV", "V")) {
+      return(parts[length(parts) - 1])
+    } else {
+      return(parts[length(parts)])
+    }
+  } else {
+    return(x)
+  }
+})
+## adding season variable to merge with the table below (accounting for games played in the first few weeks of the new year as included in the previous season)
+# Create a "season" variable based on the "Date" column
+games_missed_from_injury$season <- format(games_missed_from_injury$Date, "%Y")
+
+# Adjust the season values for the 2019 season
+#games_missed_from_injury$season[games_missed_from_injury$Date < as.Date("2019-08-08")] <- as.character(as.numeric(format(games_missed_from_injury$Date[games_missed_from_injury$Date < as.Date("2019-08-08")], "%Y")) - 1)
+
+# Adjust the season values for the 2020 season
+games_missed_from_injury$season[games_missed_from_injury$Date >= as.Date("2019-06-27") & games_missed_from_injury$Date <= as.Date("2020-02-28")] <- "2019"
+
+# Adjust the season values for the 2021 season
+games_missed_from_injury$season[games_missed_from_injury$Date > as.Date("2020-05-08") & games_missed_from_injury$Date < as.Date("2021-02-28")] <- "2020"
+
+# Adjust the season values for the 2021 season
+games_missed_from_injury$season[games_missed_from_injury$Date > as.Date("2021-05-08") & games_missed_from_injury$Date < as.Date("2022-03-10")] <- "2021"
+
+# Adjust the season values for the 2022 season
+games_missed_from_injury$season[games_missed_from_injury$Date >= as.Date("2022-03-11")] <- "2022"
+
+
+## adding team abbreviations in order to create a unique id to join the player_position table
+nfl_teams <- data.frame(
+  team_name = c("Cardinals", "Falcons", "Ravens", "Bills", "Panthers", "Bears", "Bengals", "Browns", "Cowboys", "Broncos", "Lions", "Packers", 
+                "Texans", "Colts", "Jaguars", "Chiefs", "Raiders", "Chargers", "Rams", "Dolphins", "Vikings", "Patriots", "Saints", "Giants", 
+                "Jets", "Eagles", "Steelers", "49ers", "Seahawks", "Buccaneers", "Titans", "Redskins", "Washington", "Commanders"),
+  team_abbreviation = c("ARI", "ATL", "BAL", "BUF", "CAR", "CHI", "CIN", "CLE", "DAL", "DEN", "DET", "GB", "HOU", "IND", "JAX", "KC", 
+                        "LV", "LAC", "LAR", "MIA", "MIN", "NE", "NO", "NYG", "NYJ", "PHI", "PIT", "SF", "SEA", "TB", "TEN", "WAS", "WAS", "WAS")
+)
+
+# Join the nfl_teams data with the injury_data on the team name
+games_missed_from_injury <- merge(games_missed_from_injury, nfl_teams, by.x = "Team", by.y = "team_name")
+
+
+## creation of unique id: 'player_id'
+games_missed_from_injury$player_id <- paste0(games_missed_from_injury$season, "_", games_missed_from_injury$last_name, "_", games_missed_from_injury$team_abbreviation)
+
+#games_missed_from_injury = games_missed_from_injury %>% filter(season == 2019)
+
+
+#write_csv(games_missed_from_injury, 'games_missed_from_injury_2019_2022_complete.csv')
+
+
+```
+
+```{r pulling_position_and_team_name_of_injured_player_who_missed_game}
+
+library(nflfastR)
+player_position = fast_scraper_roster(2019: 2022)
+
+player_position = player_position[,c('season', 'team', 'position','depth_chart_position', 'jersey_number',
+                                     'status', 'full_name', 'first_name', 'last_name', 'birth_date',
+                                     'college', 'years_exp', 'week', 'game_type', 'football_name', 'entry_year')]
+
+colnames(player_position) = c('season', 'team', 'position','depth_chart_position', 'jersey_number',
+                                     'status', 'full_name', 'first_name', 'last_name', 'birth_date',
+                                     'college', 'years_exp', 'week', 'game_type', 'football_name', 'entry_year')
+
+## creation of unique id: 'player_id' for the player_position table
+player_position$player_id <- paste0(player_position$season, "_", player_position$last_name, "_", player_position$team)
+player_position <- distinct(player_position, player_id, .keep_all = TRUE)
+#write_csv(player_position, 'Rmd_files/player_position_Rmd1.csv')
+## had to make manual changes to certain players names (i.e., Vander Esch from one of the tables, Esch from another; DeValve in one table was Devalve in another)
+
+```
+
+
+
+```{r merging_player_position_with_games_missed_from_injury}
+
+library(dplyr)
+## changed to 2019
+
+games_missed_from_injury = read_csv('Independent Study/final_files/games_missed_from_injury_2019_2022_complete_update.csv')
+names(games_missed_from_injury)[8] <- "team"
+
+# Create a new column 'area_of_injury' as NA
+games_missed_from_injury$area_of_injury <- NA
+
+# Extract the area of injury from the 'Notes' column and assign it to the 'area_of_injury' column
+games_missed_from_injury$area_of_injury <- ifelse(is.na(games_missed_from_injury$area_of_injury),
+                                                  str_extract(games_missed_from_injury$Notes, ".*(?= injury)"),
+                                                  games_missed_from_injury$area_of_injury)
+
+# Replace remaining NA values with original values from 'Notes'
+games_missed_from_injury$area_of_injury <- ifelse(is.na(games_missed_from_injury$area_of_injury),
+                                                  games_missed_from_injury$Notes,
+                                                  games_missed_from_injury$area_of_injury)
+
+# Remove parenthesis from the 'area_of_injury' column
+games_missed_from_injury$area_of_injury <- gsub("\\s*\\([^\\)]+\\)", "", games_missed_from_injury$area_of_injury)
+
+
+## table for the frequency of certain types of injuries that resulted from players missing games
+injury_counts <- table(games_missed_from_injury$area_of_injury)
+injury_counts_sorted <- sort(injury_counts, decreasing = TRUE)
+
+
+# Group the injury data by player_id, season, team, and any other relevant columns to see the number of games missed in a season by a player
+games_missed_from_injury_agg <- games_missed_from_injury %>%
+  group_by(player_id, season, team) %>%
+  summarize(games_missed = n())
+head(games_missed_from_injury_agg,20)
+
+## updated csv file from manual changes to player names to match the 
+player_position1 = read_csv('Independent Study/final_files/player_position_Rmd1.csv')
+player_position1 <- distinct(player_position, player_id, .keep_all = TRUE)
+
+
+# Merge the two tables by player ID, position, and team
+merged_table_injury_by_position <- inner_join(games_missed_from_injury, player_position1, by = "player_id")
+merged_table_injury_by_position <- merged_table_injury_by_position %>%
+  select(-ends_with(".y")) %>%  # Remove the ".y" variables
+  rename_with(~gsub("\\.x$", "", .), ends_with(".x"))  # Rename the ".x" variables
+
+merged_table_injury_by_position <- merged_table_injury_by_position %>%
+  select(-player_id, player_id)
+head(merged_table_injury_by_position,20)
+
+
+merged_table_num_injuries_by_player_by_season = inner_join(games_missed_from_injury_agg, player_position1, by = 'player_id')
+head(merged_table_num_injuries_by_player_by_season,20)
+
+
+
+
+# Merge the aggregated injury data with the player position data
+#player_data <- left_join(games_missed_from_injury_agg,player_position ,by = "player_id")
+## provides the number of injuries that a player suffered associated with the player_id of the individual
+## results in 1423 observations, 44 missing observations, total games missed in the table: 2621
+
+#player_data <- dplyr::full_join(games_missed_from_injury_agg,player_position ,by = "player_id")
+
+#player_data <- merge(games_missed_from_injury_agg,player_position ,by = "player_id")
+## results in 1378 observations, NO missing observations, total games missed in the table: 2566
+
+
+#merged_data <- left_join(games_missed_from_injury, player_position, by = "player_id")
+## results in 55 missing obs, 2621 observations
+
+#colSums(is.na(merged_table_injury_by_position))
+#write_csv(merged_table_injury_by_position, "Rmd_files/merged_table_injury_by_position1.csv")
+
+
+#head(merged_table_injury_by_position,20)
+
+
+#colSums(is.na(merged_table_num_injuries_by_player_by_season))
+#write_csv(merged_table_num_injuries_by_player_by_season, "Rmd_files/merged_table_num_injuries_by_player_by_season1.csv")
+#head(merged_table_injury_by_position,20)
+```
+
+
+```{r test_position}
+df2 = read_csv("Independent Study/final_files/df_master_schedule_injury_surface_2019_23_weather_distance_days_since_last_game.csv")
+## still need to add information about neutral sites along with correcting superbowl locations and associated information
+
+## these changes have been made previously
+#df2$Away_abbr <- ifelse(df2$Away_abbr == "LA", "LAR", df2$Away_abbr)
+#df2$Home_abbr <- ifelse(df2$Home_abbr == "LA", "LAR", df2$Home_abbr)
+#df2$game_id <- gsub("LA", "LAR", df2$game_id)
+df2_players_sep = df2 %>% separate_rows(injured_players, sep = ",\\s*")
+#write_csv(df2_players_sep, "Rmd_files/changing_suffixes2.csv")
+
+
+df2_players_sep_update1 = read_csv("Independent Study/final_files/changing_suffixes2_update.csv")
+## made corrections to names that contained suffixes and those that had periods in them (i.e., St. Brown)
+
+df2_players_sep_update1 <- df2_players_sep_update1 %>%
+  separate(col = injured_players, into = c('injured_first_name', 'injured_last_name'), sep = '\\.') %>%
+  mutate(injured_last_name = if_else(str_detect(injured_last_name, '\\s'), 
+                                     str_split(injured_last_name, '\\s')[[1]][1], 
+                                     injured_last_name))
+
+df2_players_sep_update1$injured_last_name <- ifelse(df2_players_sep_update1$injured_last_name == "NA", "No Injury", df2_players_sep_update1$injured_last_name)
+df2_players_sep_update1$injured_last_name[is.na(df2_players_sep_update1$injured_last_name)] <- "No Injury"
+## next code is to add the player position to contact_noncontact and then add them all back to df2_players_sep
+
+## need to make sure that the abbreviations and game_id later used to merge are the same for both datasets
+df2_players_sep_update1$game_id <- gsub("OAK", "LV", df2_players_sep_update1$game_id)
+df2_players_sep_update1$Away_abbr <- ifelse(df2_players_sep_update1$Away_abbr == "OAK", "LV", df2_players_sep_update1$Away_abbr)
+df2_players_sep_update1$Home_abbr <- ifelse(df2_players_sep_update1$Home_abbr == "OAK", "LV", df2_players_sep_update1$Home_abbr)
+
+any(duplicated(df2_players_sep_update1))
+df2_updated = distinct(df2_players_sep_update1)
+
+
+
+#df2_players_sep = df2_players_sep %>% 
+  #tidyr::separate(col = injured_team, into = c('injured_team', 'injured_player_num'))
+injury_test2 = read_csv("Independent Study/final_files/contact_noncontact_2019_2020_full_seasons.csv")
+#injury_test2 = read_csv("injury_test_neutral_sites.csv")
+#error_testing = read_csv("Rmd_files/error_checking.csv")
+
+injury_test2 = injury_test2 %>% 
+  tidyr::separate(col = injured_team, into = c('injured_team', 'injured_player_num'))
+
+
+#write_csv(injury_test2, "Rmd_files/joiner2_contact_corrections.csv")
+injury_test2_update = read_csv("Independent Study/final_files/joiner2_contact_corrections_update.csv")
+
+injury_test2_update$game_id <- gsub("OAK", "LV", injury_test2_update$game_id)
+injury_test2_update$injured_team <- ifelse(injury_test2_update$injured_team == "OAK", "LV", injury_test2_update$injured_team)
+injury_test2_update$home_team <- ifelse(injury_test2_update$home_team == "OAK", "LV", injury_test2_update$home_team)
+injury_test2_update$away_team <- ifelse(injury_test2_update$away_team == "OAK", "LV", injury_test2_update$away_team)
+
+injury_test2_update <- injury_test2_update %>%
+  separate(col = injured_player, into = c('injured_first_name', 'injured_last_name'), sep = '\\.') %>%
+  mutate(injured_last_name = if_else(str_detect(injured_last_name, '\\s'), 
+                                     str_split(injured_last_name, '\\s')[[1]][1], 
+                                     injured_last_name))
+
+#write_csv(injury_test2_update, "changing_game_id_injury_test2.csv")
+
+#injury_test2_update1 = read_csv("changing_game_id_injury_test2.csv")
+
+#injury_test2 <- injury_test2 %>% 
+  #separate(col = injured_player, into = c('injured_first_name', 'injured_last_name'), sep = '\\.(?=\\S+$)', extra = 'merge') %>% 
+  #mutate(injured_last_name = ifelse(grepl("[-']", injured_last_name), paste(injured_last_name, sep = ""), injured_last_name))
+#injury_test2 = injury_test2[,-29]
+
+#write_csv(injury_test2, "test_injury_merge1.csv")
+## changing names that contain II, III, Jr. Sr. etc
+#injury_update = read_csv("test_injury_merge1.csv")
+## changing LAR to LA in the game_id
+
+
+injury_test2_update$season = substr(injury_test2_update$game_id, start = 1, stop = 4)
+injury_test2_update$player_id = paste0(injury_test2_update$season,"_", injury_test2_update$injured_team, "_", injury_test2_update$injured_player_num, "_", injury_test2_update$injured_last_name)
+
+#injury_test2_update$player_id = paste0(injury_test2_update$season,"_", injury_test2_update$injured_team, "_", injury_test2_update$injured_player_num)
+
+
+rosters = nflreadr::load_rosters(2019:2022)
+rosters$team <- ifelse(rosters$team == "LA", "LAR", rosters$team)
+rosters = rosters %>% filter(season %in% c(2019,2020))
+#rosters$team <- ifelse(rosters$team == "OAK", "LV", rosters$team)
+rosters$player_id = paste0(rosters$season, "_", rosters$team, "_", rosters$jersey_number, "_", rosters$last_name)
+#rosters$player_id = paste0(rosters$season, "_", rosters$team, "_", rosters$jersey_number)
+
+
+injury_test2_sorted <- injury_test2_update %>% arrange(player_id)
+rosters_sorted <- rosters %>% arrange(player_id)
+
+position_injury_player <- merge(injury_test2_update, rosters, by = "player_id")
+colSums(is.na(position_injury_player))
+rows_dropped <- anti_join(injury_test2_update, rosters, by = "player_id")
+## currently droppoing 2 observations --> will fix later
+
+## dropping variables that have excessive missing values or are unimportant to the analysis
+position_injury_player = position_injury_player %>% 
+  select(-c("gsis_id", "espn_id", "sportradar_id", "yahoo_id", "rotowire_id", "pff_id", "pfr_id",
+                                                    "fantasy_data_id", "sleeper_id", "headshot_url", "ngs_position", "gsis_it_id", "status_description_abbr", "esb_id", "rookie_year", "draft_club", "draft_number", "week.y"))
+
+unique(position_injury_player$injured_team)
+#write_csv(position_injury_player, "position_injury_player_2019_2020_fixed.csv")
+
+
+
+##joining position_injury_player with df2_players_sep to get the game information
+pos_inj_player = read_csv("Independent Study/final_files/position_injury_player_2019_2020_fixed_update.csv")
+pos_inj_player$connector = paste0(pos_inj_player$game_id, "_", pos_inj_player$injured_last_name)
+
+library(lubridate)
+#pos_inj_player$game_date = as.Date(pos_inj_player$game_date, origin = "1899-12-30")
+pos_inj_player$date = format(as.Date(pos_inj_player$game_date,origin = "1899-12-31"), "%m/%d/%y")
+
+df2_updated$connector = paste0(df2_updated$game_id, "_", df2_updated$injured_last_name)
+
+
+game_injury_player = merge(pos_inj_player,df2_updated,  by = "connector")
+colSums(is.na(game_injury_player))
+rows_dropped <- anti_join(pos_inj_player, df2_updated, by = "connector")
+injury_teams1 = distinct(game_injury_player, injured_team)
+colSums(is.na(game_injury_player))
+
+#write_csv(game_injury_player, "game_injury_player_2019_2020_complete_final.csv")
+
+```
+
+
+```{r spreads_and_totals_combined}
+library(nflfastR)
+vegas_odds <- nflfastR::load_pbp(2019:2022)
+vegas_odds = vegas_odds %>% select(game_id,home_team,away_team,season_type,week,quarter_seconds_remaining,
+                     half_seconds_remaining,game_seconds_remaining,game_half,qtr,down,ydstogo, yrdln,spread_line, total_line, side_of_field, defteam,season)
+
+vegas_odds$home_team <- ifelse(vegas_odds$home_team == "LA", "LAR", vegas_odds$home_team)
+vegas_odds$away_team <- ifelse(vegas_odds$away_team == "LA", "LAR", vegas_odds$away_team)
+
+# Replace "LA" with "LAR" in game_id
+#vegas_odds2 <- vegas_odds %>%
+  #mutate(game_id = str_replace(game_id, "(?<=^\\d{4}_\\d{2}_)[^_]*\\bLA\\b[^_]*", "LAR"))
+
+#vegas_odds
+
+#write_csv(vegas_odds, "vegas_odds_corrections2.csv")
+
+vegas_update = read_csv("Independent Study/final_files/vegas_odds_corrections2_update.csv")
+vegas_update = distinct(vegas_update)
+
+## changed numeric weeks like 18 (in 2019 and 2022) and 19 as WildCard, Division, etc.
+game_injury_no_odds1 = read_csv("Independent Study/final_files/game_injury_player_2019_2020_complete_final_update.csv")
+game_injury_no_odds1 = game_injury_no_odds1 %>% 
+  select(-c("week...48", "season...60"))
+game_injury_no_odds1 = rename(game_injury_no_odds1, week = week...7)
+game_injury_no_odds1 = rename(game_injury_no_odds1, season = season...30)
+game_injury_no_odds1 = distinct(game_injury_no_odds1)
+
+#sum(!complete.cases(game_injury_no_odds1[, c("game_id", "week", "quarter_seconds_remaining", "half_seconds_remaining", "game_seconds_remaining","yrdln","season_type", "game_half", "home_team", "away_team")]))
+
+#sum(!complete.cases(vegas_update[, c("game_id", "week", "quarter_seconds_remaining", "half_seconds_remaining", "game_seconds_remaining","yrdln","season_type", "game_half", "home_team", "away_team")]))
+
+sum(duplicated(game_injury_no_odds1))
+
+temp_merge1= inner_join(game_injury_no_odds1, vegas_update, by = c("game_id", "week", "quarter_seconds_remaining", "half_seconds_remaining", "game_seconds_remaining","yrdln","season_type", "game_half", "home_team", "away_team"))
+## 30 observations dropped (1.9% of total dataset)
+temp_merge1 = distinct(temp_merge1)
+
+
+
+#write_csv(temp_merge1, "Rmd_files/game_injury_player_2019_2020_complete_update_vegas.csv")
+rows_dropped1 =  anti_join(game_injury_no_odds1, vegas_update, by = c("game_id", "week", "quarter_seconds_remaining", "half_seconds_remaining", "game_seconds_remaining","yrdln","season_type", "game_half", "home_team", "away_team")) %>% as.data.frame()
+sum(duplicated(rows_dropped1))
+rows_dropped1 = distinct(rows_dropped1)
+
+
+#rows_dropped2$home_team <- gsub("LV", "OAK",rows_dropped2$home_team )
+#rows_dropped2$away_team <- gsub("LV", "OAK",rows_dropped2$away_team )
+#write_csv(rows_dropped2, "rows_dropped_update_LV_to_OAK2.csv")
+
+#dropped_merge = read_csv("rows_dropped_update_LV_to_OAK2_update.csv")
+
+#temp_merge3 = inner_join(dropped_merge, vegas_update, by = c("game_id", "week", "quarter_seconds_remaining", "half_seconds_remaining", "game_seconds_remaining","season_type","yrdln" ,"game_half", "home_team", "away_team"))
+
+#temp_merge1 = temp_merge1 %>% 
+  #select(-c("season...60"))
+#temp_merge3 = temp_merge3 %>% 
+  #select(-c("season...59"))
+
+#temp_merge1 = rename(temp_merge1, season = season...30)
+#temp_merge3 = rename(temp_merge3, season = season...30)
+
+
+#complete_df = rbind(temp_merge1,temp_merge3)
+
+#write_csv(temp_merge1, "game_injury_player_2019_2020_complete_update_vegas.csv")
+
+
+```
+
+```{r weeks_bucketed}
+
+game_injury_odds = read_csv("Independent Study/final_files/game_injury_player_2019_2020_complete_update_vegas_update.csv")
+
+# use case_when to bucket weeks into new variable weeks_bucketed
+game_injury_odds$weeks_bucketed <- as.character(case_when(
+  game_injury_odds$week %in% 1:4  ~ 1,
+  game_injury_odds$week %in% 5:8  ~ 2,
+  game_injury_odds$week %in% 9:12 ~ 3,
+  game_injury_odds$week %in% 13:17 ~ 4,
+  game_injury_odds$week %in% 18:21 ~ 5
+)
+)
+
+# view the results
+unique(game_injury_odds$weeks_bucketed)
+
+#write_csv(game_injury_odds, "game_injury_player_2019_2020_complete_update_vegas_weeks_bucketed.csv")
+
+```
+
+
