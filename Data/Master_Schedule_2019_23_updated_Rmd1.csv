@@ -1,0 +1,1106 @@
+game_id,week,day,date,time,winner/tie,loser/tie,pts_w,pts_l,yds_w,tov_w,yds_l,tov_l,season,loser_is_home,Home_Team,Away_Team,Home_abbr,Away_abbr
+2019_01_GB_CHI,01,Thu,9/5/19,8:20PM,Green Bay Packers,Chicago Bears,10,3,213,0,254,1,2019,True,Chicago Bears,Green Bay Packers,CHI,GB
+2019_01_ATL_MIN,01,Sun,9/8/19,1:00PM,Minnesota Vikings,Atlanta Falcons,28,12,269,0,345,3,2019,False,Minnesota Vikings,Atlanta Falcons,MIN,ATL
+2019_01_BUF_NYJ,01,Sun,9/8/19,1:00PM,Buffalo Bills,New York Jets,17,16,370,4,223,1,2019,True,New York Jets,Buffalo Bills,NYJ,BUF
+2019_01_LAR_CAR,01,Sun,9/8/19,1:00PM,Los Angeles Rams,Carolina Panthers,30,27,349,1,343,3,2019,True,Carolina Panthers,Los Angeles Rams,CAR,LAR
+2019_01_TEN_CLE,01,Sun,9/8/19,1:00PM,Tennessee Titans,Cleveland Browns,43,13,339,0,346,3,2019,True,Cleveland Browns,Tennessee Titans,CLE,TEN
+2019_01_KC_JAX,01,Sun,9/8/19,1:00PM,Kansas City Chiefs,Jacksonville Jaguars,40,26,491,0,428,2,2019,True,Jacksonville Jaguars,Kansas City Chiefs,JAX,KC
+2019_01_BAL_MIA,01,Sun,9/8/19,1:00PM,Baltimore Ravens,Miami Dolphins,59,10,643,0,200,3,2019,True,Miami Dolphins,Baltimore Ravens,MIA,BAL
+2019_01_WAS_PHI,01,Sun,9/8/19,1:00PM,Philadelphia Eagles,Washington Redskins,32,27,436,0,398,0,2019,False,Philadelphia Eagles,Washington Redskins,PHI,WAS
+2019_01_CIN_SEA,01,Sun,9/8/19,4:05PM,Seattle Seahawks,Cincinnati Bengals,21,20,232,1,429,3,2019,False,Seattle Seahawks,Cincinnati Bengals,SEA,CIN
+2019_01_IND_LAC,01,Sun,9/8/19,4:05PM,Los Angeles Chargers,Indianapolis Colts,30,24,435,2,376,0,2019,False,Los Angeles Chargers,Indianapolis Colts,LAC,IND
+2019_01_DET_ARI,01,Sun,9/8/19,4:25PM,Detroit Lions,Arizona Cardinals,27,27,477,2,387,1,2019,True,Arizona Cardinals,Detroit Lions,ARI,DET
+2019_01_NYG_DAL,01,Sun,9/8/19,4:25PM,Dallas Cowboys,New York Giants,35,17,494,0,470,2,2019,False,Dallas Cowboys,New York Giants,DAL,NYG
+2019_01_SF_TB,01,Sun,9/8/19,4:25PM,San Francisco 49ers,Tampa Bay Buccaneers,31,17,256,2,295,4,2019,True,Tampa Bay Buccaneers,San Francisco 49ers,TB,SF
+2019_01_PIT_NE,01,Sun,9/8/19,8:20PM,New England Patriots,Pittsburgh Steelers,33,3,465,0,308,1,2019,False,New England Patriots,Pittsburgh Steelers,NE,PIT
+2019_01_HOU_NO,01,Mon,9/9/19,7:10PM,New Orleans Saints,Houston Texans,30,28,510,1,414,1,2019,False,New Orleans Saints,Houston Texans,NO,HOU
+2019_01_DEN_OAK,01,Mon,9/9/19,10:20PM,Oakland Raiders,Denver Broncos,24,16,357,0,344,0,2019,False,Oakland Raiders,Denver Broncos,OAK,DEN
+2019_02_TB_CAR,02,Thu,9/12/19,8:20PM,Tampa Bay Buccaneers,Carolina Panthers,20,14,289,0,352,1,2019,True,Carolina Panthers,Tampa Bay Buccaneers,CAR,TB
+2019_02_BUF_NYG,02,Sun,9/15/19,1:00PM,Buffalo Bills,New York Giants,28,14,388,0,370,2,2019,True,New York Giants,Buffalo Bills,NYG,BUF
+2019_02_SF_CIN,02,Sun,9/15/19,1:00PM,San Francisco 49ers,Cincinnati Bengals,41,17,571,1,316,1,2019,True,Cincinnati Bengals,San Francisco 49ers,CIN,SF
+2019_02_IND_TEN,02,Sun,9/15/19,1:00PM,Indianapolis Colts,Tennessee Titans,19,17,288,2,243,0,2019,True,Tennessee Titans,Indianapolis Colts,TEN,IND
+2019_02_ARI_BAL,02,Sun,9/15/19,1:00PM,Baltimore Ravens,Arizona Cardinals,23,17,440,0,349,0,2019,False,Baltimore Ravens,Arizona Cardinals,BAL,ARI
+2019_02_DAL_WAS,02,Sun,9/15/19,1:00PM,Dallas Cowboys,Washington Redskins,31,21,474,1,255,0,2019,True,Washington Redskins,Dallas Cowboys,WAS,DAL
+2019_02_LAC_DET,02,Sun,9/15/19,1:00PM,Detroit Lions,Los Angeles Chargers,13,10,339,2,424,2,2019,False,Detroit Lions,Los Angeles Chargers,DET,LAC
+2019_02_MIN_GB,02,Sun,9/15/19,1:00PM,Green Bay Packers,Minnesota Vikings,21,16,335,2,421,4,2019,False,Green Bay Packers,Minnesota Vikings,GB,MIN
+2019_02_JAX_HOU,02,Sun,9/15/19,1:00PM,Houston Texans,Jacksonville Jaguars,13,12,263,0,281,1,2019,False,Houston Texans,Jacksonville Jaguars,HOU,JAX
+2019_02_NE_MIA,02,Sun,9/15/19,1:00PM,New England Patriots,Miami Dolphins,43,0,379,1,184,4,2019,True,Miami Dolphins,New England Patriots,MIA,NE
+2019_02_SEA_PIT,02,Sun,9/15/19,1:00PM,Seattle Seahawks,Pittsburgh Steelers,28,26,425,2,261,1,2019,True,Pittsburgh Steelers,Seattle Seahawks,PIT,SEA
+2019_02_KC_OAK,02,Sun,9/15/19,4:05PM,Kansas City Chiefs,Oakland Raiders,28,10,467,1,307,2,2019,True,Oakland Raiders,Kansas City Chiefs,OAK,KC
+2019_02_CHI_DEN,02,Sun,9/15/19,4:25PM,Chicago Bears,Denver Broncos,16,14,273,0,372,1,2019,True,Denver Broncos,Chicago Bears,DEN,CHI
+2019_02_NO_LAR,02,Sun,9/15/19,4:25PM,Los Angeles Rams,New Orleans Saints,27,9,380,1,244,1,2019,False,Los Angeles Rams,New Orleans Saints,LAR,NO
+2019_02_PHI_ATL,02,Sun,9/15/19,8:20PM,Atlanta Falcons,Philadelphia Eagles,24,20,367,3,286,3,2019,False,Atlanta Falcons,Philadelphia Eagles,ATL,PHI
+2019_02_CLE_NYJ,02,Mon,9/16/19,8:15PM,Cleveland Browns,New York Jets,23,3,375,1,262,1,2019,True,New York Jets,Cleveland Browns,NYJ,CLE
+2019_03_TEN_JAX,03,Thu,9/19/19,8:20PM,Jacksonville Jaguars,Tennessee Titans,20,7,292,0,340,1,2019,False,Jacksonville Jaguars,Tennessee Titans,JAX,TEN
+2019_03_ATL_IND,03,Sun,9/22/19,1:00PM,Indianapolis Colts,Atlanta Falcons,27,24,379,0,397,1,2019,False,Indianapolis Colts,Atlanta Falcons,IND,ATL
+2019_03_CIN_BUF,03,Sun,9/22/19,1:00PM,Buffalo Bills,Cincinnati Bengals,21,17,416,2,306,4,2019,False,Buffalo Bills,Cincinnati Bengals,BUF,CIN
+2019_03_MIA_DAL,03,Sun,9/22/19,1:00PM,Dallas Cowboys,Miami Dolphins,31,6,476,1,283,1,2019,False,Dallas Cowboys,Miami Dolphins,DAL,MIA
+2019_03_DEN_GB,03,Sun,9/22/19,1:00PM,Green Bay Packers,Denver Broncos,27,16,312,0,310,3,2019,False,Green Bay Packers,Denver Broncos,GB,DEN
+2019_03_DET_PHI,03,Sun,9/22/19,1:00PM,Detroit Lions,Philadelphia Eagles,27,24,287,0,373,2,2019,True,Philadelphia Eagles,Detroit Lions,PHI,DET
+2019_03_BAL_KC,03,Sun,9/22/19,1:00PM,Kansas City Chiefs,Baltimore Ravens,33,28,503,0,452,0,2019,False,Kansas City Chiefs,Baltimore Ravens,KC,BAL
+2019_03_OAK_MIN,03,Sun,9/22/19,1:00PM,Minnesota Vikings,Oakland Raiders,34,14,385,0,302,1,2019,False,Minnesota Vikings,Oakland Raiders,MIN,OAK
+2019_03_NYJ_NE,03,Sun,9/22/19,1:00PM,New England Patriots,New York Jets,30,14,381,2,105,1,2019,False,New England Patriots,New York Jets,NE,NYJ
+2019_03_CAR_ARI,03,Sun,9/22/19,4:05PM,Carolina Panthers,Arizona Cardinals,38,20,413,1,248,2,2019,True,Arizona Cardinals,Carolina Panthers,ARI,CAR
+2019_03_NYG_TB,03,Sun,9/22/19,4:05PM,New York Giants,Tampa Bay Buccaneers,32,31,384,2,499,1,2019,True,Tampa Bay Buccaneers,New York Giants,TB,NYG
+2019_03_HOU_LAC,03,Sun,9/22/19,4:25PM,Houston Texans,Los Angeles Chargers,27,20,376,1,366,1,2019,True,Los Angeles Chargers,Houston Texans,LAC,HOU
+2019_03_NO_SEA,03,Sun,9/22/19,4:25PM,New Orleans Saints,Seattle Seahawks,33,27,265,1,514,1,2019,True,Seattle Seahawks,New Orleans Saints,SEA,NO
+2019_03_PIT_SF,03,Sun,9/22/19,4:25PM,San Francisco 49ers,Pittsburgh Steelers,24,20,436,5,239,2,2019,False,San Francisco 49ers,Pittsburgh Steelers,SF,PIT
+2019_03_LAR_CLE,03,Sun,9/22/19,8:20PM,Los Angeles Rams,Cleveland Browns,20,13,344,3,270,1,2019,True,Cleveland Browns,Los Angeles Rams,CLE,LAR
+2019_03_CHI_WAS,03,Mon,9/23/19,8:15PM,Chicago Bears,Washington Redskins,31,15,298,1,356,5,2019,True,Washington Redskins,Chicago Bears,WAS,CHI
+2019_04_PHI_GB,04,Thu,9/26/19,8:20PM,Philadelphia Eagles,Green Bay Packers,34,27,336,0,491,2,2019,True,Green Bay Packers,Philadelphia Eagles,GB,PHI
+2019_04_TEN_ATL,04,Sun,9/29/19,1:00PM,Tennessee Titans,Atlanta Falcons,24,10,365,0,422,1,2019,True,Atlanta Falcons,Tennessee Titans,ATL,TEN
+2019_04_NE_BUF,04,Sun,9/29/19,1:00PM,New England Patriots,Buffalo Bills,16,10,224,1,375,4,2019,True,Buffalo Bills,New England Patriots,BUF,NE
+2019_04_CAR_HOU,04,Sun,9/29/19,1:00PM,Carolina Panthers,Houston Texans,16,10,297,3,264,2,2019,True,Houston Texans,Carolina Panthers,HOU,CAR
+2019_04_CLE_BAL,04,Sun,9/29/19,1:00PM,Cleveland Browns,Baltimore Ravens,40,25,530,1,395,3,2019,True,Baltimore Ravens,Cleveland Browns,BAL,CLE
+2019_04_OAK_IND,04,Sun,9/29/19,1:00PM,Oakland Raiders,Indianapolis Colts,31,24,377,1,346,2,2019,True,Indianapolis Colts,Oakland Raiders,IND,OAK
+2019_04_KC_DET,04,Sun,9/29/19,1:00PM,Kansas City Chiefs,Detroit Lions,34,30,438,3,447,2,2019,True,Detroit Lions,Kansas City Chiefs,DET,KC
+2019_04_LAC_MIA,04,Sun,9/29/19,1:00PM,Los Angeles Chargers,Miami Dolphins,30,10,390,0,233,1,2019,True,Miami Dolphins,Los Angeles Chargers,MIA,LAC
+2019_04_WAS_NYG,04,Sun,9/29/19,1:00PM,New York Giants,Washington Redskins,24,3,389,4,176,4,2019,False,New York Giants,Washington Redskins,NYG,WAS
+2019_04_SEA_ARI,04,Sun,9/29/19,4:05PM,Seattle Seahawks,Arizona Cardinals,27,10,340,0,321,1,2019,True,Arizona Cardinals,Seattle Seahawks,ARI,SEA
+2019_04_TB_LAR,04,Sun,9/29/19,4:05PM,Tampa Bay Buccaneers,Los Angeles Rams,55,40,464,1,518,4,2019,True,Los Angeles Rams,Tampa Bay Buccaneers,LAR,TB
+2019_04_MIN_CHI,04,Sun,9/29/19,4:25PM,Chicago Bears,Minnesota Vikings,16,6,269,0,222,2,2019,False,Chicago Bears,Minnesota Vikings,CHI,MIN
+2019_04_JAX_DEN,04,Sun,9/29/19,4:25PM,Jacksonville Jaguars,Denver Broncos,26,24,455,0,371,1,2019,True,Denver Broncos,Jacksonville Jaguars,DEN,JAX
+2019_04_DAL_NO,04,Sun,9/29/19,8:20PM,New Orleans Saints,Dallas Cowboys,12,10,266,1,257,3,2019,False,New Orleans Saints,Dallas Cowboys,NO,DAL
+2019_04_CIN_PIT,04,Mon,9/30/19,8:15PM,Pittsburgh Steelers,Cincinnati Bengals,27,3,326,1,175,2,2019,False,Pittsburgh Steelers,Cincinnati Bengals,PIT,CIN
+2019_05_LAR_SEA,05,Thu,10/3/19,8:20PM,Seattle Seahawks,Los Angeles Rams,30,29,429,1,477,2,2019,False,Seattle Seahawks,Los Angeles Rams,SEA,LAR
+2019_05_NYJ_PHI,05,Sun,10/6/19,1:00PM,Philadelphia Eagles,New York Jets,31,6,265,1,128,3,2019,False,Philadelphia Eagles,New York Jets,PHI,NYJ
+2019_05_ATL_HOU,05,Sun,10/6/19,1:00PM,Houston Texans,Atlanta Falcons,53,32,592,1,373,1,2019,False,Houston Texans,Atlanta Falcons,HOU,ATL
+2019_05_BUF_TEN,05,Sun,10/6/19,1:00PM,Buffalo Bills,Tennessee Titans,14,7,313,1,252,0,2019,True,Tennessee Titans,Buffalo Bills,TEN,BUF
+2019_05_JAX_CAR,05,Sun,10/6/19,1:00PM,Carolina Panthers,Jacksonville Jaguars,34,27,445,0,507,3,2019,False,Carolina Panthers,Jacksonville Jaguars,CAR,JAX
+2019_05_CHI_OAK,05,Sun,10/6/19,1:00PM,Oakland Raiders,Chicago Bears,24,21,398,2,236,2,2019,False,Oakland Raiders,Chicago Bears,OAK,CHI
+2019_05_ARI_CIN,05,Sun,10/6/19,1:00PM,Arizona Cardinals,Cincinnati Bengals,26,23,514,0,370,0,2019,True,Cincinnati Bengals,Arizona Cardinals,CIN,ARI
+2019_05_MIN_NYG,05,Sun,10/6/19,1:00PM,Minnesota Vikings,New York Giants,28,10,490,1,211,1,2019,True,New York Giants,Minnesota Vikings,NYG,MIN
+2019_05_TB_NO,05,Sun,10/6/19,1:00PM,New Orleans Saints,Tampa Bay Buccaneers,31,24,457,1,252,0,2019,False,New Orleans Saints,Tampa Bay Buccaneers,NO,TB
+2019_05_NE_WAS,05,Sun,10/6/19,1:00PM,New England Patriots,Washington Redskins,33,7,442,1,223,2,2019,True,Washington Redskins,New England Patriots,WAS,NE
+2019_05_BAL_PIT,05,Sun,10/6/19,1:00PM,Baltimore Ravens,Pittsburgh Steelers,26,23,277,3,269,2,2019,True,Pittsburgh Steelers,Baltimore Ravens,PIT,BAL
+2019_05_DEN_LAC,05,Sun,10/6/19,4:05PM,Denver Broncos,Los Angeles Chargers,20,13,350,2,246,3,2019,True,Los Angeles Chargers,Denver Broncos,LAC,DEN
+2019_05_GB_DAL,05,Sun,10/6/19,4:25PM,Green Bay Packers,Dallas Cowboys,34,24,335,0,563,3,2019,True,Dallas Cowboys,Green Bay Packers,DAL,GB
+2019_05_IND_KC,05,Sun,10/6/19,8:20PM,Indianapolis Colts,Kansas City Chiefs,19,13,331,1,324,1,2019,True,Kansas City Chiefs,Indianapolis Colts,KC,IND
+2019_05_CLE_SF,05,Mon,10/7/19,8:15PM,San Francisco 49ers,Cleveland Browns,31,3,446,0,180,4,2019,False,San Francisco 49ers,Cleveland Browns,SF,CLE
+2019_06_NYG_NE,06,Thu,10/10/19,8:20PM,New England Patriots,New York Giants,35,14,427,2,213,4,2019,False,New England Patriots,New York Giants,NE,NYG
+2019_06_CAR_TB,06,Sun,10/13/19,9:30AM,Carolina Panthers,Tampa Bay Buccaneers,37,26,268,1,407,7,2019,True,Tampa Bay Buccaneers,Carolina Panthers,TB,CAR
+2019_06_WAS_MIA,06,Sun,10/13/19,1:00PM,Washington Redskins,Miami Dolphins,17,16,311,0,271,2,2019,True,Miami Dolphins,Washington Redskins,MIA,WAS
+2019_06_CIN_BAL,06,Sun,10/13/19,1:00PM,Baltimore Ravens,Cincinnati Bengals,23,17,497,1,250,1,2019,False,Baltimore Ravens,Cincinnati Bengals,BAL,CIN
+2019_06_SEA_CLE,06,Sun,10/13/19,1:00PM,Seattle Seahawks,Cleveland Browns,32,28,454,1,406,4,2019,True,Cleveland Browns,Seattle Seahawks,CLE,SEA
+2019_06_HOU_KC,06,Sun,10/13/19,1:00PM,Houston Texans,Kansas City Chiefs,31,24,472,3,309,2,2019,True,Kansas City Chiefs,Houston Texans,KC,HOU
+2019_06_NO_JAX,06,Sun,10/13/19,1:00PM,New Orleans Saints,Jacksonville Jaguars,13,6,326,0,226,1,2019,True,Jacksonville Jaguars,New Orleans Saints,JAX,NO
+2019_06_PHI_MIN,06,Sun,10/13/19,1:00PM,Minnesota Vikings,Philadelphia Eagles,38,20,447,2,400,3,2019,False,Minnesota Vikings,Philadelphia Eagles,MIN,PHI
+2019_06_ATL_ARI,06,Sun,10/13/19,4:05PM,Arizona Cardinals,Atlanta Falcons,34,33,442,0,444,0,2019,False,Arizona Cardinals,Atlanta Falcons,ARI,ATL
+2019_06_SF_LAR,06,Sun,10/13/19,4:05PM,San Francisco 49ers,Los Angeles Rams,20,7,331,2,157,1,2019,True,Los Angeles Rams,San Francisco 49ers,LAR,SF
+2019_06_DAL_NYJ,06,Sun,10/13/19,4:25PM,New York Jets,Dallas Cowboys,24,22,382,1,399,0,2019,False,New York Jets,Dallas Cowboys,NYJ,DAL
+2019_06_TEN_DEN,06,Sun,10/13/19,4:25PM,Denver Broncos,Tennessee Titans,16,0,270,1,204,3,2019,False,Denver Broncos,Tennessee Titans,DEN,TEN
+2019_06_PIT_LAC,06,Sun,10/13/19,8:20PM,Pittsburgh Steelers,Los Angeles Chargers,24,17,256,1,348,3,2019,True,Los Angeles Chargers,Pittsburgh Steelers,LAC,PIT
+2019_06_DET_GB,06,Mon,10/14/19,8:15PM,Green Bay Packers,Detroit Lions,23,22,447,3,299,0,2019,False,Green Bay Packers,Detroit Lions,GB,DET
+2019_07_KC_DEN,07,Thu,10/17/19,8:20PM,Kansas City Chiefs,Denver Broncos,30,6,271,0,205,1,2019,True,Denver Broncos,Kansas City Chiefs,DEN,KC
+2019_07_MIA_BUF,07,Sun,10/20/19,1:00PM,Buffalo Bills,Miami Dolphins,31,21,305,0,381,2,2019,False,Buffalo Bills,Miami Dolphins,BUF,MIA
+2019_07_HOU_IND,07,Sun,10/20/19,1:00PM,Indianapolis Colts,Houston Texans,30,23,383,1,391,2,2019,False,Indianapolis Colts,Houston Texans,IND,HOU
+2019_07_MIN_DET,07,Sun,10/20/19,1:00PM,Minnesota Vikings,Detroit Lions,42,30,504,0,433,1,2019,True,Detroit Lions,Minnesota Vikings,DET,MIN
+2019_07_SF_WAS,07,Sun,10/20/19,1:00PM,San Francisco 49ers,Washington Redskins,9,0,283,1,154,1,2019,True,Washington Redskins,San Francisco 49ers,WAS,SF
+2019_07_LAR_ATL,07,Sun,10/20/19,1:00PM,Los Angeles Rams,Atlanta Falcons,37,10,381,0,224,3,2019,True,Atlanta Falcons,Los Angeles Rams,ATL,LAR
+2019_07_JAX_CIN,07,Sun,10/20/19,1:00PM,Jacksonville Jaguars,Cincinnati Bengals,27,17,460,0,291,4,2019,True,Cincinnati Bengals,Jacksonville Jaguars,CIN,JAX
+2019_07_ARI_NYG,07,Sun,10/20/19,1:00PM,Arizona Cardinals,New York Giants,27,21,245,0,263,3,2019,True,New York Giants,Arizona Cardinals,NYG,ARI
+2019_07_OAK_GB,07,Sun,10/20/19,1:00PM,Green Bay Packers,Oakland Raiders,42,24,481,0,484,2,2019,False,Green Bay Packers,Oakland Raiders,GB,OAK
+2019_07_LAC_TEN,07,Sun,10/20/19,4:05PM,Tennessee Titans,Los Angeles Chargers,23,20,403,1,365,1,2019,False,Tennessee Titans,Los Angeles Chargers,TEN,LAC
+2019_07_NO_CHI,07,Sun,10/20/19,4:25PM,New Orleans Saints,Chicago Bears,36,25,424,0,252,2,2019,True,Chicago Bears,New Orleans Saints,CHI,NO
+2019_07_BAL_SEA,07,Sun,10/20/19,4:25PM,Baltimore Ravens,Seattle Seahawks,30,16,340,0,347,2,2019,True,Seattle Seahawks,Baltimore Ravens,SEA,BAL
+2019_07_PHI_DAL,07,Sun,10/20/19,8:20PM,Dallas Cowboys,Philadelphia Eagles,37,10,402,1,283,4,2019,False,Dallas Cowboys,Philadelphia Eagles,DAL,PHI
+2019_07_NE_NYJ,07,Mon,10/21/19,8:15PM,New England Patriots,New York Jets,33,0,323,1,154,6,2019,True,New York Jets,New England Patriots,NYJ,NE
+2019_08_WAS_MIN,08,Thu,10/24/19,8:20PM,Minnesota Vikings,Washington Redskins,19,9,434,1,216,2,2019,False,Minnesota Vikings,Washington Redskins,MIN,WAS
+2019_08_PHI_BUF,08,Sun,10/27/19,1:00PM,Philadelphia Eagles,Buffalo Bills,31,13,371,1,253,1,2019,True,Buffalo Bills,Philadelphia Eagles,BUF,PHI
+2019_08_LAC_CHI,08,Sun,10/27/19,1:00PM,Los Angeles Chargers,Chicago Bears,17,16,231,1,388,2,2019,True,Chicago Bears,Los Angeles Chargers,CHI,LAC
+2019_08_DEN_IND,08,Sun,10/27/19,1:00PM,Indianapolis Colts,Denver Broncos,15,13,318,1,279,0,2019,False,Indianapolis Colts,Denver Broncos,IND,DEN
+2019_08_NYG_DET,08,Sun,10/27/19,1:00PM,Detroit Lions,New York Giants,31,26,375,2,370,1,2019,False,Detroit Lions,New York Giants,DET,NYG
+2019_08_SEA_ATL,08,Sun,10/27/19,1:00PM,Seattle Seahawks,Atlanta Falcons,27,20,322,0,510,3,2019,True,Atlanta Falcons,Seattle Seahawks,ATL,SEA
+2019_08_CIN_LAR,08,Sun,10/27/19,1:00PM,Los Angeles Rams,Cincinnati Bengals,24,10,470,0,401,0,2019,False,Los Angeles Rams,Cincinnati Bengals,LAR,CIN
+2019_08_ARI_NO,08,Sun,10/27/19,1:00PM,New Orleans Saints,Arizona Cardinals,31,9,510,1,237,0,2019,False,New Orleans Saints,Arizona Cardinals,NO,ARI
+2019_08_NYJ_JAX,08,Sun,10/27/19,1:00PM,Jacksonville Jaguars,New York Jets,29,15,389,1,213,3,2019,False,Jacksonville Jaguars,New York Jets,JAX,NYJ
+2019_08_TB_TEN,08,Sun,10/27/19,1:00PM,Tennessee Titans,Tampa Bay Buccaneers,27,23,246,1,389,4,2019,False,Tennessee Titans,Tampa Bay Buccaneers,TEN,TB
+2019_08_CAR_SF,08,Sun,10/27/19,4:05PM,San Francisco 49ers,Carolina Panthers,51,13,388,1,230,3,2019,False,San Francisco 49ers,Carolina Panthers,SF,CAR
+2019_08_CLE_NE,08,Sun,10/27/19,4:25PM,New England Patriots,Cleveland Browns,27,13,318,0,310,3,2019,False,New England Patriots,Cleveland Browns,NE,CLE
+2019_08_OAK_HOU,08,Sun,10/27/19,4:25PM,Houston Texans,Oakland Raiders,27,24,388,0,378,0,2019,False,Houston Texans,Oakland Raiders,HOU,OAK
+2019_08_GB_KC,08,Sun,10/27/19,8:20PM,Green Bay Packers,Kansas City Chiefs,31,24,374,0,337,1,2019,True,Kansas City Chiefs,Green Bay Packers,KC,GB
+2019_08_MIA_PIT,08,Mon,10/28/19,8:15PM,Pittsburgh Steelers,Miami Dolphins,27,14,394,1,230,4,2019,False,Pittsburgh Steelers,Miami Dolphins,PIT,MIA
+2019_09_SF_ARI,09,Thu,10/31/19,8:20PM,San Francisco 49ers,Arizona Cardinals,28,25,411,0,357,0,2019,True,Arizona Cardinals,San Francisco 49ers,ARI,SF
+2019_09_HOU_JAX,09,Sun,11/3/19,9:30AM,Houston Texans,Jacksonville Jaguars,26,3,410,1,356,4,2019,True,Jacksonville Jaguars,Houston Texans,JAX,HOU
+2019_09_WAS_BUF,09,Sun,11/3/19,1:00PM,Buffalo Bills,Washington Redskins,24,9,268,0,243,0,2019,False,Buffalo Bills,Washington Redskins,BUF,WAS
+2019_09_TEN_CAR,09,Sun,11/3/19,1:00PM,Carolina Panthers,Tennessee Titans,30,20,370,1,431,3,2019,False,Carolina Panthers,Tennessee Titans,CAR,TEN
+2019_09_CHI_PHI,09,Sun,11/3/19,1:00PM,Philadelphia Eagles,Chicago Bears,22,14,373,0,164,1,2019,False,Philadelphia Eagles,Chicago Bears,PHI,CHI
+2019_09_IND_PIT,09,Sun,11/3/19,1:00PM,Pittsburgh Steelers,Indianapolis Colts,26,24,273,2,328,3,2019,False,Pittsburgh Steelers,Indianapolis Colts,PIT,IND
+2019_09_NYJ_MIA,09,Sun,11/3/19,1:00PM,Miami Dolphins,New York Jets,26,18,316,0,321,1,2019,False,Miami Dolphins,New York Jets,MIA,NYJ
+2019_09_MIN_KC,09,Sun,11/3/19,1:00PM,Kansas City Chiefs,Minnesota Vikings,26,23,377,1,308,0,2019,False,Kansas City Chiefs,Minnesota Vikings,KC,MIN
+2019_09_DET_OAK,09,Sun,11/3/19,4:05PM,Oakland Raiders,Detroit Lions,31,24,450,0,473,2,2019,False,Oakland Raiders,Detroit Lions,OAK,DET
+2019_09_TB_SEA,09,Sun,11/3/19,4:05PM,Seattle Seahawks,Tampa Bay Buccaneers,40,34,492,1,418,1,2019,False,Seattle Seahawks,Tampa Bay Buccaneers,SEA,TB
+2019_09_CLE_DEN,09,Sun,11/3/19,4:25PM,Denver Broncos,Cleveland Browns,24,19,302,1,351,0,2019,False,Denver Broncos,Cleveland Browns,DEN,CLE
+2019_09_GB_LAC,09,Sun,11/3/19,4:25PM,Los Angeles Chargers,Green Bay Packers,26,11,442,0,184,0,2019,False,Los Angeles Chargers,Green Bay Packers,LAC,GB
+2019_09_NE_BAL,09,Sun,11/3/19,8:20PM,Baltimore Ravens,New England Patriots,37,20,372,2,342,2,2019,False,Baltimore Ravens,New England Patriots,BAL,NE
+2019_09_DAL_NYG,09,Mon,11/4/19,8:15PM,Dallas Cowboys,New York Giants,37,18,429,2,271,3,2019,True,New York Giants,Dallas Cowboys,NYG,DAL
+2019_10_LAC_OAK,10,Thu,11/7/19,8:20PM,Oakland Raiders,Los Angeles Chargers,26,24,278,0,315,3,2019,False,Oakland Raiders,Los Angeles Chargers,OAK,LAC
+2019_10_ATL_NO,10,Sun,11/10/19,1:00PM,Atlanta Falcons,New Orleans Saints,26,9,317,1,310,0,2019,True,New Orleans Saints,Atlanta Falcons,NO,ATL
+2019_10_BUF_CLE,10,Sun,11/10/19,1:00PM,Cleveland Browns,Buffalo Bills,19,16,368,0,344,0,2019,False,Cleveland Browns,Buffalo Bills,CLE,BUF
+2019_10_DET_CHI,10,Sun,11/10/19,1:00PM,Chicago Bears,Detroit Lions,20,13,226,0,357,1,2019,False,Chicago Bears,Detroit Lions,CHI,DET
+2019_10_BAL_CIN,10,Sun,11/10/19,1:00PM,Baltimore Ravens,Cincinnati Bengals,49,13,379,1,307,3,2019,True,Cincinnati Bengals,Baltimore Ravens,CIN,BAL
+2019_10_ARI_TB,10,Sun,11/10/19,1:00PM,Tampa Bay Buccaneers,Arizona Cardinals,30,27,457,3,417,2,2019,False,Tampa Bay Buccaneers,Arizona Cardinals,TB,ARI
+2019_10_KC_TEN,10,Sun,11/10/19,1:00PM,Tennessee Titans,Kansas City Chiefs,35,32,371,1,530,1,2019,False,Tennessee Titans,Kansas City Chiefs,TEN,KC
+2019_10_NYG_NYJ,10,Sun,11/10/19,1:00PM,New York Jets,New York Giants,34,27,294,0,281,2,2019,False,New York Jets,New York Giants,NYJ,NYG
+2019_10_MIA_IND,10,Sun,11/10/19,4:05PM,Miami Dolphins,Indianapolis Colts,16,12,229,2,300,3,2019,True,Indianapolis Colts,Miami Dolphins,IND,MIA
+2019_10_CAR_GB,10,Sun,11/10/19,4:25PM,Green Bay Packers,Carolina Panthers,24,16,388,0,401,2,2019,False,Green Bay Packers,Carolina Panthers,GB,CAR
+2019_10_LAR_PIT,10,Sun,11/10/19,4:25PM,Pittsburgh Steelers,Los Angeles Rams,17,12,273,2,306,4,2019,False,Pittsburgh Steelers,Los Angeles Rams,PIT,LAR
+2019_10_MIN_DAL,10,Sun,11/10/19,8:20PM,Minnesota Vikings,Dallas Cowboys,28,24,364,0,443,1,2019,True,Dallas Cowboys,Minnesota Vikings,DAL,MIN
+2019_10_SEA_SF,10,Mon,11/11/19,8:15PM,Seattle Seahawks,San Francisco 49ers,27,24,336,4,302,3,2019,True,San Francisco 49ers,Seattle Seahawks,SF,SEA
+2019_11_PIT_CLE,11,Thu,11/14/19,8:20PM,Cleveland Browns,Pittsburgh Steelers,21,7,293,0,236,4,2019,False,Cleveland Browns,Pittsburgh Steelers,CLE,PIT
+2019_11_ATL_CAR,11,Sun,11/17/19,1:00PM,Atlanta Falcons,Carolina Panthers,29,3,349,0,347,4,2019,True,Carolina Panthers,Atlanta Falcons,CAR,ATL
+2019_11_BUF_MIA,11,Sun,11/17/19,1:00PM,Buffalo Bills,Miami Dolphins,37,20,424,0,303,1,2019,True,Miami Dolphins,Buffalo Bills,MIA,BUF
+2019_11_JAX_IND,11,Sun,11/17/19,1:00PM,Indianapolis Colts,Jacksonville Jaguars,33,13,389,2,308,1,2019,False,Indianapolis Colts,Jacksonville Jaguars,IND,JAX
+2019_11_DAL_DET,11,Sun,11/17/19,1:00PM,Dallas Cowboys,Detroit Lions,35,27,509,1,312,0,2019,True,Detroit Lions,Dallas Cowboys,DET,DAL
+2019_11_DEN_MIN,11,Sun,11/17/19,1:00PM,Minnesota Vikings,Denver Broncos,27,23,321,2,394,1,2019,False,Minnesota Vikings,Denver Broncos,MIN,DEN
+2019_11_HOU_BAL,11,Sun,11/17/19,1:00PM,Baltimore Ravens,Houston Texans,41,7,491,0,232,2,2019,False,Baltimore Ravens,Houston Texans,BAL,HOU
+2019_11_NO_TB,11,Sun,11/17/19,1:00PM,New Orleans Saints,Tampa Bay Buccaneers,34,17,328,0,334,4,2019,True,Tampa Bay Buccaneers,New Orleans Saints,TB,NO
+2019_11_NYJ_WAS,11,Sun,11/17/19,1:00PM,New York Jets,Washington Redskins,34,17,400,2,225,1,2019,True,Washington Redskins,New York Jets,WAS,NYJ
+2019_11_ARI_SF,11,Sun,11/17/19,4:05PM,San Francisco 49ers,Arizona Cardinals,36,26,442,2,266,2,2019,False,San Francisco 49ers,Arizona Cardinals,SF,ARI
+2019_11_CIN_OAK,11,Sun,11/17/19,4:25PM,Oakland Raiders,Cincinnati Bengals,17,10,386,2,246,2,2019,False,Oakland Raiders,Cincinnati Bengals,OAK,CIN
+2019_11_NE_PHI,11,Sun,11/17/19,4:25PM,New England Patriots,Philadelphia Eagles,17,10,298,0,255,1,2019,True,Philadelphia Eagles,New England Patriots,PHI,NE
+2019_11_CHI_LAR,11,Sun,11/17/19,8:20PM,Los Angeles Rams,Chicago Bears,17,7,283,2,267,1,2019,False,Los Angeles Rams,Chicago Bears,LAR,CHI
+2019_11_KC_LAC,11,Mon,11/18/19,8:15PM,Kansas City Chiefs,Los Angeles Chargers,24,17,310,1,438,4,2019,True,Los Angeles Chargers,Kansas City Chiefs,LAC,KC
+2019_12_IND_HOU,12,Thu,11/21/19,8:20PM,Houston Texans,Indianapolis Colts,20,17,396,1,296,0,2019,False,Houston Texans,Indianapolis Colts,HOU,IND
+2019_12_TB_ATL,12,Sun,11/24/19,1:00PM,Tampa Bay Buccaneers,Atlanta Falcons,35,22,446,2,337,2,2019,True,Atlanta Falcons,Tampa Bay Buccaneers,ATL,TB
+2019_12_DEN_BUF,12,Sun,11/24/19,1:00PM,Buffalo Bills,Denver Broncos,20,3,424,1,134,1,2019,False,Buffalo Bills,Denver Broncos,BUF,DEN
+2019_12_CAR_NO,12,Sun,11/24/19,1:00PM,New Orleans Saints,Carolina Panthers,34,31,418,1,351,1,2019,False,New Orleans Saints,Carolina Panthers,NO,CAR
+2019_12_NYG_CHI,12,Sun,11/24/19,1:00PM,Chicago Bears,New York Giants,19,14,335,2,243,1,2019,False,Chicago Bears,New York Giants,CHI,NYG
+2019_12_PIT_CIN,12,Sun,11/24/19,1:00PM,Pittsburgh Steelers,Cincinnati Bengals,16,10,338,1,244,2,2019,True,Cincinnati Bengals,Pittsburgh Steelers,CIN,PIT
+2019_12_MIA_CLE,12,Sun,11/24/19,1:00PM,Cleveland Browns,Miami Dolphins,41,24,467,1,284,2,2019,False,Cleveland Browns,Miami Dolphins,CLE,MIA
+2019_12_DET_WAS,12,Sun,11/24/19,1:00PM,Washington Redskins,Detroit Lions,19,16,230,2,364,4,2019,False,Washington Redskins,Detroit Lions,WAS,DET
+2019_12_OAK_NYJ,12,Sun,11/24/19,1:00PM,New York Jets,Oakland Raiders,34,3,401,1,208,2,2019,False,New York Jets,Oakland Raiders,NYJ,OAK
+2019_12_SEA_PHI,12,Sun,11/24/19,1:00PM,Seattle Seahawks,Philadelphia Eagles,17,9,348,2,344,5,2019,True,Philadelphia Eagles,Seattle Seahawks,PHI,SEA
+2019_12_JAX_TEN,12,Sun,11/24/19,4:05PM,Tennessee Titans,Jacksonville Jaguars,42,20,471,2,369,1,2019,False,Tennessee Titans,Jacksonville Jaguars,TEN,JAX
+2019_12_DAL_NE,12,Sun,11/24/19,4:25PM,New England Patriots,Dallas Cowboys,13,9,282,0,321,1,2019,False,New England Patriots,Dallas Cowboys,NE,DAL
+2019_12_GB_SF,12,Sun,11/24/19,8:20PM,San Francisco 49ers,Green Bay Packers,37,8,339,0,198,1,2019,False,San Francisco 49ers,Green Bay Packers,SF,GB
+2019_12_BAL_LAR,12,Mon,11/25/19,8:15PM,Baltimore Ravens,Los Angeles Rams,45,6,480,0,221,2,2019,True,Los Angeles Rams,Baltimore Ravens,LAR,BAL
+2019_13_CHI_DET,13,Thu,11/28/19,12:30PM,Chicago Bears,Detroit Lions,24,20,419,1,364,1,2019,True,Detroit Lions,Chicago Bears,DET,CHI
+2019_13_BUF_DAL,13,Thu,11/28/19,4:30PM,Buffalo Bills,Dallas Cowboys,26,15,356,0,426,2,2019,True,Dallas Cowboys,Buffalo Bills,DAL,BUF
+2019_13_NO_ATL,13,Thu,11/28/19,8:20PM,New Orleans Saints,Atlanta Falcons,26,18,279,0,348,3,2019,True,Atlanta Falcons,New Orleans Saints,ATL,NO
+2019_13_WAS_CAR,13,Sun,12/1/19,1:00PM,Washington Redskins,Carolina Panthers,29,21,362,0,278,2,2019,True,Carolina Panthers,Washington Redskins,CAR,WAS
+2019_13_NYJ_CIN,13,Sun,12/1/19,1:00PM,Cincinnati Bengals,New York Jets,22,6,277,0,271,0,2019,False,Cincinnati Bengals,New York Jets,CIN,NYJ
+2019_13_CLE_PIT,13,Sun,12/1/19,1:00PM,Pittsburgh Steelers,Cleveland Browns,20,13,323,1,279,2,2019,False,Pittsburgh Steelers,Cleveland Browns,PIT,CLE
+2019_13_TEN_IND,13,Sun,12/1/19,1:00PM,Tennessee Titans,Indianapolis Colts,31,17,292,2,391,3,2019,True,Indianapolis Colts,Tennessee Titans,IND,TEN
+2019_13_GB_NYG,13,Sun,12/1/19,1:00PM,Green Bay Packers,New York Giants,31,13,322,0,335,3,2019,True,New York Giants,Green Bay Packers,NYG,GB
+2019_13_TB_JAX,13,Sun,12/1/19,1:00PM,Tampa Bay Buccaneers,Jacksonville Jaguars,28,11,315,1,242,4,2019,True,Jacksonville Jaguars,Tampa Bay Buccaneers,JAX,TB
+2019_13_PHI_MIA,13,Sun,12/1/19,1:00PM,Miami Dolphins,Philadelphia Eagles,37,31,409,1,386,1,2019,False,Miami Dolphins,Philadelphia Eagles,MIA,PHI
+2019_13_SF_BAL,13,Sun,12/1/19,1:00PM,Baltimore Ravens,San Francisco 49ers,20,17,283,1,331,1,2019,False,Baltimore Ravens,San Francisco 49ers,BAL,SF
+2019_13_LAR_ARI,13,Sun,12/1/19,4:05PM,Los Angeles Rams,Arizona Cardinals,34,7,549,0,198,1,2019,True,Arizona Cardinals,Los Angeles Rams,ARI,LAR
+2019_13_LAC_DEN,13,Sun,12/1/19,4:25PM,Denver Broncos,Los Angeles Chargers,23,20,218,1,359,2,2019,False,Denver Broncos,Los Angeles Chargers,DEN,LAC
+2019_13_OAK_KC,13,Sun,12/1/19,4:25PM,Kansas City Chiefs,Oakland Raiders,40,9,259,0,332,3,2019,False,Kansas City Chiefs,Oakland Raiders,KC,OAK
+2019_13_NE_HOU,13,Sun,12/1/19,8:20PM,Houston Texans,New England Patriots,28,22,276,0,448,1,2019,False,Houston Texans,New England Patriots,HOU,NE
+2019_13_MIN_SEA,13,Mon,12/2/19,8:15PM,Seattle Seahawks,Minnesota Vikings,37,30,444,2,354,3,2019,False,Seattle Seahawks,Minnesota Vikings,SEA,MIN
+2019_14_DAL_CHI,14,Thu,12/5/19,8:20PM,Chicago Bears,Dallas Cowboys,31,24,382,2,408,0,2019,False,Chicago Bears,Dallas Cowboys,CHI,DAL
+2019_14_CAR_ATL,14,Sun,12/8/19,1:00PM,Atlanta Falcons,Carolina Panthers,40,20,461,0,345,4,2019,False,Atlanta Falcons,Carolina Panthers,ATL,CAR
+2019_14_BAL_BUF,14,Sun,12/8/19,1:00PM,Baltimore Ravens,Buffalo Bills,24,17,257,1,209,1,2019,True,Buffalo Bills,Baltimore Ravens,BUF,BAL
+2019_14_CIN_CLE,14,Sun,12/8/19,1:00PM,Cleveland Browns,Cincinnati Bengals,27,19,333,2,451,1,2019,False,Cleveland Browns,Cincinnati Bengals,CLE,CIN
+2019_14_IND_TB,14,Sun,12/8/19,1:00PM,Tampa Bay Buccaneers,Indianapolis Colts,38,35,542,4,309,1,2019,False,Tampa Bay Buccaneers,Indianapolis Colts,TB,IND
+2019_14_DEN_HOU,14,Sun,12/8/19,1:00PM,Denver Broncos,Houston Texans,38,24,391,1,414,3,2019,True,Houston Texans,Denver Broncos,HOU,DEN
+2019_14_DET_MIN,14,Sun,12/8/19,1:00PM,Minnesota Vikings,Detroit Lions,20,7,354,0,231,2,2019,False,Minnesota Vikings,Detroit Lions,MIN,DET
+2019_14_WAS_GB,14,Sun,12/8/19,1:00PM,Green Bay Packers,Washington Redskins,20,15,341,1,262,1,2019,False,Green Bay Packers,Washington Redskins,GB,WAS
+2019_14_MIA_NYJ,14,Sun,12/8/19,1:00PM,New York Jets,Miami Dolphins,22,21,374,1,362,1,2019,False,New York Jets,Miami Dolphins,NYJ,MIA
+2019_14_SF_NO,14,Sun,12/8/19,1:00PM,San Francisco 49ers,New Orleans Saints,48,46,516,1,465,1,2019,True,New Orleans Saints,San Francisco 49ers,NO,SF
+2019_14_LAC_JAX,14,Sun,12/8/19,4:05PM,Los Angeles Chargers,Jacksonville Jaguars,45,10,525,0,252,0,2019,True,Jacksonville Jaguars,Los Angeles Chargers,JAX,LAC
+2019_14_PIT_ARI,14,Sun,12/8/19,4:25PM,Pittsburgh Steelers,Arizona Cardinals,23,17,275,2,236,3,2019,True,Arizona Cardinals,Pittsburgh Steelers,ARI,PIT
+2019_14_KC_NE,14,Sun,12/8/19,4:25PM,Kansas City Chiefs,New England Patriots,23,16,346,2,278,1,2019,True,New England Patriots,Kansas City Chiefs,NE,KC
+2019_14_TEN_OAK,14,Sun,12/8/19,4:25PM,Tennessee Titans,Oakland Raiders,42,21,552,1,355,1,2019,True,Oakland Raiders,Tennessee Titans,OAK,TEN
+2019_14_SEA_LAR,14,Sun,12/8/19,8:20PM,Los Angeles Rams,Seattle Seahawks,28,12,455,2,308,1,2019,False,Los Angeles Rams,Seattle Seahawks,LAR,SEA
+2019_14_NYG_PHI,14,Mon,12/9/19,8:15PM,Philadelphia Eagles,New York Giants,23,17,418,1,255,0,2019,False,Philadelphia Eagles,New York Giants,PHI,NYG
+2019_15_NYJ_BAL,15,Thu,12/12/19,8:20PM,Baltimore Ravens,New York Jets,42,21,430,0,310,2,2019,False,Baltimore Ravens,New York Jets,BAL,NYJ
+2019_15_SEA_CAR,15,Sun,12/15/19,1:00PM,Seattle Seahawks,Carolina Panthers,30,24,428,1,414,3,2019,True,Carolina Panthers,Seattle Seahawks,CAR,SEA
+2019_15_CHI_GB,15,Sun,12/15/19,1:00PM,Green Bay Packers,Chicago Bears,21,13,292,0,415,3,2019,False,Green Bay Packers,Chicago Bears,GB,CHI
+2019_15_NE_CIN,15,Sun,12/15/19,1:00PM,New England Patriots,Cincinnati Bengals,34,13,291,0,315,5,2019,True,Cincinnati Bengals,New England Patriots,CIN,NE
+2019_15_DEN_KC,15,Sun,12/15/19,1:00PM,Kansas City Chiefs,Denver Broncos,23,3,419,1,251,1,2019,False,Kansas City Chiefs,Denver Broncos,KC,DEN
+2019_15_TB_DET,15,Sun,12/15/19,1:00PM,Tampa Bay Buccaneers,Detroit Lions,38,17,495,1,295,3,2019,True,Detroit Lions,Tampa Bay Buccaneers,DET,TB
+2019_15_HOU_TEN,15,Sun,12/15/19,1:00PM,Houston Texans,Tennessee Titans,24,21,374,2,432,1,2019,True,Tennessee Titans,Houston Texans,TEN,HOU
+2019_15_MIA_NYG,15,Sun,12/15/19,1:00PM,New York Giants,Miami Dolphins,36,20,412,3,384,1,2019,False,New York Giants,Miami Dolphins,NYG,MIA
+2019_15_PHI_WAS,15,Sun,12/15/19,1:00PM,Philadelphia Eagles,Washington Redskins,37,27,415,1,352,1,2019,True,Washington Redskins,Philadelphia Eagles,WAS,PHI
+2019_15_CLE_ARI,15,Sun,12/15/19,4:05PM,Arizona Cardinals,Cleveland Browns,38,24,445,1,393,2,2019,False,Arizona Cardinals,Cleveland Browns,ARI,CLE
+2019_15_JAX_OAK,15,Sun,12/15/19,4:05PM,Jacksonville Jaguars,Oakland Raiders,20,16,262,0,364,0,2019,True,Oakland Raiders,Jacksonville Jaguars,OAK,JAX
+2019_15_MIN_LAC,15,Sun,12/15/19,4:05PM,Minnesota Vikings,Los Angeles Chargers,39,10,344,1,345,7,2019,True,Los Angeles Chargers,Minnesota Vikings,LAC,MIN
+2019_15_ATL_SF,15,Sun,12/15/19,4:25PM,Atlanta Falcons,San Francisco 49ers,29,22,290,1,313,2,2019,True,San Francisco 49ers,Atlanta Falcons,SF,ATL
+2019_15_LAR_DAL,15,Sun,12/15/19,4:25PM,Dallas Cowboys,Los Angeles Rams,44,21,475,0,289,1,2019,False,Dallas Cowboys,Los Angeles Rams,DAL,LAR
+2019_15_BUF_PIT,15,Sun,12/15/19,8:20PM,Buffalo Bills,Pittsburgh Steelers,17,10,261,2,229,5,2019,True,Pittsburgh Steelers,Buffalo Bills,PIT,BUF
+2019_15_IND_NO,15,Mon,12/16/19,8:15PM,New Orleans Saints,Indianapolis Colts,34,7,424,0,205,0,2019,False,New Orleans Saints,Indianapolis Colts,NO,IND
+2019_16_HOU_TB,16,Sat,12/21/19,1:00PM,Houston Texans,Tampa Bay Buccaneers,23,20,229,2,435,5,2019,True,Tampa Bay Buccaneers,Houston Texans,TB,HOU
+2019_16_BUF_NE,16,Sat,12/21/19,4:30PM,New England Patriots,Buffalo Bills,24,17,414,1,268,0,2019,False,New England Patriots,Buffalo Bills,NE,BUF
+2019_16_LAR_SF,16,Sat,12/21/19,8:15PM,San Francisco 49ers,Los Angeles Rams,34,31,334,2,395,1,2019,False,San Francisco 49ers,Los Angeles Rams,SF,LAR
+2019_16_JAX_ATL,16,Sun,12/22/19,1:00PM,Atlanta Falcons,Jacksonville Jaguars,24,12,518,2,288,1,2019,False,Atlanta Falcons,Jacksonville Jaguars,ATL,JAX
+2019_16_CAR_IND,16,Sun,12/22/19,1:00PM,Indianapolis Colts,Carolina Panthers,38,6,324,0,286,3,2019,False,Indianapolis Colts,Carolina Panthers,IND,CAR
+2019_16_CIN_MIA,16,Sun,12/22/19,1:00PM,Miami Dolphins,Cincinnati Bengals,38,35,502,1,430,1,2019,False,Miami Dolphins,Cincinnati Bengals,MIA,CIN
+2019_16_BAL_CLE,16,Sun,12/22/19,1:00PM,Baltimore Ravens,Cleveland Browns,31,15,481,1,241,1,2019,True,Cleveland Browns,Baltimore Ravens,CLE,BAL
+2019_16_NO_TEN,16,Sun,12/22/19,1:00PM,New Orleans Saints,Tennessee Titans,38,28,377,0,397,1,2019,True,Tennessee Titans,New Orleans Saints,TEN,NO
+2019_16_NYG_WAS,16,Sun,12/22/19,1:00PM,New York Giants,Washington Redskins,41,35,552,0,361,0,2019,True,Washington Redskins,New York Giants,WAS,NYG
+2019_16_PIT_NYJ,16,Sun,12/22/19,1:00PM,New York Jets,Pittsburgh Steelers,16,10,259,1,260,2,2019,False,New York Jets,Pittsburgh Steelers,NYJ,PIT
+2019_16_DET_DEN,16,Sun,12/22/19,4:05PM,Denver Broncos,Detroit Lions,27,17,348,0,191,0,2019,False,Denver Broncos,Detroit Lions,DEN,DET
+2019_16_OAK_LAC,16,Sun,12/22/19,4:05PM,Oakland Raiders,Los Angeles Chargers,24,17,366,0,284,0,2019,True,Los Angeles Chargers,Oakland Raiders,LAC,OAK
+2019_16_ARI_SEA,16,Sun,12/22/19,4:25PM,Arizona Cardinals,Seattle Seahawks,27,13,412,0,224,1,2019,True,Seattle Seahawks,Arizona Cardinals,SEA,ARI
+2019_16_DAL_PHI,16,Sun,12/22/19,4:25PM,Philadelphia Eagles,Dallas Cowboys,17,9,431,0,311,1,2019,False,Philadelphia Eagles,Dallas Cowboys,PHI,DAL
+2019_16_KC_CHI,16,Sun,12/22/19,8:20PM,Kansas City Chiefs,Chicago Bears,26,3,350,0,234,0,2019,True,Chicago Bears,Kansas City Chiefs,CHI,KC
+2019_16_GB_MIN,16,Mon,12/23/19,8:15PM,Green Bay Packers,Minnesota Vikings,23,10,383,3,139,1,2019,True,Minnesota Vikings,Green Bay Packers,MIN,GB
+2019_17_ATL_TB,17,Sun,12/29/19,1:00PM,Atlanta Falcons,Tampa Bay Buccaneers,28,22,373,1,329,3,2019,True,Tampa Bay Buccaneers,Atlanta Falcons,TB,ATL
+2019_17_NYJ_BUF,17,Sun,12/29/19,1:00PM,New York Jets,Buffalo Bills,13,6,271,1,309,3,2019,True,Buffalo Bills,New York Jets,BUF,NYJ
+2019_17_NO_CAR,17,Sun,12/29/19,1:00PM,New Orleans Saints,Carolina Panthers,42,10,379,0,329,3,2019,True,Carolina Panthers,New Orleans Saints,CAR,NO
+2019_17_CHI_MIN,17,Sun,12/29/19,1:00PM,Chicago Bears,Minnesota Vikings,21,19,337,1,300,3,2019,True,Minnesota Vikings,Chicago Bears,MIN,CHI
+2019_17_CLE_CIN,17,Sun,12/29/19,1:00PM,Cincinnati Bengals,Cleveland Browns,33,23,361,1,313,3,2019,False,Cincinnati Bengals,Cleveland Browns,CIN,CLE
+2019_17_GB_DET,17,Sun,12/29/19,1:00PM,Green Bay Packers,Detroit Lions,23,20,432,1,305,1,2019,True,Detroit Lions,Green Bay Packers,DET,GB
+2019_17_LAC_KC,17,Sun,12/29/19,1:00PM,Kansas City Chiefs,Los Angeles Chargers,31,21,336,1,366,2,2019,False,Kansas City Chiefs,Los Angeles Chargers,KC,LAC
+2019_17_MIA_NE,17,Sun,12/29/19,1:00PM,Miami Dolphins,New England Patriots,27,24,389,0,352,2,2019,True,New England Patriots,Miami Dolphins,NE,MIA
+2019_17_IND_JAX,17,Sun,12/29/19,4:25PM,Jacksonville Jaguars,Indianapolis Colts,38,20,353,1,275,2,2019,False,Jacksonville Jaguars,Indianapolis Colts,JAX,IND
+2019_17_ARI_LAR,17,Sun,12/29/19,4:25PM,Los Angeles Rams,Arizona Cardinals,31,24,424,0,393,5,2019,False,Los Angeles Rams,Arizona Cardinals,LAR,ARI
+2019_17_WAS_DAL,17,Sun,12/29/19,4:25PM,Dallas Cowboys,Washington Redskins,47,16,517,1,271,2,2019,False,Dallas Cowboys,Washington Redskins,DAL,WAS
+2019_17_OAK_DEN,17,Sun,12/29/19,4:25PM,Denver Broncos,Oakland Raiders,16,15,238,1,477,1,2019,False,Denver Broncos,Oakland Raiders,DEN,OAK
+2019_17_TEN_HOU,17,Sun,12/29/19,4:25PM,Tennessee Titans,Houston Texans,35,14,467,0,301,1,2019,True,Houston Texans,Tennessee Titans,HOU,TEN
+2019_17_PHI_NYG,17,Sun,12/29/19,4:25PM,Philadelphia Eagles,New York Giants,34,17,400,0,397,2,2019,True,New York Giants,Philadelphia Eagles,NYG,PHI
+2019_17_PIT_BAL,17,Sun,12/29/19,4:25PM,Baltimore Ravens,Pittsburgh Steelers,28,10,304,2,168,2,2019,False,Baltimore Ravens,Pittsburgh Steelers,BAL,PIT
+2019_17_SF_SEA,17,Sun,12/29/19,8:20PM,San Francisco 49ers,Seattle Seahawks,26,21,398,0,348,0,2019,True,Seattle Seahawks,San Francisco 49ers,SEA,SF
+2019_18_BUF_HOU,18,Sat,1/4/20,4:35PM,Houston Texans,Buffalo Bills,22,19,360,1,425,1,2019,False,Houston Texans,Buffalo Bills,HOU,BUF
+2019_18_TEN_NE,18,Sat,1/4/20,8:15PM,Tennessee Titans,New England Patriots,20,13,272,1,307,2,2019,True,New England Patriots,Tennessee Titans,NE,TEN
+2019_18_MIN_NO,18,Sun,1/5/20,1:05PM,Minnesota Vikings,New Orleans Saints,26,20,362,1,324,2,2019,True,New Orleans Saints,Minnesota Vikings,NO,MIN
+2019_18_SEA_PHI,18,Sun,1/5/20,4:40PM,Seattle Seahawks,Philadelphia Eagles,17,9,382,0,282,0,2019,True,Philadelphia Eagles,Seattle Seahawks,PHI,SEA
+2019_19_MIN_SF,19,Sat,1/11/20,4:35PM,San Francisco 49ers,Minnesota Vikings,27,10,308,2,147,2,2019,False,San Francisco 49ers,Minnesota Vikings,SF,MIN
+2019_19_TEN_BAL,19,Sat,1/11/20,8:15PM,Tennessee Titans,Baltimore Ravens,28,12,300,0,530,3,2019,True,Baltimore Ravens,Tennessee Titans,BAL,TEN
+2019_19_HOU_KC,19,Sun,1/12/20,3:05PM,Kansas City Chiefs,Houston Texans,51,31,434,1,442,1,2019,False,Kansas City Chiefs,Houston Texans,KC,HOU
+2019_19_SEA_GB,19,Sun,1/12/20,6:40PM,Green Bay Packers,Seattle Seahawks,28,23,344,0,375,0,2019,False,Green Bay Packers,Seattle Seahawks,GB,SEA
+2019_20_TEN_KC,20,Sun,1/19/20,3:05PM,Kansas City Chiefs,Tennessee Titans,35,24,404,0,295,0,2019,False,Kansas City Chiefs,Tennessee Titans,KC,TEN
+2019_20_GB_SF,20,Sun,1/19/20,6:40PM,San Francisco 49ers,Green Bay Packers,37,20,354,0,358,3,2019,False,San Francisco 49ers,Green Bay Packers,SF,GB
+2019_21_SF_KC,21,Sun,2/2/20,6:30PM,Kansas City Chiefs,San Francisco 49ers,31,20,397,2,351,2,2019,False,Kansas City Chiefs,San Francisco 49ers,KC,SF
+2020_01_HOU_KC,01,Thu,9/10/20,8:20PM,Kansas City Chiefs,Houston Texans,34,20,369,0,360,1,2020,False,Kansas City Chiefs,Houston Texans,KC,HOU
+2020_01_SEA_ATL,01,Sun,9/13/20,1:00PM,Seattle Seahawks,Atlanta Falcons,38,25,383,0,506,2,2020,True,Atlanta Falcons,Seattle Seahawks,ATL,SEA
+2020_01_NYJ_BUF,01,Sun,9/13/20,1:00PM,Buffalo Bills,New York Jets,27,17,404,2,254,2,2020,False,Buffalo Bills,New York Jets,BUF,NYJ
+2020_01_LV_CAR,01,Sun,9/13/20,1:00PM,Las Vegas Raiders,Carolina Panthers,34,30,372,0,388,0,2020,True,Carolina Panthers,Las Vegas Raiders,CAR,LV
+2020_01_CHI_DET,01,Sun,9/13/20,1:00PM,Chicago Bears,Detroit Lions,27,23,363,0,426,1,2020,True,Detroit Lions,Chicago Bears,DET,CHI
+2020_01_CLE_BAL,01,Sun,9/13/20,1:00PM,Baltimore Ravens,Cleveland Browns,38,6,381,1,306,3,2020,False,Baltimore Ravens,Cleveland Browns,BAL,CLE
+2020_01_IND_JAX,01,Sun,9/13/20,1:00PM,Jacksonville Jaguars,Indianapolis Colts,27,20,241,0,445,2,2020,False,Jacksonville Jaguars,Indianapolis Colts,JAX,IND
+2020_01_GB_MIN,01,Sun,9/13/20,1:00PM,Green Bay Packers,Minnesota Vikings,43,34,522,0,382,1,2020,True,Minnesota Vikings,Green Bay Packers,MIN,GB
+2020_01_MIA_NE,01,Sun,9/13/20,1:00PM,New England Patriots,Miami Dolphins,21,11,357,1,269,3,2020,False,New England Patriots,Miami Dolphins,NE,MIA
+2020_01_PHI_WAS,01,Sun,9/13/20,1:00PM,Washington Football Team,Philadelphia Eagles,27,17,239,0,265,3,2020,False,Washington Football Team,Philadelphia Eagles,WAS,PHI
+2020_01_LAC_CIN,01,Sun,9/13/20,4:05PM,Los Angeles Chargers,Cincinnati Bengals,16,13,362,0,295,2,2020,True,Cincinnati Bengals,Los Angeles Chargers,CIN,LAC
+2020_01_ARI_SF,01,Sun,9/13/20,4:25PM,Arizona Cardinals,San Francisco 49ers,24,20,404,1,366,0,2020,True,San Francisco 49ers,Arizona Cardinals,SF,ARI
+2020_01_TB_NO,01,Sun,9/13/20,4:25PM,New Orleans Saints,Tampa Bay Buccaneers,34,23,271,0,310,3,2020,False,New Orleans Saints,Tampa Bay Buccaneers,NO,TB
+2020_01_DAL_LAR,01,Sun,9/13/20,8:20PM,Los Angeles Rams,Dallas Cowboys,20,17,422,1,380,0,2020,False,Los Angeles Rams,Dallas Cowboys,LAR,DAL
+2020_01_PIT_NYG,01,Mon,9/14/20,7:15PM,Pittsburgh Steelers,New York Giants,26,16,349,1,291,2,2020,True,New York Giants,Pittsburgh Steelers,NYG,PIT
+2020_01_TEN_DEN,01,Mon,9/14/20,10:10PM,Tennessee Titans,Denver Broncos,16,14,377,0,323,1,2020,True,Denver Broncos,Tennessee Titans,DEN,TEN
+2020_02_CIN_CLE,02,Thu,9/17/20,8:20PM,Cleveland Browns,Cincinnati Bengals,35,30,434,1,353,1,2020,False,Cleveland Browns,Cincinnati Bengals,CLE,CIN
+2020_02_ATL_DAL,02,Sun,9/20/20,1:00PM,Dallas Cowboys,Atlanta Falcons,40,39,570,3,380,0,2020,False,Dallas Cowboys,Atlanta Falcons,DAL,ATL
+2020_02_BUF_MIA,02,Sun,9/20/20,1:00PM,Buffalo Bills,Miami Dolphins,31,28,523,1,410,0,2020,True,Miami Dolphins,Buffalo Bills,MIA,BUF
+2020_02_CAR_TB,02,Sun,9/20/20,1:00PM,Tampa Bay Buccaneers,Carolina Panthers,31,17,339,2,427,4,2020,False,Tampa Bay Buccaneers,Carolina Panthers,TB,CAR
+2020_02_NYG_CHI,02,Sun,9/20/20,1:00PM,Chicago Bears,New York Giants,17,13,304,2,295,2,2020,False,Chicago Bears,New York Giants,CHI,NYG
+2020_02_MIN_IND,02,Sun,9/20/20,1:00PM,Indianapolis Colts,Minnesota Vikings,28,11,354,1,175,3,2020,False,Indianapolis Colts,Minnesota Vikings,IND,MIN
+2020_02_DEN_PIT,02,Sun,9/20/20,1:00PM,Pittsburgh Steelers,Denver Broncos,26,21,410,2,319,2,2020,False,Pittsburgh Steelers,Denver Broncos,PIT,DEN
+2020_02_DET_GB,02,Sun,9/20/20,1:00PM,Green Bay Packers,Detroit Lions,42,21,488,0,307,1,2020,False,Green Bay Packers,Detroit Lions,GB,DET
+2020_02_JAX_TEN,02,Sun,9/20/20,1:00PM,Tennessee Titans,Jacksonville Jaguars,33,30,354,0,480,2,2020,False,Tennessee Titans,Jacksonville Jaguars,TEN,JAX
+2020_02_SF_NYJ,02,Sun,9/20/20,1:00PM,San Francisco 49ers,New York Jets,31,13,359,1,277,0,2020,True,New York Jets,San Francisco 49ers,NYJ,SF
+2020_02_LAR_PHI,02,Sun,9/20/20,1:00PM,Los Angeles Rams,Philadelphia Eagles,37,19,449,1,363,3,2020,True,Philadelphia Eagles,Los Angeles Rams,PHI,LAR
+2020_02_WAS_ARI,02,Sun,9/20/20,4:05PM,Arizona Cardinals,Washington Football Team,30,15,438,1,316,2,2020,False,Arizona Cardinals,Washington Football Team,ARI,WAS
+2020_02_BAL_HOU,02,Sun,9/20/20,4:25PM,Baltimore Ravens,Houston Texans,33,16,407,0,304,2,2020,True,Houston Texans,Baltimore Ravens,HOU,BAL
+2020_02_KC_LAC,02,Sun,9/20/20,4:25PM,Kansas City Chiefs,Los Angeles Chargers,23,20,414,0,479,1,2020,True,Los Angeles Chargers,Kansas City Chiefs,LAC,KC
+2020_02_NE_SEA,02,Sun,9/20/20,8:20PM,Seattle Seahawks,New England Patriots,35,30,429,1,464,1,2020,False,Seattle Seahawks,New England Patriots,SEA,NE
+2020_02_NO_LV,02,Mon,9/21/20,8:15PM,Las Vegas Raiders,New Orleans Saints,34,24,377,1,424,1,2020,False,Las Vegas Raiders,New Orleans Saints,LV,NO
+2020_03_MIA_JAX,03,Thu,9/24/20,8:20PM,Miami Dolphins,Jacksonville Jaguars,31,13,294,0,318,2,2020,True,Jacksonville Jaguars,Miami Dolphins,JAX,MIA
+2020_03_CHI_ATL,03,Sun,9/27/20,1:00PM,Chicago Bears,Atlanta Falcons,30,26,437,2,371,1,2020,True,Atlanta Falcons,Chicago Bears,ATL,CHI
+2020_03_LAR_BUF,03,Sun,9/27/20,1:00PM,Buffalo Bills,Los Angeles Rams,35,32,375,2,478,2,2020,False,Buffalo Bills,Los Angeles Rams,BUF,LAR
+2020_03_CIN_PHI,03,Sun,9/27/20,1:00PM,Philadelphia Eagles,Cincinnati Bengals,23,23,378,2,304,0,2020,False,Philadelphia Eagles,Cincinnati Bengals,PHI,CIN
+2020_03_WAS_CLE,03,Sun,9/27/20,1:00PM,Cleveland Browns,Washington Football Team,34,20,300,0,309,5,2020,False,Cleveland Browns,Washington Football Team,CLE,WAS
+2020_03_HOU_PIT,03,Sun,9/27/20,1:00PM,Pittsburgh Steelers,Houston Texans,28,21,387,0,260,1,2020,False,Pittsburgh Steelers,Houston Texans,PIT,HOU
+2020_03_TEN_MIN,03,Sun,9/27/20,1:00PM,Tennessee Titans,Minnesota Vikings,31,30,444,1,464,3,2020,True,Minnesota Vikings,Tennessee Titans,MIN,TEN
+2020_03_LV_NE,03,Sun,9/27/20,1:00PM,New England Patriots,Las Vegas Raiders,36,20,406,1,375,3,2020,False,New England Patriots,Las Vegas Raiders,NE,LV
+2020_03_SF_NYG,03,Sun,9/27/20,1:00PM,San Francisco 49ers,New York Giants,36,9,420,0,231,3,2020,True,New York Giants,San Francisco 49ers,NYG,SF
+2020_03_CAR_LAC,03,Sun,9/27/20,4:05PM,Carolina Panthers,Los Angeles Chargers,21,16,302,0,436,4,2020,True,Los Angeles Chargers,Carolina Panthers,LAC,CAR
+2020_03_NYJ_IND,03,Sun,9/27/20,4:05PM,Indianapolis Colts,New York Jets,36,7,353,0,260,3,2020,False,Indianapolis Colts,New York Jets,IND,NYJ
+2020_03_DET_ARI,03,Sun,9/27/20,4:25PM,Detroit Lions,Arizona Cardinals,26,23,322,0,377,3,2020,True,Arizona Cardinals,Detroit Lions,ARI,DET
+2020_03_DAL_SEA,03,Sun,9/27/20,4:25PM,Seattle Seahawks,Dallas Cowboys,38,31,412,1,522,3,2020,False,Seattle Seahawks,Dallas Cowboys,SEA,DAL
+2020_03_TB_DEN,03,Sun,9/27/20,4:25PM,Tampa Bay Buccaneers,Denver Broncos,28,10,353,0,226,2,2020,True,Denver Broncos,Tampa Bay Buccaneers,DEN,TB
+2020_03_GB_NO,03,Sun,9/27/20,8:20PM,Green Bay Packers,New Orleans Saints,37,30,369,0,397,1,2020,True,New Orleans Saints,Green Bay Packers,NO,GB
+2020_03_KC_BAL,03,Mon,9/28/20,8:15PM,Kansas City Chiefs,Baltimore Ravens,34,20,517,1,228,1,2020,True,Baltimore Ravens,Kansas City Chiefs,BAL,KC
+2020_04_DEN_NYJ,04,Thu,10/1/20,8:20PM,Denver Broncos,New York Jets,37,28,359,3,321,0,2020,True,New York Jets,Denver Broncos,NYJ,DEN
+2020_04_ARI_CAR,04,Sun,10/4/20,1:00PM,Carolina Panthers,Arizona Cardinals,31,21,444,1,262,1,2020,False,Carolina Panthers,Arizona Cardinals,CAR,ARI
+2020_04_IND_CHI,04,Sun,10/4/20,1:00PM,Indianapolis Colts,Chicago Bears,19,11,289,0,269,1,2020,True,Chicago Bears,Indianapolis Colts,CHI,IND
+2020_04_JAX_CIN,04,Sun,10/4/20,1:00PM,Cincinnati Bengals,Jacksonville Jaguars,33,25,505,1,429,1,2020,False,Cincinnati Bengals,Jacksonville Jaguars,CIN,JAX
+2020_04_CLE_DAL,04,Sun,10/4/20,1:00PM,Cleveland Browns,Dallas Cowboys,49,38,508,0,566,3,2020,True,Dallas Cowboys,Cleveland Browns,DAL,CLE
+2020_04_NO_DET,04,Sun,10/4/20,1:00PM,New Orleans Saints,Detroit Lions,35,29,392,1,281,1,2020,True,Detroit Lions,New Orleans Saints,DET,NO
+2020_04_MIN_HOU,04,Sun,10/4/20,1:00PM,Minnesota Vikings,Houston Texans,31,23,410,0,386,1,2020,True,Houston Texans,Minnesota Vikings,HOU,MIN
+2020_04_SEA_MIA,04,Sun,10/4/20,1:00PM,Seattle Seahawks,Miami Dolphins,31,23,441,1,415,2,2020,True,Miami Dolphins,Seattle Seahawks,MIA,SEA
+2020_04_BAL_WAS,04,Sun,10/4/20,1:00PM,Baltimore Ravens,Washington Football Team,31,17,350,2,343,1,2020,True,Washington Football Team,Baltimore Ravens,WAS,BAL
+2020_04_LAC_TB,04,Sun,10/4/20,1:00PM,Tampa Bay Buccaneers,Los Angeles Chargers,38,31,484,1,324,2,2020,False,Tampa Bay Buccaneers,Los Angeles Chargers,TB,LAC
+2020_04_NYG_LAR,04,Sun,10/4/20,4:05PM,Los Angeles Rams,New York Giants,17,9,240,1,295,1,2020,False,Los Angeles Rams,New York Giants,LAR,NYG
+2020_04_BUF_LV,04,Sun,10/4/20,4:25PM,Buffalo Bills,Las Vegas Raiders,30,23,337,0,383,2,2020,True,Las Vegas Raiders,Buffalo Bills,LV,BUF
+2020_04_PHI_SF,04,Sun,10/4/20,8:20PM,Philadelphia Eagles,San Francisco 49ers,25,20,267,1,417,3,2020,True,San Francisco 49ers,Philadelphia Eagles,SF,PHI
+2020_04_NE_KC,04,Mon,10/5/20,7:05PM,Kansas City Chiefs,New England Patriots,26,10,323,1,357,4,2020,False,Kansas City Chiefs,New England Patriots,KC,NE
+2020_04_ATL_GB,04,Mon,10/5/20,8:15PM,Green Bay Packers,Atlanta Falcons,30,16,403,0,327,0,2020,False,Green Bay Packers,Atlanta Falcons,GB,ATL
+2020_05_TB_CHI,05,Thu,10/8/20,8:20PM,Chicago Bears,Tampa Bay Buccaneers,20,19,243,1,339,1,2020,False,Chicago Bears,Tampa Bay Buccaneers,CHI,TB
+2020_05_CAR_ATL,05,Sun,10/11/20,1:00PM,Carolina Panthers,Atlanta Falcons,23,16,437,0,373,1,2020,True,Atlanta Falcons,Carolina Panthers,ATL,CAR
+2020_05_CIN_BAL,05,Sun,10/11/20,1:00PM,Baltimore Ravens,Cincinnati Bengals,27,3,332,1,205,3,2020,False,Baltimore Ravens,Cincinnati Bengals,BAL,CIN
+2020_05_ARI_NYJ,05,Sun,10/11/20,1:00PM,Arizona Cardinals,New York Jets,30,10,496,1,285,0,2020,True,New York Jets,Arizona Cardinals,NYJ,ARI
+2020_05_JAX_HOU,05,Sun,10/11/20,1:00PM,Houston Texans,Jacksonville Jaguars,30,14,486,2,364,2,2020,False,Houston Texans,Jacksonville Jaguars,HOU,JAX
+2020_05_LV_KC,05,Sun,10/11/20,1:00PM,Las Vegas Raiders,Kansas City Chiefs,40,32,490,1,413,1,2020,True,Kansas City Chiefs,Las Vegas Raiders,KC,LV
+2020_05_PHI_PIT,05,Sun,10/11/20,1:00PM,Pittsburgh Steelers,Philadelphia Eagles,38,29,367,1,336,2,2020,False,Pittsburgh Steelers,Philadelphia Eagles,PIT,PHI
+2020_05_LAR_WAS,05,Sun,10/11/20,1:00PM,Los Angeles Rams,Washington Football Team,30,10,429,1,108,0,2020,True,Washington Football Team,Los Angeles Rams,WAS,LAR
+2020_05_MIA_SF,05,Sun,10/11/20,4:05PM,Miami Dolphins,San Francisco 49ers,43,17,436,0,259,3,2020,True,San Francisco 49ers,Miami Dolphins,SF,MIA
+2020_05_IND_CLE,05,Sun,10/11/20,4:25PM,Cleveland Browns,Indianapolis Colts,32,23,385,2,308,2,2020,False,Cleveland Browns,Indianapolis Colts,CLE,IND
+2020_05_NYG_DAL,05,Sun,10/11/20,4:25PM,Dallas Cowboys,New York Giants,37,34,402,2,300,1,2020,False,Dallas Cowboys,New York Giants,DAL,NYG
+2020_05_MIN_SEA,05,Sun,10/11/20,8:20PM,Seattle Seahawks,Minnesota Vikings,27,26,314,1,449,2,2020,False,Seattle Seahawks,Minnesota Vikings,SEA,MIN
+2020_05_LAC_NO,05,Mon,10/12/20,8:15PM,New Orleans Saints,Los Angeles Chargers,30,27,408,1,350,0,2020,False,New Orleans Saints,Los Angeles Chargers,NO,LAC
+2020_05_BUF_TEN,05,Tue,10/13/20,7:00PM,Tennessee Titans,Buffalo Bills,42,16,334,0,370,3,2020,False,Tennessee Titans,Buffalo Bills,TEN,BUF
+2020_06_DEN_NE,06,Sun,10/18/20,1:00PM,Denver Broncos,New England Patriots,18,12,299,2,288,3,2020,True,New England Patriots,Denver Broncos,NE,DEN
+2020_06_DET_JAX,06,Sun,10/18/20,1:00PM,Detroit Lions,Jacksonville Jaguars,34,16,403,1,275,2,2020,True,Jacksonville Jaguars,Detroit Lions,JAX,DET
+2020_06_ATL_MIN,06,Sun,10/18/20,1:00PM,Atlanta Falcons,Minnesota Vikings,40,23,462,1,365,3,2020,True,Minnesota Vikings,Atlanta Falcons,MIN,ATL
+2020_06_CHI_CAR,06,Sun,10/18/20,1:00PM,Chicago Bears,Carolina Panthers,23,16,261,1,303,3,2020,True,Carolina Panthers,Chicago Bears,CAR,CHI
+2020_06_CIN_IND,06,Sun,10/18/20,1:00PM,Indianapolis Colts,Cincinnati Bengals,31,27,430,2,398,1,2020,False,Indianapolis Colts,Cincinnati Bengals,IND,CIN
+2020_06_CLE_PIT,06,Sun,10/18/20,1:00PM,Pittsburgh Steelers,Cleveland Browns,38,7,277,0,220,2,2020,False,Pittsburgh Steelers,Cleveland Browns,PIT,CLE
+2020_06_HOU_TEN,06,Sun,10/18/20,1:00PM,Tennessee Titans,Houston Texans,42,36,607,2,412,0,2020,False,Tennessee Titans,Houston Texans,TEN,HOU
+2020_06_WAS_NYG,06,Sun,10/18/20,1:00PM,New York Giants,Washington Football Team,20,19,240,1,337,2,2020,False,New York Giants,Washington Football Team,NYG,WAS
+2020_06_BAL_PHI,06,Sun,10/18/20,1:00PM,Baltimore Ravens,Philadelphia Eagles,30,28,355,0,364,1,2020,True,Philadelphia Eagles,Baltimore Ravens,PHI,BAL
+2020_06_NYJ_MIA,06,Sun,10/18/20,4:05PM,Miami Dolphins,New York Jets,24,0,302,2,263,1,2020,False,Miami Dolphins,New York Jets,MIA,NYJ
+2020_06_GB_TB,06,Sun,10/18/20,4:25PM,Tampa Bay Buccaneers,Green Bay Packers,38,10,324,0,201,2,2020,False,Tampa Bay Buccaneers,Green Bay Packers,TB,GB
+2020_06_LAR_SF,06,Sun,10/18/20,8:20PM,San Francisco 49ers,Los Angeles Rams,24,16,390,0,311,1,2020,False,San Francisco 49ers,Los Angeles Rams,SF,LAR
+2020_06_KC_BUF,06,Mon,10/19/20,5:00PM,Kansas City Chiefs,Buffalo Bills,26,17,466,1,206,1,2020,True,Buffalo Bills,Kansas City Chiefs,BUF,KC
+2020_06_ARI_DAL,06,Mon,10/19/20,8:15PM,Arizona Cardinals,Dallas Cowboys,38,10,438,0,344,4,2020,True,Dallas Cowboys,Arizona Cardinals,DAL,ARI
+2020_07_NYG_PHI,07,Thu,10/22/20,8:20PM,Philadelphia Eagles,New York Giants,22,21,442,1,325,3,2020,False,Philadelphia Eagles,New York Giants,PHI,NYG
+2020_07_GB_HOU,07,Sun,10/25/20,1:00PM,Green Bay Packers,Houston Texans,35,20,379,0,365,1,2020,True,Houston Texans,Green Bay Packers,HOU,GB
+2020_07_PIT_TEN,07,Sun,10/25/20,1:00PM,Pittsburgh Steelers,Tennessee Titans,27,24,362,3,292,0,2020,True,Tennessee Titans,Pittsburgh Steelers,TEN,PIT
+2020_07_DET_ATL,07,Sun,10/25/20,1:00PM,Detroit Lions,Atlanta Falcons,23,22,386,0,388,1,2020,True,Atlanta Falcons,Detroit Lions,ATL,DET
+2020_07_BUF_NYJ,07,Sun,10/25/20,1:00PM,Buffalo Bills,New York Jets,18,10,422,1,191,2,2020,True,New York Jets,Buffalo Bills,NYJ,BUF
+2020_07_CAR_NO,07,Sun,10/25/20,1:00PM,New Orleans Saints,Carolina Panthers,27,24,415,1,283,0,2020,False,New Orleans Saints,Carolina Panthers,NO,CAR
+2020_07_CLE_CIN,07,Sun,10/25/20,1:00PM,Cleveland Browns,Cincinnati Bengals,37,34,398,1,468,2,2020,True,Cincinnati Bengals,Cleveland Browns,CIN,CLE
+2020_07_DAL_WAS,07,Sun,10/25/20,1:00PM,Washington Football Team,Dallas Cowboys,25,3,397,0,142,1,2020,False,Washington Football Team,Dallas Cowboys,WAS,DAL
+2020_07_TB_LV,07,Sun,10/25/20,4:05PM,Tampa Bay Buccaneers,Las Vegas Raiders,45,20,454,0,347,1,2020,True,Las Vegas Raiders,Tampa Bay Buccaneers,LV,TB
+2020_07_KC_DEN,07,Sun,10/25/20,4:25PM,Kansas City Chiefs,Denver Broncos,43,16,286,1,411,4,2020,True,Denver Broncos,Kansas City Chiefs,DEN,KC
+2020_07_SF_NE,07,Sun,10/25/20,4:25PM,San Francisco 49ers,New England Patriots,33,6,467,2,241,4,2020,True,New England Patriots,San Francisco 49ers,NE,SF
+2020_07_JAX_LAC,07,Sun,10/25/20,4:25PM,Los Angeles Chargers,Jacksonville Jaguars,39,29,484,0,294,1,2020,False,Los Angeles Chargers,Jacksonville Jaguars,LAC,JAX
+2020_07_SEA_ARI,07,Sun,10/25/20,8:20PM,Arizona Cardinals,Seattle Seahawks,37,34,519,2,572,3,2020,False,Arizona Cardinals,Seattle Seahawks,ARI,SEA
+2020_07_CHI_LAR,07,Mon,10/26/20,8:15PM,Los Angeles Rams,Chicago Bears,24,10,371,1,279,2,2020,False,Los Angeles Rams,Chicago Bears,LAR,CHI
+2020_08_ATL_CAR,08,Thu,10/29/20,8:20PM,Atlanta Falcons,Carolina Panthers,25,17,401,1,304,1,2020,True,Carolina Panthers,Atlanta Falcons,CAR,ATL
+2020_08_IND_DET,08,Sun,11/1/20,1:00PM,Indianapolis Colts,Detroit Lions,41,21,366,0,326,2,2020,True,Detroit Lions,Indianapolis Colts,DET,IND
+2020_08_MIN_GB,08,Sun,11/1/20,1:00PM,Minnesota Vikings,Green Bay Packers,28,22,324,0,400,1,2020,True,Green Bay Packers,Minnesota Vikings,GB,MIN
+2020_08_LAR_MIA,08,Sun,11/1/20,1:00PM,Miami Dolphins,Los Angeles Rams,28,17,145,2,471,4,2020,False,Miami Dolphins,Los Angeles Rams,MIA,LAR
+2020_08_PIT_BAL,08,Sun,11/1/20,1:00PM,Pittsburgh Steelers,Baltimore Ravens,28,24,221,1,457,4,2020,True,Baltimore Ravens,Pittsburgh Steelers,BAL,PIT
+2020_08_NE_BUF,08,Sun,11/1/20,1:00PM,Buffalo Bills,New England Patriots,24,21,339,1,349,1,2020,False,Buffalo Bills,New England Patriots,BUF,NE
+2020_08_TEN_CIN,08,Sun,11/1/20,1:00PM,Cincinnati Bengals,Tennessee Titans,31,20,367,0,441,1,2020,False,Cincinnati Bengals,Tennessee Titans,CIN,TEN
+2020_08_LV_CLE,08,Sun,11/1/20,1:00PM,Las Vegas Raiders,Cleveland Browns,16,6,309,0,223,1,2020,True,Cleveland Browns,Las Vegas Raiders,CLE,LV
+2020_08_NYJ_KC,08,Sun,11/1/20,1:00PM,Kansas City Chiefs,New York Jets,35,9,496,0,221,1,2020,False,Kansas City Chiefs,New York Jets,KC,NYJ
+2020_08_LAC_DEN,08,Sun,11/1/20,4:05PM,Denver Broncos,Los Angeles Chargers,31,30,351,1,485,2,2020,False,Denver Broncos,Los Angeles Chargers,DEN,LAC
+2020_08_SF_SEA,08,Sun,11/1/20,4:25PM,Seattle Seahawks,San Francisco 49ers,37,27,350,0,351,2,2020,False,Seattle Seahawks,San Francisco 49ers,SEA,SF
+2020_08_NO_CHI,08,Sun,11/1/20,4:25PM,New Orleans Saints,Chicago Bears,26,23,394,0,329,1,2020,True,Chicago Bears,New Orleans Saints,CHI,NO
+2020_08_DAL_PHI,08,Sun,11/1/20,8:20PM,Philadelphia Eagles,Dallas Cowboys,23,9,222,4,265,2,2020,False,Philadelphia Eagles,Dallas Cowboys,PHI,DAL
+2020_08_TB_NYG,08,Mon,11/2/20,8:15PM,Tampa Bay Buccaneers,New York Giants,25,23,344,1,357,2,2020,True,New York Giants,Tampa Bay Buccaneers,NYG,TB
+2020_09_GB_SF,09,Thu,11/5/20,8:20PM,Green Bay Packers,San Francisco 49ers,34,17,405,0,337,2,2020,True,San Francisco 49ers,Green Bay Packers,SF,GB
+2020_09_BAL_IND,09,Sun,11/8/20,1:00PM,Baltimore Ravens,Indianapolis Colts,24,10,266,1,339,2,2020,True,Indianapolis Colts,Baltimore Ravens,IND,BAL
+2020_09_DET_MIN,09,Sun,11/8/20,1:00PM,Minnesota Vikings,Detroit Lions,34,20,487,0,421,3,2020,False,Minnesota Vikings,Detroit Lions,MIN,DET
+2020_09_HOU_JAX,09,Sun,11/8/20,1:00PM,Houston Texans,Jacksonville Jaguars,27,25,374,1,403,1,2020,True,Jacksonville Jaguars,Houston Texans,JAX,HOU
+2020_09_DEN_ATL,09,Sun,11/8/20,1:00PM,Atlanta Falcons,Denver Broncos,34,27,363,1,405,1,2020,False,Atlanta Falcons,Denver Broncos,ATL,DEN
+2020_09_SEA_BUF,09,Sun,11/8/20,1:00PM,Buffalo Bills,Seattle Seahawks,44,34,420,0,419,4,2020,False,Buffalo Bills,Seattle Seahawks,BUF,SEA
+2020_09_CAR_KC,09,Sun,11/8/20,1:00PM,Kansas City Chiefs,Carolina Panthers,33,31,397,1,435,0,2020,False,Kansas City Chiefs,Carolina Panthers,KC,CAR
+2020_09_CHI_TEN,09,Sun,11/8/20,1:00PM,Tennessee Titans,Chicago Bears,24,17,228,0,375,2,2020,False,Tennessee Titans,Chicago Bears,TEN,CHI
+2020_09_NYG_WAS,09,Sun,11/8/20,1:00PM,New York Giants,Washington Football Team,23,20,350,0,402,5,2020,True,Washington Football Team,New York Giants,WAS,NYG
+2020_09_LV_LAC,09,Sun,11/8/20,4:05PM,Las Vegas Raiders,Los Angeles Chargers,31,26,320,1,440,1,2020,True,Los Angeles Chargers,Las Vegas Raiders,LAC,LV
+2020_09_MIA_ARI,09,Sun,11/8/20,4:25PM,Miami Dolphins,Arizona Cardinals,34,31,312,0,442,1,2020,True,Arizona Cardinals,Miami Dolphins,ARI,MIA
+2020_09_PIT_DAL,09,Sun,11/8/20,4:25PM,Pittsburgh Steelers,Dallas Cowboys,24,19,355,0,364,2,2020,True,Dallas Cowboys,Pittsburgh Steelers,DAL,PIT
+2020_09_NO_TB,09,Sun,11/8/20,8:20PM,New Orleans Saints,Tampa Bay Buccaneers,38,3,420,2,194,3,2020,True,Tampa Bay Buccaneers,New Orleans Saints,TB,NO
+2020_09_NE_NYJ,09,Mon,11/9/20,8:15PM,New England Patriots,New York Jets,30,27,433,0,322,1,2020,True,New York Jets,New England Patriots,NYJ,NE
+2020_10_IND_TEN,10,Thu,11/12/20,8:20PM,Indianapolis Colts,Tennessee Titans,34,17,430,0,294,0,2020,True,Tennessee Titans,Indianapolis Colts,TEN,IND
+2020_10_HOU_CLE,10,Sun,11/15/20,1:00PM,Cleveland Browns,Houston Texans,10,7,356,0,243,0,2020,False,Cleveland Browns,Houston Texans,CLE,HOU
+2020_10_WAS_DET,10,Sun,11/15/20,1:00PM,Detroit Lions,Washington Football Team,30,27,372,0,464,1,2020,False,Detroit Lions,Washington Football Team,DET,WAS
+2020_10_JAX_GB,10,Sun,11/15/20,1:00PM,Green Bay Packers,Jacksonville Jaguars,24,20,395,2,260,1,2020,False,Green Bay Packers,Jacksonville Jaguars,GB,JAX
+2020_10_TB_CAR,10,Sun,11/15/20,1:00PM,Tampa Bay Buccaneers,Carolina Panthers,46,23,544,1,187,1,2020,True,Carolina Panthers,Tampa Bay Buccaneers,CAR,TB
+2020_10_PHI_NYG,10,Sun,11/15/20,1:00PM,New York Giants,Philadelphia Eagles,27,17,382,0,346,0,2020,False,New York Giants,Philadelphia Eagles,NYG,PHI
+2020_10_DEN_LV,10,Sun,11/15/20,4:05PM,Las Vegas Raiders,Denver Broncos,37,12,357,0,313,5,2020,False,Las Vegas Raiders,Denver Broncos,LV,DEN
+2020_10_LAC_MIA,10,Sun,11/15/20,4:05PM,Miami Dolphins,Los Angeles Chargers,29,21,280,1,273,1,2020,False,Miami Dolphins,Los Angeles Chargers,MIA,LAC
+2020_10_BUF_ARI,10,Sun,11/15/20,4:05PM,Arizona Cardinals,Buffalo Bills,32,30,453,2,369,2,2020,False,Arizona Cardinals,Buffalo Bills,ARI,BUF
+2020_10_CIN_PIT,10,Sun,11/15/20,4:25PM,Pittsburgh Steelers,Cincinnati Bengals,36,10,377,0,324,2,2020,False,Pittsburgh Steelers,Cincinnati Bengals,PIT,CIN
+2020_10_SF_NO,10,Sun,11/15/20,4:25PM,New Orleans Saints,San Francisco 49ers,27,13,237,2,281,4,2020,False,New Orleans Saints,San Francisco 49ers,NO,SF
+2020_10_SEA_LAR,10,Sun,11/15/20,4:25PM,Los Angeles Rams,Seattle Seahawks,23,16,389,1,333,3,2020,False,Los Angeles Rams,Seattle Seahawks,LAR,SEA
+2020_10_BAL_NE,10,Sun,11/15/20,8:20PM,New England Patriots,Baltimore Ravens,23,17,308,0,357,1,2020,False,New England Patriots,Baltimore Ravens,NE,BAL
+2020_10_MIN_CHI,10,Mon,11/16/20,8:15PM,Minnesota Vikings,Chicago Bears,19,13,385,2,149,2,2020,True,Chicago Bears,Minnesota Vikings,CHI,MIN
+2020_11_ARI_SEA,11,Thu,11/19/20,8:20PM,Seattle Seahawks,Arizona Cardinals,28,21,347,0,314,0,2020,False,Seattle Seahawks,Arizona Cardinals,SEA,ARI
+2020_11_ATL_NO,11,Sun,11/22/20,1:00PM,New Orleans Saints,Atlanta Falcons,24,9,376,1,248,2,2020,False,New Orleans Saints,Atlanta Falcons,NO,ATL
+2020_11_CIN_WAS,11,Sun,11/22/20,1:00PM,Washington Football Team,Cincinnati Bengals,20,9,325,1,272,2,2020,False,Washington Football Team,Cincinnati Bengals,WAS,CIN
+2020_11_PHI_CLE,11,Sun,11/22/20,1:00PM,Cleveland Browns,Philadelphia Eagles,22,17,324,1,315,3,2020,False,Cleveland Browns,Philadelphia Eagles,CLE,PHI
+2020_11_NE_HOU,11,Sun,11/22/20,1:00PM,Houston Texans,New England Patriots,27,20,399,0,435,0,2020,False,Houston Texans,New England Patriots,HOU,NE
+2020_11_PIT_JAX,11,Sun,11/22/20,1:00PM,Pittsburgh Steelers,Jacksonville Jaguars,27,3,373,1,206,4,2020,True,Jacksonville Jaguars,Pittsburgh Steelers,JAX,PIT
+2020_11_TEN_BAL,11,Sun,11/22/20,1:00PM,Tennessee Titans,Baltimore Ravens,30,24,423,1,306,1,2020,True,Baltimore Ravens,Tennessee Titans,BAL,TEN
+2020_11_DET_CAR,11,Sun,11/22/20,1:00PM,Carolina Panthers,Detroit Lions,20,0,374,2,185,1,2020,False,Carolina Panthers,Detroit Lions,CAR,DET
+2020_11_MIA_DEN,11,Sun,11/22/20,4:05PM,Denver Broncos,Miami Dolphins,20,13,459,2,223,1,2020,False,Denver Broncos,Miami Dolphins,DEN,MIA
+2020_11_NYJ_LAC,11,Sun,11/22/20,4:05PM,Los Angeles Chargers,New York Jets,34,28,376,1,292,1,2020,False,Los Angeles Chargers,New York Jets,LAC,NYJ
+2020_11_GB_IND,11,Sun,11/22/20,4:25PM,Indianapolis Colts,Green Bay Packers,34,31,420,2,367,4,2020,False,Indianapolis Colts,Green Bay Packers,IND,GB
+2020_11_DAL_MIN,11,Sun,11/22/20,4:25PM,Dallas Cowboys,Minnesota Vikings,31,28,376,1,430,2,2020,True,Minnesota Vikings,Dallas Cowboys,MIN,DAL
+2020_11_KC_LV,11,Sun,11/22/20,8:20PM,Kansas City Chiefs,Las Vegas Raiders,35,31,460,1,364,1,2020,True,Las Vegas Raiders,Kansas City Chiefs,LV,KC
+2020_11_LAR_TB,11,Mon,11/23/20,8:15PM,Los Angeles Rams,Tampa Bay Buccaneers,27,24,413,2,251,2,2020,True,Tampa Bay Buccaneers,Los Angeles Rams,TB,LAR
+2020_12_HOU_DET,12,Thu,11/26/20,12:30PM,Houston Texans,Detroit Lions,41,25,384,1,388,3,2020,True,Detroit Lions,Houston Texans,DET,HOU
+2020_12_WAS_DAL,12,Thu,11/26/20,4:30PM,Washington Football Team,Dallas Cowboys,41,16,338,1,247,2,2020,True,Dallas Cowboys,Washington Football Team,DAL,WAS
+2020_12_LV_ATL,12,Sun,11/29/20,1:00PM,Atlanta Falcons,Las Vegas Raiders,43,6,304,1,243,5,2020,False,Atlanta Falcons,Las Vegas Raiders,ATL,LV
+2020_12_LAC_BUF,12,Sun,11/29/20,1:00PM,Buffalo Bills,Los Angeles Chargers,27,17,332,3,367,1,2020,False,Buffalo Bills,Los Angeles Chargers,BUF,LAC
+2020_12_NYG_CIN,12,Sun,11/29/20,1:00PM,New York Giants,Cincinnati Bengals,19,17,386,1,155,3,2020,True,Cincinnati Bengals,New York Giants,CIN,NYG
+2020_12_CLE_JAX,12,Sun,11/29/20,1:00PM,Cleveland Browns,Jacksonville Jaguars,27,25,459,1,375,0,2020,True,Jacksonville Jaguars,Cleveland Browns,JAX,CLE
+2020_12_TEN_IND,12,Sun,11/29/20,1:00PM,Tennessee Titans,Indianapolis Colts,45,26,449,0,336,1,2020,True,Indianapolis Colts,Tennessee Titans,IND,TEN
+2020_12_ARI_NE,12,Sun,11/29/20,1:00PM,New England Patriots,Arizona Cardinals,20,17,179,2,298,1,2020,False,New England Patriots,Arizona Cardinals,NE,ARI
+2020_12_MIA_NYJ,12,Sun,11/29/20,1:00PM,Miami Dolphins,New York Jets,20,3,345,2,260,2,2020,True,New York Jets,Miami Dolphins,NYJ,MIA
+2020_12_CAR_MIN,12,Sun,11/29/20,1:00PM,Minnesota Vikings,Carolina Panthers,28,27,387,3,374,1,2020,False,Minnesota Vikings,Carolina Panthers,MIN,CAR
+2020_12_NO_DEN,12,Sun,11/29/20,4:05PM,New Orleans Saints,Denver Broncos,31,3,292,1,112,3,2020,True,Denver Broncos,New Orleans Saints,DEN,NO
+2020_12_SF_LAR,12,Sun,11/29/20,4:05PM,San Francisco 49ers,Los Angeles Rams,23,20,345,3,308,4,2020,True,Los Angeles Rams,San Francisco 49ers,LAR,SF
+2020_12_KC_TB,12,Sun,11/29/20,4:25PM,Kansas City Chiefs,Tampa Bay Buccaneers,27,24,543,1,417,2,2020,True,Tampa Bay Buccaneers,Kansas City Chiefs,TB,KC
+2020_12_CHI_GB,12,Sun,11/29/20,8:20PM,Green Bay Packers,Chicago Bears,41,25,393,0,350,3,2020,False,Green Bay Packers,Chicago Bears,GB,CHI
+2020_12_SEA_PHI,12,Mon,11/30/20,8:15PM,Seattle Seahawks,Philadelphia Eagles,23,17,301,0,250,1,2020,True,Philadelphia Eagles,Seattle Seahawks,PHI,SEA
+2020_12_BAL_PIT,12,Wed,12/2/20,3:40PM,Pittsburgh Steelers,Baltimore Ravens,19,14,334,2,219,2,2020,False,Pittsburgh Steelers,Baltimore Ravens,PIT,BAL
+2020_13_NO_ATL,13,Sun,12/6/20,1:00PM,New Orleans Saints,Atlanta Falcons,21,16,424,1,332,1,2020,True,Atlanta Falcons,New Orleans Saints,ATL,NO
+2020_13_DET_CHI,13,Sun,12/6/20,1:00PM,Detroit Lions,Chicago Bears,34,30,460,1,389,1,2020,True,Chicago Bears,Detroit Lions,CHI,DET
+2020_13_CIN_MIA,13,Sun,12/6/20,1:00PM,Miami Dolphins,Cincinnati Bengals,19,7,406,1,196,2,2020,False,Miami Dolphins,Cincinnati Bengals,MIA,CIN
+2020_13_CLE_TEN,13,Sun,12/6/20,1:00PM,Cleveland Browns,Tennessee Titans,41,35,458,1,431,3,2020,True,Tennessee Titans,Cleveland Browns,TEN,CLE
+2020_13_IND_HOU,13,Sun,12/6/20,1:00PM,Indianapolis Colts,Houston Texans,26,20,371,0,398,2,2020,True,Houston Texans,Indianapolis Colts,HOU,IND
+2020_13_JAX_MIN,13,Sun,12/6/20,1:00PM,Minnesota Vikings,Jacksonville Jaguars,27,24,420,2,390,4,2020,False,Minnesota Vikings,Jacksonville Jaguars,MIN,JAX
+2020_13_LV_NYJ,13,Sun,12/6/20,1:00PM,Las Vegas Raiders,New York Jets,31,28,440,2,376,3,2020,True,New York Jets,Las Vegas Raiders,NYJ,LV
+2020_13_LAR_ARI,13,Sun,12/6/20,4:05PM,Los Angeles Rams,Arizona Cardinals,38,28,463,1,232,2,2020,True,Arizona Cardinals,Los Angeles Rams,ARI,LAR
+2020_13_NYG_SEA,13,Sun,12/6/20,4:05PM,New York Giants,Seattle Seahawks,17,12,290,1,327,2,2020,True,Seattle Seahawks,New York Giants,SEA,NYG
+2020_13_PHI_GB,13,Sun,12/6/20,4:25PM,Green Bay Packers,Philadelphia Eagles,30,16,437,0,278,1,2020,False,Green Bay Packers,Philadelphia Eagles,GB,PHI
+2020_13_NE_LAC,13,Sun,12/6/20,4:25PM,New England Patriots,Los Angeles Chargers,45,0,291,0,258,2,2020,True,Los Angeles Chargers,New England Patriots,LAC,NE
+2020_13_DEN_KC,13,Sun,12/6/20,8:20PM,Kansas City Chiefs,Denver Broncos,22,16,447,0,330,2,2020,False,Kansas City Chiefs,Denver Broncos,KC,DEN
+2020_13_WAS_PIT,13,Mon,12/7/20,5:00PM,Washington Football Team,Pittsburgh Steelers,23,17,318,0,326,1,2020,True,Pittsburgh Steelers,Washington Football Team,PIT,WAS
+2020_13_BUF_SF,13,Mon,12/7/20,8:15PM,Buffalo Bills,San Francisco 49ers,34,24,449,1,402,2,2020,True,San Francisco 49ers,Buffalo Bills,SF,BUF
+2020_13_DAL_BAL,13,Tue,12/8/20,8:05PM,Baltimore Ravens,Dallas Cowboys,34,17,401,1,388,1,2020,False,Baltimore Ravens,Dallas Cowboys,BAL,DAL
+2020_14_NE_LAR,14,Thu,12/10/20,8:20PM,Los Angeles Rams,New England Patriots,24,3,318,1,220,1,2020,False,Los Angeles Rams,New England Patriots,LAR,NE
+2020_14_DEN_CAR,14,Sun,12/13/20,1:00PM,Denver Broncos,Carolina Panthers,32,27,365,1,370,0,2020,True,Carolina Panthers,Denver Broncos,CAR,DEN
+2020_14_HOU_CHI,14,Sun,12/13/20,1:00PM,Chicago Bears,Houston Texans,36,7,410,0,263,2,2020,False,Chicago Bears,Houston Texans,CHI,HOU
+2020_14_DAL_CIN,14,Sun,12/13/20,1:00PM,Dallas Cowboys,Cincinnati Bengals,30,7,272,0,309,3,2020,True,Cincinnati Bengals,Dallas Cowboys,CIN,DAL
+2020_14_ARI_NYG,14,Sun,12/13/20,1:00PM,Arizona Cardinals,New York Giants,26,7,390,0,159,3,2020,True,New York Giants,Arizona Cardinals,NYG,ARI
+2020_14_TEN_JAX,14,Sun,12/13/20,1:00PM,Tennessee Titans,Jacksonville Jaguars,31,10,454,1,354,1,2020,True,Jacksonville Jaguars,Tennessee Titans,JAX,TEN
+2020_14_KC_MIA,14,Sun,12/13/20,1:00PM,Kansas City Chiefs,Miami Dolphins,33,27,448,4,367,1,2020,True,Miami Dolphins,Kansas City Chiefs,MIA,KC
+2020_14_MIN_TB,14,Sun,12/13/20,1:00PM,Tampa Bay Buccaneers,Minnesota Vikings,26,14,303,0,335,1,2020,False,Tampa Bay Buccaneers,Minnesota Vikings,TB,MIN
+2020_14_IND_LV,14,Sun,12/13/20,4:05PM,Indianapolis Colts,Las Vegas Raiders,44,27,456,0,424,3,2020,True,Las Vegas Raiders,Indianapolis Colts,LV,IND
+2020_14_NYJ_SEA,14,Sun,12/13/20,4:05PM,Seattle Seahawks,New York Jets,40,3,410,1,185,1,2020,False,Seattle Seahawks,New York Jets,SEA,NYJ
+2020_14_ATL_LAC,14,Sun,12/13/20,4:25PM,Los Angeles Chargers,Atlanta Falcons,20,17,345,1,319,3,2020,False,Los Angeles Chargers,Atlanta Falcons,LAC,ATL
+2020_14_GB_DET,14,Sun,12/13/20,4:25PM,Green Bay Packers,Detroit Lions,31,24,410,0,293,0,2020,True,Detroit Lions,Green Bay Packers,DET,GB
+2020_14_NO_PHI,14,Sun,12/13/20,4:25PM,Philadelphia Eagles,New Orleans Saints,24,21,413,1,358,2,2020,False,Philadelphia Eagles,New Orleans Saints,PHI,NO
+2020_14_WAS_SF,14,Sun,12/13/20,4:25PM,Washington Football Team,San Francisco 49ers,23,15,193,1,344,3,2020,True,San Francisco 49ers,Washington Football Team,SF,WAS
+2020_14_PIT_BUF,14,Sun,12/13/20,8:20PM,Buffalo Bills,Pittsburgh Steelers,26,15,334,2,224,2,2020,False,Buffalo Bills,Pittsburgh Steelers,BUF,PIT
+2020_14_BAL_CLE,14,Mon,12/14/20,8:15PM,Baltimore Ravens,Cleveland Browns,47,42,385,0,493,1,2020,True,Cleveland Browns,Baltimore Ravens,CLE,BAL
+2020_15_LAC_LV,15,Thu,12/17/20,8:20PM,Los Angeles Chargers,Las Vegas Raiders,30,27,402,0,449,1,2020,True,Las Vegas Raiders,Los Angeles Chargers,LV,LAC
+2020_15_BUF_DEN,15,Sat,12/19/20,4:30PM,Buffalo Bills,Denver Broncos,48,19,534,1,255,1,2020,True,Denver Broncos,Buffalo Bills,DEN,BUF
+2020_15_CAR_GB,15,Sat,12/19/20,8:15PM,Green Bay Packers,Carolina Panthers,24,16,291,0,364,1,2020,False,Green Bay Packers,Carolina Panthers,GB,CAR
+2020_15_TB_ATL,15,Sun,12/20/20,1:00PM,Tampa Bay Buccaneers,Atlanta Falcons,31,27,416,0,369,0,2020,True,Atlanta Falcons,Tampa Bay Buccaneers,ATL,TB
+2020_15_CHI_MIN,15,Sun,12/20/20,1:00PM,Chicago Bears,Minnesota Vikings,33,27,397,1,407,1,2020,True,Minnesota Vikings,Chicago Bears,MIN,CHI
+2020_15_HOU_IND,15,Sun,12/20/20,1:00PM,Indianapolis Colts,Houston Texans,27,20,350,0,425,2,2020,False,Indianapolis Colts,Houston Texans,IND,HOU
+2020_15_SF_DAL,15,Sun,12/20/20,1:00PM,Dallas Cowboys,San Francisco 49ers,41,33,291,0,458,4,2020,False,Dallas Cowboys,San Francisco 49ers,DAL,SF
+2020_15_DET_TEN,15,Sun,12/20/20,1:00PM,Tennessee Titans,Detroit Lions,46,25,463,0,430,3,2020,False,Tennessee Titans,Detroit Lions,TEN,DET
+2020_15_JAX_BAL,15,Sun,12/20/20,1:00PM,Baltimore Ravens,Jacksonville Jaguars,40,14,409,1,267,1,2020,False,Baltimore Ravens,Jacksonville Jaguars,BAL,JAX
+2020_15_NE_MIA,15,Sun,12/20/20,1:00PM,Miami Dolphins,New England Patriots,22,12,383,1,303,1,2020,False,Miami Dolphins,New England Patriots,MIA,NE
+2020_15_SEA_WAS,15,Sun,12/20/20,1:00PM,Seattle Seahawks,Washington Football Team,20,15,302,1,353,2,2020,True,Washington Football Team,Seattle Seahawks,WAS,SEA
+2020_15_PHI_ARI,15,Sun,12/20/20,4:05PM,Arizona Cardinals,Philadelphia Eagles,33,26,526,3,422,0,2020,False,Arizona Cardinals,Philadelphia Eagles,ARI,PHI
+2020_15_NYJ_LAR,15,Sun,12/20/20,4:05PM,New York Jets,Los Angeles Rams,23,20,289,0,303,1,2020,True,Los Angeles Rams,New York Jets,LAR,NYJ
+2020_15_KC_NO,15,Sun,12/20/20,4:25PM,Kansas City Chiefs,New Orleans Saints,32,29,411,1,285,1,2020,True,New Orleans Saints,Kansas City Chiefs,NO,KC
+2020_15_CLE_NYG,15,Sun,12/20/20,8:20PM,Cleveland Browns,New York Giants,20,6,392,0,288,0,2020,True,New York Giants,Cleveland Browns,NYG,CLE
+2020_15_PIT_CIN,15,Mon,12/21/20,8:15PM,Cincinnati Bengals,Pittsburgh Steelers,27,17,230,0,244,3,2020,False,Cincinnati Bengals,Pittsburgh Steelers,CIN,PIT
+2020_16_MIN_NO,16,Fri,12/25/20,4:30PM,New Orleans Saints,Minnesota Vikings,52,33,583,2,364,0,2020,False,New Orleans Saints,Minnesota Vikings,NO,MIN
+2020_16_TB_DET,16,Sat,12/26/20,1:00PM,Tampa Bay Buccaneers,Detroit Lions,47,7,588,0,186,2,2020,True,Detroit Lions,Tampa Bay Buccaneers,DET,TB
+2020_16_SF_ARI,16,Sat,12/26/20,4:30PM,San Francisco 49ers,Arizona Cardinals,20,12,398,1,350,2,2020,True,Arizona Cardinals,San Francisco 49ers,ARI,SF
+2020_16_MIA_LV,16,Sat,12/26/20,8:15PM,Miami Dolphins,Las Vegas Raiders,26,25,383,0,418,1,2020,True,Las Vegas Raiders,Miami Dolphins,LV,MIA
+2020_16_ATL_KC,16,Sun,12/27/20,1:00PM,Kansas City Chiefs,Atlanta Falcons,17,14,395,2,367,1,2020,False,Kansas City Chiefs,Atlanta Falcons,KC,ATL
+2020_16_CHI_JAX,16,Sun,12/27/20,1:00PM,Chicago Bears,Jacksonville Jaguars,41,17,391,1,279,2,2020,True,Jacksonville Jaguars,Chicago Bears,JAX,CHI
+2020_16_CIN_HOU,16,Sun,12/27/20,1:00PM,Cincinnati Bengals,Houston Texans,37,31,540,0,488,1,2020,True,Houston Texans,Cincinnati Bengals,HOU,CIN
+2020_16_CLE_NYJ,16,Sun,12/27/20,1:00PM,New York Jets,Cleveland Browns,23,16,333,0,299,2,2020,False,New York Jets,Cleveland Browns,NYJ,CLE
+2020_16_IND_PIT,16,Sun,12/27/20,1:00PM,Pittsburgh Steelers,Indianapolis Colts,28,24,354,0,365,2,2020,False,Pittsburgh Steelers,Indianapolis Colts,PIT,IND
+2020_16_NYG_BAL,16,Sun,12/27/20,1:00PM,Baltimore Ravens,New York Giants,27,13,432,1,269,0,2020,False,Baltimore Ravens,New York Giants,BAL,NYG
+2020_16_CAR_WAS,16,Sun,12/27/20,4:05PM,Carolina Panthers,Washington Football Team,20,13,280,2,386,4,2020,True,Washington Football Team,Carolina Panthers,WAS,CAR
+2020_16_DEN_LAC,16,Sun,12/27/20,4:05PM,Los Angeles Chargers,Denver Broncos,19,16,316,0,396,2,2020,False,Los Angeles Chargers,Denver Broncos,LAC,DEN
+2020_16_PHI_DAL,16,Sun,12/27/20,4:25PM,Dallas Cowboys,Philadelphia Eagles,37,17,513,1,477,3,2020,False,Dallas Cowboys,Philadelphia Eagles,DAL,PHI
+2020_16_LAR_SEA,16,Sun,12/27/20,4:25PM,Seattle Seahawks,Los Angeles Rams,20,9,292,0,334,1,2020,False,Seattle Seahawks,Los Angeles Rams,SEA,LAR
+2020_16_TEN_GB,16,Sun,12/27/20,8:20PM,Green Bay Packers,Tennessee Titans,40,14,448,1,260,2,2020,False,Green Bay Packers,Tennessee Titans,GB,TEN
+2020_16_BUF_NE,16,Mon,12/28/20,8:15PM,Buffalo Bills,New England Patriots,38,9,474,0,201,0,2020,True,New England Patriots,Buffalo Bills,NE,BUF
+2020_17_ATL_TB,17,Sun,1/3/21,1:00PM,Tampa Bay Buccaneers,Atlanta Falcons,44,27,485,1,385,2,2020,False,Tampa Bay Buccaneers,Atlanta Falcons,TB,ATL
+2020_17_MIA_BUF,17,Sun,1/3/21,1:00PM,Buffalo Bills,Miami Dolphins,56,26,455,2,454,4,2020,False,Buffalo Bills,Miami Dolphins,BUF,MIA
+2020_17_BAL_CIN,17,Sun,1/3/21,1:00PM,Baltimore Ravens,Cincinnati Bengals,38,3,525,1,195,2,2020,True,Cincinnati Bengals,Baltimore Ravens,CIN,BAL
+2020_17_PIT_CLE,17,Sun,1/3/21,1:00PM,Cleveland Browns,Pittsburgh Steelers,24,22,358,0,394,1,2020,False,Cleveland Browns,Pittsburgh Steelers,CLE,PIT
+2020_17_DAL_NYG,17,Sun,1/3/21,1:00PM,New York Giants,Dallas Cowboys,23,19,336,2,307,1,2020,False,New York Giants,Dallas Cowboys,NYG,DAL
+2020_17_MIN_DET,17,Sun,1/3/21,1:00PM,Minnesota Vikings,Detroit Lions,37,35,508,0,417,2,2020,True,Detroit Lions,Minnesota Vikings,DET,MIN
+2020_17_NYJ_NE,17,Sun,1/3/21,1:00PM,New England Patriots,New York Jets,28,14,404,0,350,2,2020,False,New England Patriots,New York Jets,NE,NYJ
+2020_17_NO_CAR,17,Sun,1/3/21,4:25PM,New Orleans Saints,Carolina Panthers,33,7,347,0,320,5,2020,True,Carolina Panthers,New Orleans Saints,CAR,NO
+2020_17_GB_CHI,17,Sun,1/3/21,4:25PM,Green Bay Packers,Chicago Bears,35,16,316,1,356,2,2020,True,Chicago Bears,Green Bay Packers,CHI,GB
+2020_17_JAX_IND,17,Sun,1/3/21,4:25PM,Indianapolis Colts,Jacksonville Jaguars,28,14,437,1,283,1,2020,False,Indianapolis Colts,Jacksonville Jaguars,IND,JAX
+2020_17_ARI_LAR,17,Sun,1/3/21,4:25PM,Los Angeles Rams,Arizona Cardinals,18,7,333,2,214,1,2020,False,Los Angeles Rams,Arizona Cardinals,LAR,ARI
+2020_17_LV_DEN,17,Sun,1/3/21,4:25PM,Las Vegas Raiders,Denver Broncos,32,31,465,4,446,0,2020,True,Denver Broncos,Las Vegas Raiders,DEN,LV
+2020_17_TEN_HOU,17,Sun,1/3/21,4:25PM,Tennessee Titans,Houston Texans,41,38,492,1,457,1,2020,True,Houston Texans,Tennessee Titans,HOU,TEN
+2020_17_LAC_KC,17,Sun,1/3/21,4:25PM,Los Angeles Chargers,Kansas City Chiefs,38,21,416,0,268,1,2020,True,Kansas City Chiefs,Los Angeles Chargers,KC,LAC
+2020_17_SEA_SF,17,Sun,1/3/21,4:25PM,Seattle Seahawks,San Francisco 49ers,26,23,280,0,328,1,2020,True,San Francisco 49ers,Seattle Seahawks,SF,SEA
+2020_17_WAS_PHI,17,Sun,1/3/21,8:20PM,Washington Football Team,Philadelphia Eagles,20,14,248,2,216,3,2020,True,Philadelphia Eagles,Washington Football Team,PHI,WAS
+2020_18_IND_BUF,18,Sat,1/9/21,1:05PM,Buffalo Bills,Indianapolis Colts,27,24,397,0,472,0,2020,False,Buffalo Bills,Indianapolis Colts,BUF,IND
+2020_18_LAR_SEA,18,Sat,1/9/21,4:40PM,Los Angeles Rams,Seattle Seahawks,30,20,333,0,278,2,2020,True,Seattle Seahawks,Los Angeles Rams,SEA,LAR
+2020_18_TB_WAS,18,Sat,1/9/21,8:15PM,Tampa Bay Buccaneers,Washington Football Team,31,23,507,1,375,1,2020,True,Washington Football Team,Tampa Bay Buccaneers,WAS,TB
+2020_18_BAL_TEN,18,Sun,1/10/21,1:05PM,Baltimore Ravens,Tennessee Titans,20,13,401,1,209,1,2020,True,Tennessee Titans,Baltimore Ravens,TEN,BAL
+2020_18_CHI_NO,18,Sun,1/10/21,4:40PM,New Orleans Saints,Chicago Bears,21,9,385,1,239,0,2020,False,New Orleans Saints,Chicago Bears,NO,CHI
+2020_18_CLE_PIT,18,Sun,1/10/21,8:15PM,Cleveland Browns,Pittsburgh Steelers,48,37,390,0,553,5,2020,True,Pittsburgh Steelers,Cleveland Browns,PIT,CLE
+2020_19_LAR_GB,19,Sat,1/16/21,4:35PM,Green Bay Packers,Los Angeles Rams,32,18,484,0,244,0,2020,False,Green Bay Packers,Los Angeles Rams,GB,LAR
+2020_19_BAL_BUF,19,Sat,1/16/21,8:15PM,Buffalo Bills,Baltimore Ravens,17,3,220,0,340,1,2020,False,Buffalo Bills,Baltimore Ravens,BUF,BAL
+2020_19_CLE_KC,19,Sun,1/17/21,3:05PM,Kansas City Chiefs,Cleveland Browns,22,17,438,1,308,2,2020,False,Kansas City Chiefs,Cleveland Browns,KC,CLE
+2020_19_TB_NO,19,Sun,1/17/21,6:40PM,Tampa Bay Buccaneers,New Orleans Saints,30,20,316,0,294,4,2020,True,New Orleans Saints,Tampa Bay Buccaneers,NO,TB
+2020_20_TB_GB,20,Sun,1/24/21,3:05PM,Tampa Bay Buccaneers,Green Bay Packers,31,26,351,3,381,2,2020,True,Green Bay Packers,Tampa Bay Buccaneers,GB,TB
+2020_20_BUF_KC,20,Sun,1/24/21,6:40PM,Kansas City Chiefs,Buffalo Bills,38,24,439,1,363,1,2020,False,Kansas City Chiefs,Buffalo Bills,KC,BUF
+2020_21_KC_TB,21,Sun,2/7/21,6:30PM,Tampa Bay Buccaneers,Kansas City Chiefs,31,9,340,0,350,2,2020,False,Tampa Bay Buccaneers,Kansas City Chiefs,TB,KC
+2021_01_DAL_TB,01,Thu,9/9/21,8:20PM,Tampa Bay Buccaneers,Dallas Cowboys,31,29,431,4,451,1,2021,False,Tampa Bay Buccaneers,Dallas Cowboys,TB,DAL
+2021_01_PHI_ATL,01,Sun,9/12/21,1:00PM,Philadelphia Eagles,Atlanta Falcons,32,6,434,0,260,0,2021,True,Atlanta Falcons,Philadelphia Eagles,ATL,PHI
+2021_01_PIT_BUF,01,Sun,9/12/21,1:00PM,Pittsburgh Steelers,Buffalo Bills,23,16,252,0,371,1,2021,True,Buffalo Bills,Pittsburgh Steelers,BUF,PIT
+2021_01_NYJ_CAR,01,Sun,9/12/21,1:00PM,Carolina Panthers,New York Jets,19,14,381,1,252,1,2021,False,Carolina Panthers,New York Jets,CAR,NYJ
+2021_01_MIN_CIN,01,Sun,9/12/21,1:00PM,Cincinnati Bengals,Minnesota Vikings,27,24,366,0,403,1,2021,False,Cincinnati Bengals,Minnesota Vikings,CIN,MIN
+2021_01_SEA_IND,01,Sun,9/12/21,1:00PM,Seattle Seahawks,Indianapolis Colts,28,16,381,1,336,1,2021,True,Indianapolis Colts,Seattle Seahawks,IND,SEA
+2021_01_ARI_TEN,01,Sun,9/12/21,1:00PM,Arizona Cardinals,Tennessee Titans,38,13,416,1,248,3,2021,True,Tennessee Titans,Arizona Cardinals,TEN,ARI
+2021_01_SF_DET,01,Sun,9/12/21,1:00PM,San Francisco 49ers,Detroit Lions,41,33,442,2,430,1,2021,True,Detroit Lions,San Francisco 49ers,DET,SF
+2021_01_JAX_HOU,01,Sun,9/12/21,1:00PM,Houston Texans,Jacksonville Jaguars,37,21,449,0,395,3,2021,False,Houston Texans,Jacksonville Jaguars,HOU,JAX
+2021_01_LAC_WAS,01,Sun,9/12/21,1:00PM,Los Angeles Chargers,Washington Football Team,20,16,424,2,259,1,2021,True,Washington Football Team,Los Angeles Chargers,WAS,LAC
+2021_01_CLE_KC,01,Sun,9/12/21,4:25PM,Kansas City Chiefs,Cleveland Browns,33,29,397,0,457,2,2021,False,Kansas City Chiefs,Cleveland Browns,KC,CLE
+2021_01_DEN_NYG,01,Sun,9/12/21,4:25PM,Denver Broncos,New York Giants,27,13,420,1,314,1,2021,True,New York Giants,Denver Broncos,NYG,DEN
+2021_01_GB_NO,01,Sun,9/12/21,4:25PM,New Orleans Saints,Green Bay Packers,38,3,322,0,229,3,2021,False,New Orleans Saints,Green Bay Packers,NO,GB
+2021_01_MIA_NE,01,Sun,9/12/21,4:25PM,Miami Dolphins,New England Patriots,17,16,259,1,393,2,2021,True,New England Patriots,Miami Dolphins,NE,MIA
+2021_01_CHI_LAR,01,Sun,9/12/21,8:20PM,Los Angeles Rams,Chicago Bears,34,14,386,0,322,2,2021,False,Los Angeles Rams,Chicago Bears,LAR,CHI
+2021_01_BAL_LV,01,Mon,9/13/21,8:15PM,Las Vegas Raiders,Baltimore Ravens,33,27,491,1,406,2,2021,False,Las Vegas Raiders,Baltimore Ravens,LV,BAL
+2021_02_NYG_WAS,02,Thu,9/16/21,8:20PM,Washington Football Team,New York Giants,30,29,407,1,391,0,2021,False,Washington Football Team,New York Giants,WAS,NYG
+2021_02_BUF_MIA,02,Sun,9/19/21,1:00PM,Buffalo Bills,Miami Dolphins,35,0,314,2,216,3,2021,True,Miami Dolphins,Buffalo Bills,MIA,BUF
+2021_02_NO_CAR,02,Sun,9/19/21,1:00PM,Carolina Panthers,New Orleans Saints,26,7,383,1,128,2,2021,False,Carolina Panthers,New Orleans Saints,CAR,NO
+2021_02_CIN_CHI,02,Sun,9/19/21,1:00PM,Chicago Bears,Cincinnati Bengals,20,17,206,1,248,4,2021,False,Chicago Bears,Cincinnati Bengals,CHI,CIN
+2021_02_HOU_CLE,02,Sun,9/19/21,1:00PM,Cleveland Browns,Houston Texans,31,21,355,2,302,2,2021,False,Cleveland Browns,Houston Texans,CLE,HOU
+2021_02_LAR_IND,02,Sun,9/19/21,1:00PM,Los Angeles Rams,Indianapolis Colts,27,24,371,2,354,2,2021,True,Indianapolis Colts,Los Angeles Rams,IND,LAR
+2021_02_DEN_JAX,02,Sun,9/19/21,1:00PM,Denver Broncos,Jacksonville Jaguars,23,13,398,0,189,2,2021,True,Jacksonville Jaguars,Denver Broncos,JAX,DEN
+2021_02_NE_NYJ,02,Sun,9/19/21,1:00PM,New England Patriots,New York Jets,25,6,260,0,336,4,2021,True,New York Jets,New England Patriots,NYJ,NE
+2021_02_SF_PHI,02,Sun,9/19/21,1:00PM,San Francisco 49ers,Philadelphia Eagles,17,11,306,0,328,0,2021,True,Philadelphia Eagles,San Francisco 49ers,PHI,SF
+2021_02_LV_PIT,02,Sun,9/19/21,1:00PM,Las Vegas Raiders,Pittsburgh Steelers,26,17,425,0,331,1,2021,True,Pittsburgh Steelers,Las Vegas Raiders,PIT,LV
+2021_02_ATL_TB,02,Sun,9/19/21,4:05PM,Tampa Bay Buccaneers,Atlanta Falcons,48,25,341,1,348,3,2021,False,Tampa Bay Buccaneers,Atlanta Falcons,TB,ATL
+2021_02_MIN_ARI,02,Sun,9/19/21,4:05PM,Arizona Cardinals,Minnesota Vikings,34,33,474,2,419,0,2021,False,Arizona Cardinals,Minnesota Vikings,ARI,MIN
+2021_02_DAL_LAC,02,Sun,9/19/21,4:25PM,Dallas Cowboys,Los Angeles Chargers,20,17,419,1,408,2,2021,True,Los Angeles Chargers,Dallas Cowboys,LAC,DAL
+2021_02_TEN_SEA,02,Sun,9/19/21,4:25PM,Tennessee Titans,Seattle Seahawks,33,30,532,1,397,0,2021,True,Seattle Seahawks,Tennessee Titans,SEA,TEN
+2021_02_KC_BAL,02,Sun,9/19/21,8:20PM,Baltimore Ravens,Kansas City Chiefs,36,35,481,2,405,2,2021,False,Baltimore Ravens,Kansas City Chiefs,BAL,KC
+2021_02_DET_GB,02,Mon,9/20/21,8:15PM,Green Bay Packers,Detroit Lions,35,17,323,0,344,2,2021,False,Green Bay Packers,Detroit Lions,GB,DET
+2021_03_CAR_HOU,03,Thu,9/23/21,8:20PM,Carolina Panthers,Houston Texans,24,9,407,0,193,0,2021,True,Houston Texans,Carolina Panthers,HOU,CAR
+2021_03_ATL_NYG,03,Sun,9/26/21,1:00PM,Atlanta Falcons,New York Giants,17,14,296,1,346,1,2021,True,New York Giants,Atlanta Falcons,NYG,ATL
+2021_03_WAS_BUF,03,Sun,9/26/21,1:00PM,Buffalo Bills,Washington Football Team,43,21,481,0,290,3,2021,False,Buffalo Bills,Washington Football Team,BUF,WAS
+2021_03_CHI_CLE,03,Sun,9/26/21,1:00PM,Cleveland Browns,Chicago Bears,26,6,418,0,47,0,2021,False,Cleveland Browns,Chicago Bears,CLE,CHI
+2021_03_CIN_PIT,03,Sun,9/26/21,1:00PM,Cincinnati Bengals,Pittsburgh Steelers,24,10,268,1,342,2,2021,True,Pittsburgh Steelers,Cincinnati Bengals,PIT,CIN
+2021_03_IND_TEN,03,Sun,9/26/21,1:00PM,Tennessee Titans,Indianapolis Colts,25,16,368,3,265,0,2021,False,Tennessee Titans,Indianapolis Colts,TEN,IND
+2021_03_ARI_JAX,03,Sun,9/26/21,1:00PM,Arizona Cardinals,Jacksonville Jaguars,31,19,407,1,361,4,2021,True,Jacksonville Jaguars,Arizona Cardinals,JAX,ARI
+2021_03_BAL_DET,03,Sun,9/26/21,1:00PM,Baltimore Ravens,Detroit Lions,19,17,387,1,285,0,2021,True,Detroit Lions,Baltimore Ravens,DET,BAL
+2021_03_LAC_KC,03,Sun,9/26/21,1:00PM,Los Angeles Chargers,Kansas City Chiefs,30,24,352,0,437,4,2021,True,Kansas City Chiefs,Los Angeles Chargers,KC,LAC
+2021_03_NO_NE,03,Sun,9/26/21,1:00PM,New Orleans Saints,New England Patriots,28,13,252,0,300,3,2021,True,New England Patriots,New Orleans Saints,NE,NO
+2021_03_NYJ_DEN,03,Sun,9/26/21,4:05PM,Denver Broncos,New York Jets,26,0,343,1,162,2,2021,False,Denver Broncos,New York Jets,DEN,NYJ
+2021_03_MIA_LV,03,Sun,9/26/21,4:05PM,Las Vegas Raiders,Miami Dolphins,31,28,497,1,330,0,2021,False,Las Vegas Raiders,Miami Dolphins,LV,MIA
+2021_03_SEA_MIN,03,Sun,9/26/21,4:25PM,Minnesota Vikings,Seattle Seahawks,30,17,453,0,389,0,2021,False,Minnesota Vikings,Seattle Seahawks,MIN,SEA
+2021_03_TB_LAR,03,Sun,9/26/21,4:25PM,Los Angeles Rams,Tampa Bay Buccaneers,34,24,407,0,446,0,2021,False,Los Angeles Rams,Tampa Bay Buccaneers,LAR,TB
+2021_03_GB_SF,03,Sun,9/26/21,8:20PM,Green Bay Packers,San Francisco 49ers,30,28,353,0,298,2,2021,True,San Francisco 49ers,Green Bay Packers,SF,GB
+2021_03_PHI_DAL,03,Mon,9/27/21,8:15PM,Dallas Cowboys,Philadelphia Eagles,41,21,380,1,367,2,2021,False,Dallas Cowboys,Philadelphia Eagles,DAL,PHI
+2021_04_JAX_CIN,04,Thu,9/30/21,8:20PM,Cincinnati Bengals,Jacksonville Jaguars,24,21,420,0,341,0,2021,False,Cincinnati Bengals,Jacksonville Jaguars,CIN,JAX
+2021_04_WAS_ATL,04,Sun,10/3/21,1:00PM,Washington Football Team,Atlanta Falcons,34,30,412,0,374,0,2021,True,Atlanta Falcons,Washington Football Team,ATL,WAS
+2021_04_HOU_BUF,04,Sun,10/3/21,1:00PM,Buffalo Bills,Houston Texans,40,0,450,1,109,5,2021,False,Buffalo Bills,Houston Texans,BUF,HOU
+2021_04_CAR_DAL,04,Sun,10/3/21,1:00PM,Dallas Cowboys,Carolina Panthers,36,28,433,0,379,2,2021,False,Dallas Cowboys,Carolina Panthers,DAL,CAR
+2021_04_DET_CHI,04,Sun,10/3/21,1:00PM,Chicago Bears,Detroit Lions,24,14,373,1,351,2,2021,False,Chicago Bears,Detroit Lions,CHI,DET
+2021_04_CLE_MIN,04,Sun,10/3/21,1:00PM,Cleveland Browns,Minnesota Vikings,14,7,327,0,255,1,2021,True,Minnesota Vikings,Cleveland Browns,MIN,CLE
+2021_04_IND_MIA,04,Sun,10/3/21,1:00PM,Indianapolis Colts,Miami Dolphins,27,17,349,1,203,2,2021,True,Miami Dolphins,Indianapolis Colts,MIA,IND
+2021_04_KC_PHI,04,Sun,10/3/21,1:00PM,Kansas City Chiefs,Philadelphia Eagles,42,30,471,1,461,0,2021,True,Philadelphia Eagles,Kansas City Chiefs,PHI,KC
+2021_04_NYG_NO,04,Sun,10/3/21,1:00PM,New York Giants,New Orleans Saints,27,21,485,1,405,1,2021,True,New Orleans Saints,New York Giants,NO,NYG
+2021_04_TEN_NYJ,04,Sun,10/3/21,1:00PM,New York Jets,Tennessee Titans,27,24,355,1,430,0,2021,False,New York Jets,Tennessee Titans,NYJ,TEN
+2021_04_ARI_LAR,04,Sun,10/3/21,4:05PM,Arizona Cardinals,Los Angeles Rams,37,20,465,0,401,2,2021,True,Los Angeles Rams,Arizona Cardinals,LAR,ARI
+2021_04_SEA_SF,04,Sun,10/3/21,4:05PM,Seattle Seahawks,San Francisco 49ers,28,21,234,0,457,2,2021,True,San Francisco 49ers,Seattle Seahawks,SF,SEA
+2021_04_BAL_DEN,04,Sun,10/3/21,4:25PM,Baltimore Ravens,Denver Broncos,23,7,406,0,254,1,2021,True,Denver Broncos,Baltimore Ravens,DEN,BAL
+2021_04_PIT_GB,04,Sun,10/3/21,4:25PM,Green Bay Packers,Pittsburgh Steelers,27,17,367,1,282,2,2021,False,Green Bay Packers,Pittsburgh Steelers,GB,PIT
+2021_04_TB_NE,04,Sun,10/3/21,8:20PM,Tampa Bay Buccaneers,New England Patriots,19,17,381,0,294,2,2021,True,New England Patriots,Tampa Bay Buccaneers,NE,TB
+2021_04_LV_LAC,04,Mon,10/4/21,8:15PM,Los Angeles Chargers,Las Vegas Raiders,28,14,380,0,213,1,2021,False,Los Angeles Chargers,Las Vegas Raiders,LAC,LV
+2021_05_LAR_SEA,05,Thu,10/7/21,8:20PM,Los Angeles Rams,Seattle Seahawks,26,17,476,1,354,2,2021,True,Seattle Seahawks,Los Angeles Rams,SEA,LAR
+2021_05_NYJ_ATL,05,Sun,10/10/21,9:30AM,Atlanta Falcons,New York Jets,27,20,450,2,230,1,2021,False,Atlanta Falcons,New York Jets,ATL,NYJ
+2021_05_PHI_CAR,05,Sun,10/10/21,1:00PM,Philadelphia Eagles,Carolina Panthers,21,18,273,2,267,3,2021,True,Carolina Panthers,Philadelphia Eagles,CAR,PHI
+2021_05_GB_CIN,05,Sun,10/10/21,1:00PM,Green Bay Packers,Cincinnati Bengals,25,22,466,1,367,2,2021,True,Cincinnati Bengals,Green Bay Packers,CIN,GB
+2021_05_DEN_PIT,05,Sun,10/10/21,1:00PM,Pittsburgh Steelers,Denver Broncos,27,19,391,1,374,1,2021,False,Pittsburgh Steelers,Denver Broncos,PIT,DEN
+2021_05_DET_MIN,05,Sun,10/10/21,1:00PM,Minnesota Vikings,Detroit Lions,19,17,384,2,288,2,2021,False,Minnesota Vikings,Detroit Lions,MIN,DET
+2021_05_NE_HOU,05,Sun,10/10/21,1:00PM,New England Patriots,Houston Texans,25,22,352,2,360,1,2021,True,Houston Texans,New England Patriots,HOU,NE
+2021_05_TEN_JAX,05,Sun,10/10/21,1:00PM,Tennessee Titans,Jacksonville Jaguars,37,19,368,0,454,2,2021,True,Jacksonville Jaguars,Tennessee Titans,JAX,TEN
+2021_05_MIA_TB,05,Sun,10/10/21,1:00PM,Tampa Bay Buccaneers,Miami Dolphins,45,17,558,0,301,2,2021,False,Tampa Bay Buccaneers,Miami Dolphins,TB,MIA
+2021_05_NO_WAS,05,Sun,10/10/21,1:00PM,New Orleans Saints,Washington Football Team,33,22,369,2,373,2,2021,True,Washington Football Team,New Orleans Saints,WAS,NO
+2021_05_CHI_LV,05,Sun,10/10/21,4:05PM,Chicago Bears,Las Vegas Raiders,20,9,252,0,259,1,2021,True,Las Vegas Raiders,Chicago Bears,LV,CHI
+2021_05_CLE_LAC,05,Sun,10/10/21,4:05PM,Los Angeles Chargers,Cleveland Browns,47,42,493,1,531,0,2021,False,Los Angeles Chargers,Cleveland Browns,LAC,CLE
+2021_05_SF_ARI,05,Sun,10/10/21,4:25PM,Arizona Cardinals,San Francisco 49ers,17,10,304,1,338,1,2021,False,Arizona Cardinals,San Francisco 49ers,ARI,SF
+2021_05_NYG_DAL,05,Sun,10/10/21,4:25PM,Dallas Cowboys,New York Giants,44,20,515,2,367,2,2021,False,Dallas Cowboys,New York Giants,DAL,NYG
+2021_05_BUF_KC,05,Sun,10/10/21,8:20PM,Buffalo Bills,Kansas City Chiefs,38,20,436,0,392,4,2021,True,Kansas City Chiefs,Buffalo Bills,KC,BUF
+2021_05_IND_BAL,05,Mon,10/11/21,8:15PM,Baltimore Ravens,Indianapolis Colts,31,25,523,1,513,1,2021,False,Baltimore Ravens,Indianapolis Colts,BAL,IND
+2021_06_TB_PHI,06,Thu,10/14/21,8:20PM,Tampa Bay Buccaneers,Philadelphia Eagles,28,22,399,1,213,1,2021,True,Philadelphia Eagles,Tampa Bay Buccaneers,PHI,TB
+2021_06_MIA_JAX,06,Sun,10/17/21,9:30AM,Jacksonville Jaguars,Miami Dolphins,23,20,396,1,431,1,2021,False,Jacksonville Jaguars,Miami Dolphins,JAX,MIA
+2021_06_MIN_CAR,06,Sun,10/17/21,1:00PM,Minnesota Vikings,Carolina Panthers,34,28,571,1,306,3,2021,True,Carolina Panthers,Minnesota Vikings,CAR,MIN
+2021_06_GB_CHI,06,Sun,10/17/21,1:00PM,Green Bay Packers,Chicago Bears,24,14,323,0,277,1,2021,True,Chicago Bears,Green Bay Packers,CHI,GB
+2021_06_CIN_DET,06,Sun,10/17/21,1:00PM,Cincinnati Bengals,Detroit Lions,34,11,398,1,228,1,2021,True,Detroit Lions,Cincinnati Bengals,DET,CIN
+2021_06_HOU_IND,06,Sun,10/17/21,1:00PM,Indianapolis Colts,Houston Texans,31,3,388,0,353,3,2021,False,Indianapolis Colts,Houston Texans,IND,HOU
+2021_06_KC_WAS,06,Sun,10/17/21,1:00PM,Kansas City Chiefs,Washington Football Team,31,13,499,3,276,2,2021,True,Washington Football Team,Kansas City Chiefs,WAS,KC
+2021_06_LAR_NYG,06,Sun,10/17/21,1:00PM,Los Angeles Rams,New York Giants,38,11,365,2,261,4,2021,True,New York Giants,Los Angeles Rams,NYG,LAR
+2021_06_LAC_BAL,06,Sun,10/17/21,1:00PM,Baltimore Ravens,Los Angeles Chargers,34,6,327,2,208,1,2021,False,Baltimore Ravens,Los Angeles Chargers,BAL,LAC
+2021_06_ARI_CLE,06,Sun,10/17/21,4:05PM,Arizona Cardinals,Cleveland Browns,37,14,352,0,290,3,2021,True,Cleveland Browns,Arizona Cardinals,CLE,ARI
+2021_06_DAL_NE,06,Sun,10/17/21,4:25PM,Dallas Cowboys,New England Patriots,35,29,567,2,335,2,2021,True,New England Patriots,Dallas Cowboys,NE,DAL
+2021_06_LV_DEN,06,Sun,10/17/21,4:25PM,Las Vegas Raiders,Denver Broncos,34,24,426,0,421,4,2021,True,Denver Broncos,Las Vegas Raiders,DEN,LV
+2021_06_SEA_PIT,06,Sun,10/17/21,8:20PM,Pittsburgh Steelers,Seattle Seahawks,23,20,345,1,309,1,2021,False,Pittsburgh Steelers,Seattle Seahawks,PIT,SEA
+2021_06_BUF_TEN,06,Mon,10/18/21,8:15PM,Tennessee Titans,Buffalo Bills,34,31,362,1,417,1,2021,False,Tennessee Titans,Buffalo Bills,TEN,BUF
+2021_07_DEN_CLE,07,Thu,10/21/21,8:20PM,Cleveland Browns,Denver Broncos,17,14,376,0,223,1,2021,False,Cleveland Browns,Denver Broncos,CLE,DEN
+2021_07_ATL_MIA,07,Sun,10/24/21,1:00PM,Atlanta Falcons,Miami Dolphins,30,28,397,2,413,2,2021,True,Miami Dolphins,Atlanta Falcons,MIA,ATL
+2021_07_CAR_NYG,07,Sun,10/24/21,1:00PM,New York Giants,Carolina Panthers,25,3,302,0,173,1,2021,False,New York Giants,Carolina Panthers,NYG,CAR
+2021_07_CIN_BAL,07,Sun,10/24/21,1:00PM,Cincinnati Bengals,Baltimore Ravens,41,17,520,1,393,0,2021,True,Baltimore Ravens,Cincinnati Bengals,BAL,CIN
+2021_07_WAS_GB,07,Sun,10/24/21,1:00PM,Green Bay Packers,Washington Football Team,24,10,304,1,430,2,2021,False,Green Bay Packers,Washington Football Team,GB,WAS
+2021_07_KC_TEN,07,Sun,10/24/21,1:00PM,Tennessee Titans,Kansas City Chiefs,27,3,369,1,334,3,2021,False,Tennessee Titans,Kansas City Chiefs,TEN,KC
+2021_07_NYJ_NE,07,Sun,10/24/21,1:00PM,New England Patriots,New York Jets,54,13,551,0,299,3,2021,False,New England Patriots,New York Jets,NE,NYJ
+2021_07_DET_LAR,07,Sun,10/24/21,4:05PM,Los Angeles Rams,Detroit Lions,28,19,374,0,415,2,2021,False,Los Angeles Rams,Detroit Lions,LAR,DET
+2021_07_PHI_LV,07,Sun,10/24/21,4:05PM,Las Vegas Raiders,Philadelphia Eagles,33,22,442,1,358,2,2021,False,Las Vegas Raiders,Philadelphia Eagles,LV,PHI
+2021_07_CHI_TB,07,Sun,10/24/21,4:25PM,Tampa Bay Buccaneers,Chicago Bears,38,3,408,1,311,5,2021,False,Tampa Bay Buccaneers,Chicago Bears,TB,CHI
+2021_07_HOU_ARI,07,Sun,10/24/21,4:25PM,Arizona Cardinals,Houston Texans,31,5,397,1,160,1,2021,False,Arizona Cardinals,Houston Texans,ARI,HOU
+2021_07_IND_SF,07,Sun,10/24/21,8:20PM,Indianapolis Colts,San Francisco 49ers,30,18,295,2,280,4,2021,True,San Francisco 49ers,Indianapolis Colts,SF,IND
+2021_07_NO_SEA,07,Mon,10/25/21,8:15PM,New Orleans Saints,Seattle Seahawks,13,10,304,1,219,0,2021,True,Seattle Seahawks,New Orleans Saints,SEA,NO
+2021_08_GB_ARI,08,Thu,10/28/21,8:20PM,Green Bay Packers,Arizona Cardinals,24,21,335,0,334,3,2021,True,Arizona Cardinals,Green Bay Packers,ARI,GB
+2021_08_CAR_ATL,08,Sun,10/31/21,1:00PM,Carolina Panthers,Atlanta Falcons,19,13,332,1,213,2,2021,True,Atlanta Falcons,Carolina Panthers,ATL,CAR
+2021_08_MIA_BUF,08,Sun,10/31/21,1:00PM,Buffalo Bills,Miami Dolphins,26,11,351,0,262,2,2021,False,Buffalo Bills,Miami Dolphins,BUF,MIA
+2021_08_SF_CHI,08,Sun,10/31/21,1:00PM,San Francisco 49ers,Chicago Bears,33,22,467,0,324,1,2021,True,Chicago Bears,San Francisco 49ers,CHI,SF
+2021_08_CIN_NYJ,08,Sun,10/31/21,1:00PM,New York Jets,Cincinnati Bengals,34,31,511,3,318,1,2021,False,New York Jets,Cincinnati Bengals,NYJ,CIN
+2021_08_PIT_CLE,08,Sun,10/31/21,1:00PM,Pittsburgh Steelers,Cleveland Browns,15,10,370,0,306,1,2021,True,Cleveland Browns,Pittsburgh Steelers,CLE,PIT
+2021_08_TEN_IND,08,Sun,10/31/21,1:00PM,Tennessee Titans,Indianapolis Colts,34,31,340,2,307,3,2021,True,Indianapolis Colts,Tennessee Titans,IND,TEN
+2021_08_PHI_DET,08,Sun,10/31/21,1:00PM,Philadelphia Eagles,Detroit Lions,44,6,350,0,228,1,2021,True,Detroit Lions,Philadelphia Eagles,DET,PHI
+2021_08_LAR_HOU,08,Sun,10/31/21,1:00PM,Los Angeles Rams,Houston Texans,38,22,467,0,323,1,2021,True,Houston Texans,Los Angeles Rams,HOU,LAR
+2021_08_JAX_SEA,08,Sun,10/31/21,4:05PM,Seattle Seahawks,Jacksonville Jaguars,31,7,229,0,309,1,2021,False,Seattle Seahawks,Jacksonville Jaguars,SEA,JAX
+2021_08_NE_LAC,08,Sun,10/31/21,4:05PM,New England Patriots,Los Angeles Chargers,27,24,352,1,369,2,2021,True,Los Angeles Chargers,New England Patriots,LAC,NE
+2021_08_TB_NO,08,Sun,10/31/21,4:25PM,New Orleans Saints,Tampa Bay Buccaneers,36,27,361,0,421,3,2021,False,New Orleans Saints,Tampa Bay Buccaneers,NO,TB
+2021_08_WAS_DEN,08,Sun,10/31/21,4:25PM,Denver Broncos,Washington Football Team,17,10,273,1,342,2,2021,False,Denver Broncos,Washington Football Team,DEN,WAS
+2021_08_DAL_MIN,08,Sun,10/31/21,8:20PM,Dallas Cowboys,Minnesota Vikings,20,16,419,2,278,0,2021,True,Minnesota Vikings,Dallas Cowboys,MIN,DAL
+2021_08_NYG_KC,08,Mon,11/1/21,8:15PM,Kansas City Chiefs,New York Giants,20,17,368,2,300,1,2021,False,Kansas City Chiefs,New York Giants,KC,NYG
+2021_09_NYJ_IND,09,Thu,11/4/21,8:20PM,Indianapolis Colts,New York Jets,45,30,532,0,486,2,2021,False,Indianapolis Colts,New York Jets,IND,NYJ
+2021_09_ATL_NO,09,Sun,11/7/21,1:00PM,Atlanta Falcons,New Orleans Saints,27,25,366,0,376,1,2021,True,New Orleans Saints,Atlanta Falcons,NO,ATL
+2021_09_BUF_JAX,09,Sun,11/7/21,1:00PM,Jacksonville Jaguars,Buffalo Bills,9,6,218,1,301,3,2021,False,Jacksonville Jaguars,Buffalo Bills,JAX,BUF
+2021_09_DEN_DAL,09,Sun,11/7/21,1:00PM,Denver Broncos,Dallas Cowboys,30,16,407,0,290,2,2021,True,Dallas Cowboys,Denver Broncos,DAL,DEN
+2021_09_MIN_BAL,09,Sun,11/7/21,1:00PM,Baltimore Ravens,Minnesota Vikings,34,31,500,2,318,0,2021,False,Baltimore Ravens,Minnesota Vikings,BAL,MIN
+2021_09_NE_CAR,09,Sun,11/7/21,1:00PM,New England Patriots,Carolina Panthers,24,6,273,2,240,3,2021,True,Carolina Panthers,New England Patriots,CAR,NE
+2021_09_CLE_CIN,09,Sun,11/7/21,1:00PM,Cleveland Browns,Cincinnati Bengals,41,16,361,0,348,3,2021,True,Cincinnati Bengals,Cleveland Browns,CIN,CLE
+2021_09_HOU_MIA,09,Sun,11/7/21,1:00PM,Miami Dolphins,Houston Texans,17,9,262,5,272,4,2021,False,Miami Dolphins,Houston Texans,MIA,HOU
+2021_09_LV_NYG,09,Sun,11/7/21,1:00PM,New York Giants,Las Vegas Raiders,23,16,247,1,403,3,2021,False,New York Giants,Las Vegas Raiders,NYG,LV
+2021_09_LAC_PHI,09,Sun,11/7/21,4:05PM,Los Angeles Chargers,Philadelphia Eagles,27,24,445,0,331,0,2021,True,Philadelphia Eagles,Los Angeles Chargers,PHI,LAC
+2021_09_ARI_SF,09,Sun,11/7/21,4:25PM,Arizona Cardinals,San Francisco 49ers,31,17,437,0,337,3,2021,True,San Francisco 49ers,Arizona Cardinals,SF,ARI
+2021_09_GB_KC,09,Sun,11/7/21,4:25PM,Kansas City Chiefs,Green Bay Packers,13,7,237,0,301,2,2021,False,Kansas City Chiefs,Green Bay Packers,KC,GB
+2021_09_TEN_LAR,09,Sun,11/7/21,8:20PM,Tennessee Titans,Los Angeles Rams,28,16,194,1,347,2,2021,True,Los Angeles Rams,Tennessee Titans,LAR,TEN
+2021_09_CHI_PIT,09,Mon,11/8/21,8:15PM,Pittsburgh Steelers,Chicago Bears,29,27,280,1,414,2,2021,False,Pittsburgh Steelers,Chicago Bears,PIT,CHI
+2021_10_BAL_MIA,10,Thu,11/11/21,8:20PM,Miami Dolphins,Baltimore Ravens,22,10,350,0,304,2,2021,False,Miami Dolphins,Baltimore Ravens,MIA,BAL
+2021_10_ATL_DAL,10,Sun,11/14/21,1:00PM,Dallas Cowboys,Atlanta Falcons,43,3,431,1,214,3,2021,False,Dallas Cowboys,Atlanta Falcons,DAL,ATL
+2021_10_BUF_NYJ,10,Sun,11/14/21,1:00PM,Buffalo Bills,New York Jets,45,17,489,2,366,5,2021,True,New York Jets,Buffalo Bills,NYJ,BUF
+2021_10_DET_PIT,10,Sun,11/14/21,1:00PM,Pittsburgh Steelers,Detroit Lions,16,16,387,3,306,0,2021,False,Pittsburgh Steelers,Detroit Lions,PIT,DET
+2021_10_NO_TEN,10,Sun,11/14/21,1:00PM,Tennessee Titans,New Orleans Saints,23,21,264,0,373,1,2021,False,Tennessee Titans,New Orleans Saints,TEN,NO
+2021_10_TB_WAS,10,Sun,11/14/21,1:00PM,Washington Football Team,Tampa Bay Buccaneers,29,19,320,1,273,2,2021,False,Washington Football Team,Tampa Bay Buccaneers,WAS,TB
+2021_10_CLE_NE,10,Sun,11/14/21,1:00PM,New England Patriots,Cleveland Browns,45,7,452,0,217,1,2021,False,New England Patriots,Cleveland Browns,NE,CLE
+2021_10_JAX_IND,10,Sun,11/14/21,1:00PM,Indianapolis Colts,Jacksonville Jaguars,23,17,295,0,331,1,2021,False,Indianapolis Colts,Jacksonville Jaguars,IND,JAX
+2021_10_MIN_LAC,10,Sun,11/14/21,4:05PM,Minnesota Vikings,Los Angeles Chargers,27,20,381,1,253,1,2021,True,Los Angeles Chargers,Minnesota Vikings,LAC,MIN
+2021_10_CAR_ARI,10,Sun,11/14/21,4:05PM,Carolina Panthers,Arizona Cardinals,34,10,341,2,169,2,2021,True,Arizona Cardinals,Carolina Panthers,ARI,CAR
+2021_10_PHI_DEN,10,Sun,11/14/21,4:25PM,Philadelphia Eagles,Denver Broncos,30,13,386,1,308,1,2021,True,Denver Broncos,Philadelphia Eagles,DEN,PHI
+2021_10_SEA_GB,10,Sun,11/14/21,4:25PM,Green Bay Packers,Seattle Seahawks,17,0,393,1,208,2,2021,False,Green Bay Packers,Seattle Seahawks,GB,SEA
+2021_10_KC_LV,10,Sun,11/14/21,8:20PM,Kansas City Chiefs,Las Vegas Raiders,41,14,516,1,299,2,2021,True,Las Vegas Raiders,Kansas City Chiefs,LV,KC
+2021_10_LAR_SF,10,Mon,11/15/21,8:15PM,San Francisco 49ers,Los Angeles Rams,31,10,335,0,278,2,2021,False,San Francisco 49ers,Los Angeles Rams,SF,LAR
+2021_11_NE_ATL,11,Thu,11/18/21,8:20PM,New England Patriots,Atlanta Falcons,25,0,308,1,165,4,2021,True,Atlanta Falcons,New England Patriots,ATL,NE
+2021_11_IND_BUF,11,Sun,11/21/21,1:00PM,Indianapolis Colts,Buffalo Bills,41,15,370,0,311,4,2021,True,Buffalo Bills,Indianapolis Colts,BUF,IND
+2021_11_BAL_CHI,11,Sun,11/21/21,1:00PM,Baltimore Ravens,Chicago Bears,16,13,299,1,353,1,2021,True,Chicago Bears,Baltimore Ravens,CHI,BAL
+2021_11_HOU_TEN,11,Sun,11/21/21,1:00PM,Houston Texans,Tennessee Titans,22,13,190,0,420,5,2021,True,Tennessee Titans,Houston Texans,TEN,HOU
+2021_11_SF_JAX,11,Sun,11/21/21,1:00PM,San Francisco 49ers,Jacksonville Jaguars,30,10,333,0,200,2,2021,True,Jacksonville Jaguars,San Francisco 49ers,JAX,SF
+2021_11_NO_PHI,11,Sun,11/21/21,1:00PM,Philadelphia Eagles,New Orleans Saints,40,29,380,1,323,3,2021,False,Philadelphia Eagles,New Orleans Saints,PHI,NO
+2021_11_WAS_CAR,11,Sun,11/21/21,1:00PM,Washington Football Team,Carolina Panthers,27,21,369,1,297,0,2021,True,Carolina Panthers,Washington Football Team,CAR,WAS
+2021_11_DET_CLE,11,Sun,11/21/21,1:00PM,Cleveland Browns,Detroit Lions,13,10,349,2,245,2,2021,False,Cleveland Browns,Detroit Lions,CLE,DET
+2021_11_GB_MIN,11,Sun,11/21/21,1:00PM,Minnesota Vikings,Green Bay Packers,34,31,408,0,467,0,2021,False,Minnesota Vikings,Green Bay Packers,MIN,GB
+2021_11_MIA_NYJ,11,Sun,11/21/21,1:00PM,Miami Dolphins,New York Jets,24,17,388,1,380,1,2021,True,New York Jets,Miami Dolphins,NYJ,MIA
+2021_11_CIN_LV,11,Sun,11/21/21,4:05PM,Cincinnati Bengals,Las Vegas Raiders,32,13,288,1,278,2,2021,True,Las Vegas Raiders,Cincinnati Bengals,LV,CIN
+2021_11_DAL_KC,11,Sun,11/21/21,4:25PM,Kansas City Chiefs,Dallas Cowboys,19,9,370,2,276,3,2021,False,Kansas City Chiefs,Dallas Cowboys,KC,DAL
+2021_11_ARI_SEA,11,Sun,11/21/21,4:25PM,Arizona Cardinals,Seattle Seahawks,23,13,413,0,266,0,2021,True,Seattle Seahawks,Arizona Cardinals,SEA,ARI
+2021_11_PIT_LAC,11,Sun,11/21/21,8:20PM,Los Angeles Chargers,Pittsburgh Steelers,41,37,533,1,300,0,2021,False,Los Angeles Chargers,Pittsburgh Steelers,LAC,PIT
+2021_11_NYG_TB,11,Mon,11/22/21,8:15PM,Tampa Bay Buccaneers,New York Giants,30,10,402,1,215,3,2021,False,Tampa Bay Buccaneers,New York Giants,TB,NYG
+2021_12_CHI_DET,12,Thu,11/25/21,12:30PM,Chicago Bears,Detroit Lions,16,14,378,1,239,1,2021,True,Detroit Lions,Chicago Bears,DET,CHI
+2021_12_LV_DAL,12,Thu,11/25/21,4:30PM,Las Vegas Raiders,Dallas Cowboys,36,33,509,0,437,0,2021,True,Dallas Cowboys,Las Vegas Raiders,DAL,LV
+2021_12_BUF_NO,12,Thu,11/25/21,8:20PM,Buffalo Bills,New Orleans Saints,31,6,361,2,190,1,2021,True,New Orleans Saints,Buffalo Bills,NO,BUF
+2021_12_ATL_JAX,12,Sun,11/28/21,1:00PM,Atlanta Falcons,Jacksonville Jaguars,21,14,332,1,357,2,2021,True,Jacksonville Jaguars,Atlanta Falcons,JAX,ATL
+2021_12_PIT_CIN,12,Sun,11/28/21,1:00PM,Cincinnati Bengals,Pittsburgh Steelers,41,10,370,1,301,3,2021,False,Cincinnati Bengals,Pittsburgh Steelers,CIN,PIT
+2021_12_NYJ_HOU,12,Sun,11/28/21,1:00PM,New York Jets,Houston Texans,21,14,266,1,202,1,2021,True,Houston Texans,New York Jets,HOU,NYJ
+2021_12_PHI_NYG,12,Sun,11/28/21,1:00PM,New York Giants,Philadelphia Eagles,13,7,264,0,332,4,2021,False,New York Giants,Philadelphia Eagles,NYG,PHI
+2021_12_CAR_MIA,12,Sun,11/28/21,1:00PM,Miami Dolphins,Carolina Panthers,33,10,315,1,198,3,2021,False,Miami Dolphins,Carolina Panthers,MIA,CAR
+2021_12_TB_IND,12,Sun,11/28/21,1:00PM,Tampa Bay Buccaneers,Indianapolis Colts,38,31,359,2,392,5,2021,True,Indianapolis Colts,Tampa Bay Buccaneers,IND,TB
+2021_12_TEN_NE,12,Sun,11/28/21,1:00PM,New England Patriots,Tennessee Titans,36,13,394,0,355,4,2021,False,New England Patriots,Tennessee Titans,NE,TEN
+2021_12_LAC_DEN,12,Sun,11/28/21,4:05PM,Denver Broncos,Los Angeles Chargers,28,13,302,1,357,2,2021,False,Denver Broncos,Los Angeles Chargers,DEN,LAC
+2021_12_MIN_SF,12,Sun,11/28/21,4:25PM,San Francisco 49ers,Minnesota Vikings,34,26,423,1,323,2,2021,False,San Francisco 49ers,Minnesota Vikings,SF,MIN
+2021_12_LAR_GB,12,Sun,11/28/21,4:25PM,Green Bay Packers,Los Angeles Rams,36,28,399,1,353,3,2021,False,Green Bay Packers,Los Angeles Rams,GB,LAR
+2021_12_CLE_BAL,12,Sun,11/28/21,8:20PM,Baltimore Ravens,Cleveland Browns,16,10,303,4,262,2,2021,False,Baltimore Ravens,Cleveland Browns,BAL,CLE
+2021_12_SEA_WAS,12,Mon,11/29/21,8:15PM,Washington Football Team,Seattle Seahawks,17,15,371,1,267,1,2021,False,Washington Football Team,Seattle Seahawks,WAS,SEA
+2021_13_DAL_NO,13,Thu,12/2/21,8:20PM,Dallas Cowboys,New Orleans Saints,27,17,377,1,405,4,2021,True,New Orleans Saints,Dallas Cowboys,NO,DAL
+2021_13_TB_ATL,13,Sun,12/5/21,1:00PM,Tampa Bay Buccaneers,Atlanta Falcons,30,17,425,1,380,1,2021,True,Atlanta Falcons,Tampa Bay Buccaneers,ATL,TB
+2021_13_ARI_CHI,13,Sun,12/5/21,1:00PM,Arizona Cardinals,Chicago Bears,33,22,257,0,329,4,2021,True,Chicago Bears,Arizona Cardinals,CHI,ARI
+2021_13_LAC_CIN,13,Sun,12/5/21,1:00PM,Los Angeles Chargers,Cincinnati Bengals,41,22,363,3,356,4,2021,True,Cincinnati Bengals,Los Angeles Chargers,CIN,LAC
+2021_13_MIN_DET,13,Sun,12/5/21,1:00PM,Detroit Lions,Minnesota Vikings,29,27,372,2,426,1,2021,False,Detroit Lions,Minnesota Vikings,DET,MIN
+2021_13_PHI_NYJ,13,Sun,12/5/21,1:00PM,Philadelphia Eagles,New York Jets,33,18,418,0,281,1,2021,True,New York Jets,Philadelphia Eagles,NYJ,PHI
+2021_13_IND_HOU,13,Sun,12/5/21,1:00PM,Indianapolis Colts,Houston Texans,31,0,389,1,141,2,2021,True,Houston Texans,Indianapolis Colts,HOU,IND
+2021_13_NYG_MIA,13,Sun,12/5/21,1:00PM,Miami Dolphins,New York Giants,20,9,297,0,250,1,2021,False,Miami Dolphins,New York Giants,MIA,NYG
+2021_13_SF_SEA,13,Sun,12/5/21,4:00PM,Seattle Seahawks,San Francisco 49ers,30,23,327,3,365,3,2021,False,Seattle Seahawks,San Francisco 49ers,SEA,SF
+2021_13_WAS_LV,13,Sun,12/5/21,4:05PM,Washington Football Team,Las Vegas Raiders,17,15,298,1,310,0,2021,True,Las Vegas Raiders,Washington Football Team,LV,WAS
+2021_13_JAX_LAR,13,Sun,12/5/21,4:25PM,Los Angeles Rams,Jacksonville Jaguars,37,7,418,0,197,2,2021,False,Los Angeles Rams,Jacksonville Jaguars,LAR,JAX
+2021_13_BAL_PIT,13,Sun,12/5/21,4:25PM,Pittsburgh Steelers,Baltimore Ravens,20,19,321,0,326,1,2021,False,Pittsburgh Steelers,Baltimore Ravens,PIT,BAL
+2021_13_DEN_KC,13,Sun,12/5/21,8:20PM,Kansas City Chiefs,Denver Broncos,22,9,267,1,404,3,2021,False,Kansas City Chiefs,Denver Broncos,KC,DEN
+2021_13_NE_BUF,13,Mon,12/6/21,8:15PM,New England Patriots,Buffalo Bills,14,10,241,1,230,1,2021,True,Buffalo Bills,New England Patriots,BUF,NE
+2021_14_PIT_MIN,14,Thu,12/9/21,8:20PM,Minnesota Vikings,Pittsburgh Steelers,36,28,458,2,375,1,2021,False,Minnesota Vikings,Pittsburgh Steelers,MIN,PIT
+2021_14_ATL_CAR,14,Sun,12/12/21,1:00PM,Atlanta Falcons,Carolina Panthers,29,21,318,1,334,3,2021,True,Carolina Panthers,Atlanta Falcons,CAR,ATL
+2021_14_SF_CIN,14,Sun,12/12/21,1:00PM,San Francisco 49ers,Cincinnati Bengals,26,23,355,0,397,2,2021,True,Cincinnati Bengals,San Francisco 49ers,CIN,SF
+2021_14_BAL_CLE,14,Sun,12/12/21,1:00PM,Cleveland Browns,Baltimore Ravens,24,22,290,1,389,2,2021,False,Cleveland Browns,Baltimore Ravens,CLE,BAL
+2021_14_DAL_WAS,14,Sun,12/12/21,1:00PM,Dallas Cowboys,Washington Football Team,27,20,323,2,224,4,2021,True,Washington Football Team,Dallas Cowboys,WAS,DAL
+2021_14_SEA_HOU,14,Sun,12/12/21,1:00PM,Seattle Seahawks,Houston Texans,33,13,453,0,380,0,2021,True,Houston Texans,Seattle Seahawks,HOU,SEA
+2021_14_JAX_TEN,14,Sun,12/12/21,1:00PM,Tennessee Titans,Jacksonville Jaguars,20,0,263,0,192,4,2021,False,Tennessee Titans,Jacksonville Jaguars,TEN,JAX
+2021_14_LV_KC,14,Sun,12/12/21,1:00PM,Kansas City Chiefs,Las Vegas Raiders,48,9,372,0,290,5,2021,False,Kansas City Chiefs,Las Vegas Raiders,KC,LV
+2021_14_NO_NYJ,14,Sun,12/12/21,1:00PM,New Orleans Saints,New York Jets,30,9,344,0,256,0,2021,True,New York Jets,New Orleans Saints,NYJ,NO
+2021_14_DET_DEN,14,Sun,12/12/21,4:05PM,Denver Broncos,Detroit Lions,38,10,358,0,316,2,2021,False,Denver Broncos,Detroit Lions,DEN,DET
+2021_14_NYG_LAC,14,Sun,12/12/21,4:05PM,Los Angeles Chargers,New York Giants,37,21,423,0,316,2,2021,False,Los Angeles Chargers,New York Giants,LAC,NYG
+2021_14_BUF_TB,14,Sun,12/12/21,4:25PM,Tampa Bay Buccaneers,Buffalo Bills,33,27,488,0,466,1,2021,False,Tampa Bay Buccaneers,Buffalo Bills,TB,BUF
+2021_14_CHI_GB,14,Sun,12/12/21,8:20PM,Green Bay Packers,Chicago Bears,45,30,439,0,347,3,2021,False,Green Bay Packers,Chicago Bears,GB,CHI
+2021_14_LAR_ARI,14,Mon,12/13/21,8:15PM,Los Angeles Rams,Arizona Cardinals,30,23,356,0,447,2,2021,True,Arizona Cardinals,Los Angeles Rams,ARI,LAR
+2021_15_KC_LAC,15,Thu,12/16/21,8:20PM,Kansas City Chiefs,Los Angeles Chargers,34,28,496,2,428,2,2021,True,Los Angeles Chargers,Kansas City Chiefs,LAC,KC
+2021_15_NE_IND,15,Sat,12/18/21,8:20PM,Indianapolis Colts,New England Patriots,27,17,275,1,365,2,2021,False,Indianapolis Colts,New England Patriots,IND,NE
+2021_15_CAR_BUF,15,Sun,12/19/21,1:00PM,Buffalo Bills,Carolina Panthers,31,14,312,1,275,1,2021,False,Buffalo Bills,Carolina Panthers,BUF,CAR
+2021_15_ARI_DET,15,Sun,12/19/21,1:00PM,Detroit Lions,Arizona Cardinals,30,12,338,1,398,1,2021,False,Detroit Lions,Arizona Cardinals,DET,ARI
+2021_15_DAL_NYG,15,Sun,12/19/21,1:00PM,Dallas Cowboys,New York Giants,21,6,328,1,302,4,2021,True,New York Giants,Dallas Cowboys,NYG,DAL
+2021_15_GB_BAL,15,Sun,12/19/21,1:00PM,Green Bay Packers,Baltimore Ravens,31,30,346,0,354,0,2021,True,Baltimore Ravens,Green Bay Packers,BAL,GB
+2021_15_HOU_JAX,15,Sun,12/19/21,1:00PM,Houston Texans,Jacksonville Jaguars,30,16,281,1,296,0,2021,True,Jacksonville Jaguars,Houston Texans,JAX,HOU
+2021_15_NYJ_MIA,15,Sun,12/19/21,1:00PM,Miami Dolphins,New York Jets,31,24,379,3,228,1,2021,False,Miami Dolphins,New York Jets,MIA,NYJ
+2021_15_TEN_PIT,15,Sun,12/19/21,1:00PM,Pittsburgh Steelers,Tennessee Titans,19,13,168,0,318,4,2021,False,Pittsburgh Steelers,Tennessee Titans,PIT,TEN
+2021_15_ATL_SF,15,Sun,12/19/21,4:05PM,San Francisco 49ers,Atlanta Falcons,31,13,397,1,275,1,2021,False,San Francisco 49ers,Atlanta Falcons,SF,ATL
+2021_15_CIN_DEN,15,Sun,12/19/21,4:05PM,Cincinnati Bengals,Denver Broncos,15,10,249,0,292,1,2021,True,Denver Broncos,Cincinnati Bengals,DEN,CIN
+2021_15_NO_TB,15,Sun,12/19/21,8:20PM,New Orleans Saints,Tampa Bay Buccaneers,9,0,212,0,302,2,2021,True,Tampa Bay Buccaneers,New Orleans Saints,TB,NO
+2021_15_LV_CLE,15,Mon,12/20/21,5:00PM,Las Vegas Raiders,Cleveland Browns,16,14,328,2,236,0,2021,True,Cleveland Browns,Las Vegas Raiders,CLE,LV
+2021_15_MIN_CHI,15,Mon,12/20/21,8:15PM,Minnesota Vikings,Chicago Bears,17,9,193,1,370,3,2021,True,Chicago Bears,Minnesota Vikings,CHI,MIN
+2021_15_WAS_PHI,15,Tue,12/21/21,7:00PM,Philadelphia Eagles,Washington Football Team,27,17,519,2,237,0,2021,False,Philadelphia Eagles,Washington Football Team,PHI,WAS
+2021_15_SEA_LAR,15,Tue,12/21/21,7:00PM,Los Angeles Rams,Seattle Seahawks,20,10,332,1,214,1,2021,False,Los Angeles Rams,Seattle Seahawks,LAR,SEA
+2021_16_SF_TEN,16,Thu,12/23/21,8:20PM,Tennessee Titans,San Francisco 49ers,20,17,278,0,389,2,2021,False,Tennessee Titans,San Francisco 49ers,TEN,SF
+2021_16_CLE_GB,16,Sat,12/25/21,4:30PM,Green Bay Packers,Cleveland Browns,24,22,311,0,408,4,2021,False,Green Bay Packers,Cleveland Browns,GB,CLE
+2021_16_IND_ARI,16,Sat,12/25/21,8:15PM,Indianapolis Colts,Arizona Cardinals,22,16,346,0,378,0,2021,True,Arizona Cardinals,Indianapolis Colts,ARI,IND
+2021_16_DET_ATL,16,Sun,12/26/21,1:00PM,Atlanta Falcons,Detroit Lions,20,16,254,1,338,1,2021,False,Atlanta Falcons,Detroit Lions,ATL,DET
+2021_16_BUF_NE,16,Sun,12/26/21,1:00PM,Buffalo Bills,New England Patriots,33,21,428,0,288,2,2021,True,New England Patriots,Buffalo Bills,NE,BUF
+2021_16_TB_CAR,16,Sun,12/26/21,1:00PM,Tampa Bay Buccaneers,Carolina Panthers,32,6,391,0,273,1,2021,True,Carolina Panthers,Tampa Bay Buccaneers,CAR,TB
+2021_16_BAL_CIN,16,Sun,12/26/21,1:00PM,Cincinnati Bengals,Baltimore Ravens,41,21,575,0,334,1,2021,False,Cincinnati Bengals,Baltimore Ravens,CIN,BAL
+2021_16_LAC_HOU,16,Sun,12/26/21,1:00PM,Houston Texans,Los Angeles Chargers,41,29,437,0,417,3,2021,False,Houston Texans,Los Angeles Chargers,HOU,LAC
+2021_16_JAX_NYJ,16,Sun,12/26/21,1:00PM,New York Jets,Jacksonville Jaguars,26,21,373,0,384,1,2021,False,New York Jets,Jacksonville Jaguars,NYJ,JAX
+2021_16_LAR_MIN,16,Sun,12/26/21,1:00PM,Los Angeles Rams,Minnesota Vikings,30,23,356,3,361,1,2021,True,Minnesota Vikings,Los Angeles Rams,MIN,LAR
+2021_16_NYG_PHI,16,Sun,12/26/21,1:00PM,Philadelphia Eagles,New York Giants,34,10,324,0,192,2,2021,False,Philadelphia Eagles,New York Giants,PHI,NYG
+2021_16_CHI_SEA,16,Sun,12/26/21,4:05PM,Chicago Bears,Seattle Seahawks,25,24,317,0,331,0,2021,True,Seattle Seahawks,Chicago Bears,SEA,CHI
+2021_16_DEN_LV,16,Sun,12/26/21,4:25PM,Las Vegas Raiders,Denver Broncos,17,13,342,3,158,0,2021,False,Las Vegas Raiders,Denver Broncos,LV,DEN
+2021_16_PIT_KC,16,Sun,12/26/21,4:25PM,Kansas City Chiefs,Pittsburgh Steelers,36,10,381,0,303,3,2021,False,Kansas City Chiefs,Pittsburgh Steelers,KC,PIT
+2021_16_WAS_DAL,16,Sun,12/26/21,8:20PM,Dallas Cowboys,Washington Football Team,56,14,497,0,257,2,2021,False,Dallas Cowboys,Washington Football Team,DAL,WAS
+2021_16_MIA_NO,16,Mon,12/27/21,8:15PM,Miami Dolphins,New Orleans Saints,20,3,259,1,164,2,2021,True,New Orleans Saints,Miami Dolphins,NO,MIA
+2021_17_ATL_BUF,17,Sun,1/2/22,1:00PM,Buffalo Bills,Atlanta Falcons,29,15,351,3,265,1,2021,False,Buffalo Bills,Atlanta Falcons,BUF,ATL
+2021_17_CAR_NO,17,Sun,1/2/22,1:00PM,New Orleans Saints,Carolina Panthers,18,10,280,0,178,2,2021,False,New Orleans Saints,Carolina Panthers,NO,CAR
+2021_17_NYG_CHI,17,Sun,1/2/22,1:00PM,Chicago Bears,New York Giants,29,3,249,2,155,4,2021,False,Chicago Bears,New York Giants,CHI,NYG
+2021_17_KC_CIN,17,Sun,1/2/22,1:00PM,Cincinnati Bengals,Kansas City Chiefs,34,31,475,0,414,0,2021,False,Cincinnati Bengals,Kansas City Chiefs,CIN,KC
+2021_17_LV_IND,17,Sun,1/2/22,1:00PM,Las Vegas Raiders,Indianapolis Colts,23,20,326,2,262,0,2021,True,Indianapolis Colts,Las Vegas Raiders,IND,LV
+2021_17_ARI_DAL,17,Sun,1/2/22,1:00PM,Arizona Cardinals,Dallas Cowboys,25,22,399,0,301,1,2021,True,Dallas Cowboys,Arizona Cardinals,DAL,ARI
+2021_17_JAX_NE,17,Sun,1/2/22,1:00PM,New England Patriots,Jacksonville Jaguars,50,10,471,0,253,3,2021,False,New England Patriots,Jacksonville Jaguars,NE,JAX
+2021_17_MIA_TEN,17,Sun,1/2/22,1:00PM,Tennessee Titans,Miami Dolphins,34,3,308,0,256,2,2021,False,Tennessee Titans,Miami Dolphins,TEN,MIA
+2021_17_TB_NYJ,17,Sun,1/2/22,1:00PM,Tampa Bay Buccaneers,New York Jets,28,24,467,1,374,1,2021,True,New York Jets,Tampa Bay Buccaneers,NYJ,TB
+2021_17_PHI_WAS,17,Sun,1/2/22,1:00PM,Philadelphia Eagles,Washington Football Team,20,16,330,0,312,1,2021,True,Washington Football Team,Philadelphia Eagles,WAS,PHI
+2021_17_DEN_LAC,17,Sun,1/2/22,4:05PM,Los Angeles Chargers,Denver Broncos,34,13,341,0,319,1,2021,False,Los Angeles Chargers,Denver Broncos,LAC,DEN
+2021_17_HOU_SF,17,Sun,1/2/22,4:05PM,San Francisco 49ers,Houston Texans,23,7,416,1,222,1,2021,False,San Francisco 49ers,Houston Texans,SF,HOU
+2021_17_DET_SEA,17,Sun,1/2/22,4:25PM,Seattle Seahawks,Detroit Lions,51,29,497,0,357,3,2021,False,Seattle Seahawks,Detroit Lions,SEA,DET
+2021_17_LAR_BAL,17,Sun,1/2/22,4:25PM,Los Angeles Rams,Baltimore Ravens,20,19,373,3,327,2,2021,True,Baltimore Ravens,Los Angeles Rams,BAL,LAR
+2021_17_MIN_GB,17,Sun,1/2/22,8:20PM,Green Bay Packers,Minnesota Vikings,37,10,481,0,206,0,2021,False,Green Bay Packers,Minnesota Vikings,GB,MIN
+2021_17_CLE_PIT,17,Mon,1/3/22,8:15PM,Pittsburgh Steelers,Cleveland Browns,26,14,299,1,232,2,2021,False,Pittsburgh Steelers,Cleveland Browns,PIT,CLE
+2021_18_KC_DEN,18,Sat,1/8/22,4:30PM,Kansas City Chiefs,Denver Broncos,28,24,390,0,364,1,2021,True,Denver Broncos,Kansas City Chiefs,DEN,KC
+2021_18_DAL_PHI,18,Sat,1/8/22,8:15PM,Dallas Cowboys,Philadelphia Eagles,51,26,475,0,315,1,2021,True,Philadelphia Eagles,Dallas Cowboys,PHI,DAL
+2021_18_NO_ATL,18,Sun,1/9/22,1:00PM,New Orleans Saints,Atlanta Falcons,30,20,369,0,257,3,2021,True,Atlanta Falcons,New Orleans Saints,ATL,NO
+2021_18_NYJ_BUF,18,Sun,1/9/22,1:00PM,Buffalo Bills,New York Jets,27,10,424,0,53,0,2021,False,Buffalo Bills,New York Jets,BUF,NYJ
+2021_18_CAR_TB,18,Sun,1/9/22,1:00PM,Tampa Bay Buccaneers,Carolina Panthers,41,17,409,0,317,2,2021,False,Tampa Bay Buccaneers,Carolina Panthers,TB,CAR
+2021_18_CHI_MIN,18,Sun,1/9/22,1:00PM,Minnesota Vikings,Chicago Bears,31,17,331,0,356,2,2021,False,Minnesota Vikings,Chicago Bears,MIN,CHI
+2021_18_CIN_CLE,18,Sun,1/9/22,1:00PM,Cleveland Browns,Cincinnati Bengals,21,16,376,2,182,0,2021,False,Cleveland Browns,Cincinnati Bengals,CLE,CIN
+2021_18_IND_JAX,18,Sun,1/9/22,1:00PM,Jacksonville Jaguars,Indianapolis Colts,26,11,318,0,233,2,2021,False,Jacksonville Jaguars,Indianapolis Colts,JAX,IND
+2021_18_GB_DET,18,Sun,1/9/22,1:00PM,Detroit Lions,Green Bay Packers,37,30,404,0,378,3,2021,False,Detroit Lions,Green Bay Packers,DET,GB
+2021_18_TEN_HOU,18,Sun,1/9/22,1:00PM,Tennessee Titans,Houston Texans,28,25,405,0,353,0,2021,True,Houston Texans,Tennessee Titans,HOU,TEN
+2021_18_NE_MIA,18,Sun,1/9/22,1:00PM,Miami Dolphins,New England Patriots,33,24,298,0,379,3,2021,False,Miami Dolphins,New England Patriots,MIA,NE
+2021_18_WAS_NYG,18,Sun,1/9/22,1:00PM,Washington Football Team,New York Giants,22,7,325,0,177,3,2021,True,New York Giants,Washington Football Team,NYG,WAS
+2021_18_PIT_BAL,18,Sun,1/9/22,1:00PM,Pittsburgh Steelers,Baltimore Ravens,16,13,314,1,381,3,2021,True,Baltimore Ravens,Pittsburgh Steelers,BAL,PIT
+2021_18_SEA_ARI,18,Sun,1/9/22,4:25PM,Seattle Seahawks,Arizona Cardinals,38,30,431,2,305,1,2021,True,Arizona Cardinals,Seattle Seahawks,ARI,SEA
+2021_18_SF_LAR,18,Sun,1/9/22,4:25PM,San Francisco 49ers,Los Angeles Rams,27,24,449,2,265,2,2021,True,Los Angeles Rams,San Francisco 49ers,LAR,SF
+2021_18_LAC_LV,18,Sun,1/9/22,8:25PM,Las Vegas Raiders,Los Angeles Chargers,35,32,346,0,440,2,2021,False,Las Vegas Raiders,Los Angeles Chargers,LV,LAC
+2021_19_LV_CIN,19,Sat,1/15/22,4:30PM,Cincinnati Bengals,Las Vegas Raiders,26,19,308,0,385,2,2021,False,Cincinnati Bengals,Las Vegas Raiders,CIN,LV
+2021_19_NE_BUF,19,Sat,1/15/22,8:15PM,Buffalo Bills,New England Patriots,47,17,482,0,305,2,2021,False,Buffalo Bills,New England Patriots,BUF,NE
+2021_19_PHI_TB,19,Sun,1/16/22,1:00PM,Tampa Bay Buccaneers,Philadelphia Eagles,31,15,349,0,339,3,2021,False,Tampa Bay Buccaneers,Philadelphia Eagles,TB,PHI
+2021_19_SF_DAL,19,Sun,1/16/22,4:40PM,San Francisco 49ers,Dallas Cowboys,23,17,341,1,307,1,2021,True,Dallas Cowboys,San Francisco 49ers,DAL,SF
+2021_19_PIT_KC,19,Sun,1/16/22,8:15PM,Kansas City Chiefs,Pittsburgh Steelers,42,21,478,2,257,1,2021,False,Kansas City Chiefs,Pittsburgh Steelers,KC,PIT
+2021_19_ARI_LAR,19,Mon,1/17/22,8:15PM,Los Angeles Rams,Arizona Cardinals,34,11,375,0,183,2,2021,False,Los Angeles Rams,Arizona Cardinals,LAR,ARI
+2021_20_CIN_TEN,20,Sat,1/22/22,4:30PM,Cincinnati Bengals,Tennessee Titans,19,16,345,1,353,3,2021,True,Tennessee Titans,Cincinnati Bengals,TEN,CIN
+2021_20_SF_GB,20,Sat,1/22/22,8:15PM,San Francisco 49ers,Green Bay Packers,13,10,212,1,263,1,2021,True,Green Bay Packers,San Francisco 49ers,GB,SF
+2021_20_LAR_TB,20,Sun,1/23/22,3:00PM,Los Angeles Rams,Tampa Bay Buccaneers,30,27,428,4,359,2,2021,True,Tampa Bay Buccaneers,Los Angeles Rams,TB,LAR
+2021_20_BUF_KC,20,Sun,1/23/22,6:30PM,Kansas City Chiefs,Buffalo Bills,42,36,552,0,422,0,2021,False,Kansas City Chiefs,Buffalo Bills,KC,BUF
+2021_21_CIN_KC,21,Sun,1/30/22,3:00PM,Cincinnati Bengals,Kansas City Chiefs,27,24,359,1,375,2,2021,True,Kansas City Chiefs,Cincinnati Bengals,KC,CIN
+2021_21_SF_LAR,21,Sun,1/30/22,6:30PM,Los Angeles Rams,San Francisco 49ers,20,17,396,1,282,1,2021,False,Los Angeles Rams,San Francisco 49ers,LAR,SF
+2021_22_CIN_LAR,22,Sun,2/13/22,6:30PM,Los Angeles Rams,Cincinnati Bengals,23,20,313,2,305,0,2021,False,Los Angeles Rams,Cincinnati Bengals,LAR,CIN
+2022_01_BUF_LAR,01,Thu,9/8/22,8:20PM,Buffalo Bills,Los Angeles Rams,31,10,413,4,243,3,2022,True,Los Angeles Rams,Buffalo Bills,LAR,BUF
+2022_01_NO_ATL,01,Sun,9/11/22,1:00PM,New Orleans Saints,Atlanta Falcons,27,26,385,1,416,2,2022,True,Atlanta Falcons,New Orleans Saints,ATL,NO
+2022_01_CLE_CAR,01,Sun,9/11/22,1:00PM,Cleveland Browns,Carolina Panthers,26,24,355,0,261,1,2022,True,Carolina Panthers,Cleveland Browns,CAR,CLE
+2022_01_SF_CHI,01,Sun,9/11/22,1:00PM,Chicago Bears,San Francisco 49ers,19,10,204,1,331,2,2022,False,Chicago Bears,San Francisco 49ers,CHI,SF
+2022_01_PIT_CIN,01,Sun,9/11/22,1:00PM,Pittsburgh Steelers,Cincinnati Bengals,23,20,267,0,432,5,2022,True,Cincinnati Bengals,Pittsburgh Steelers,CIN,PIT
+2022_01_IND_HOU,01,Sun,9/11/22,1:00PM,Houston Texans,Indianapolis Colts,20,20,299,1,517,2,2022,False,Houston Texans,Indianapolis Colts,HOU,IND
+2022_01_PHI_DET,01,Sun,9/11/22,1:00PM,Philadelphia Eagles,Detroit Lions,38,35,455,0,386,1,2022,True,Detroit Lions,Philadelphia Eagles,DET,PHI
+2022_01_JAX_WAS,01,Sun,9/11/22,1:00PM,Washington Commanders,Jacksonville Jaguars,28,22,390,3,383,1,2022,False,Washington Commanders,Jacksonville Jaguars,WAS,JAX
+2022_01_NE_MIA,01,Sun,9/11/22,1:00PM,Miami Dolphins,New England Patriots,20,7,307,0,271,3,2022,False,Miami Dolphins,New England Patriots,MIA,NE
+2022_01_BAL_NYJ,01,Sun,9/11/22,1:00PM,Baltimore Ravens,New York Jets,24,9,274,1,380,2,2022,True,New York Jets,Baltimore Ravens,NYJ,BAL
+2022_01_KC_ARI,01,Sun,9/11/22,4:25PM,Kansas City Chiefs,Arizona Cardinals,44,21,488,1,282,0,2022,True,Arizona Cardinals,Kansas City Chiefs,ARI,KC
+2022_01_GB_MIN,01,Sun,9/11/22,4:25PM,Minnesota Vikings,Green Bay Packers,23,7,395,0,338,2,2022,False,Minnesota Vikings,Green Bay Packers,MIN,GB
+2022_01_NYG_TEN,01,Sun,9/11/22,4:25PM,New York Giants,Tennessee Titans,21,20,394,2,359,1,2022,True,Tennessee Titans,New York Giants,TEN,NYG
+2022_01_LV_LAC,01,Sun,9/11/22,4:25PM,Los Angeles Chargers,Las Vegas Raiders,24,19,355,0,320,3,2022,False,Los Angeles Chargers,Las Vegas Raiders,LAC,LV
+2022_01_TB_DAL,01,Sun,9/11/22,8:20PM,Tampa Bay Buccaneers,Dallas Cowboys,19,3,347,1,244,1,2022,True,Dallas Cowboys,Tampa Bay Buccaneers,DAL,TB
+2022_01_DEN_SEA,01,Mon,9/12/22,8:20PM,Seattle Seahawks,Denver Broncos,17,16,253,1,433,2,2022,False,Seattle Seahawks,Denver Broncos,SEA,DEN
+2022_02_LAC_KC,02,Thu,9/15/22,8:15PM,Kansas City Chiefs,Los Angeles Chargers,27,24,319,0,401,1,2022,False,Kansas City Chiefs,Los Angeles Chargers,KC,LAC
+2022_02_CAR_NYG,02,Sun,9/18/22,1:00PM,New York Giants,Carolina Panthers,19,16,265,0,275,2,2022,False,New York Giants,Carolina Panthers,NYG,CAR
+2022_02_NYJ_CLE,02,Sun,9/18/22,1:00PM,New York Jets,Cleveland Browns,31,30,402,1,405,1,2022,True,Cleveland Browns,New York Jets,CLE,NYJ
+2022_02_IND_JAX,02,Sun,9/18/22,1:00PM,Jacksonville Jaguars,Indianapolis Colts,24,0,331,0,218,3,2022,False,Jacksonville Jaguars,Indianapolis Colts,JAX,IND
+2022_02_WAS_DET,02,Sun,9/18/22,1:00PM,Detroit Lions,Washington Commanders,36,27,425,0,396,1,2022,False,Detroit Lions,Washington Commanders,DET,WAS
+2022_02_MIA_BAL,02,Sun,9/18/22,1:00PM,Miami Dolphins,Baltimore Ravens,42,38,547,2,473,0,2022,True,Baltimore Ravens,Miami Dolphins,BAL,MIA
+2022_02_TB_NO,02,Sun,9/18/22,1:00PM,Tampa Bay Buccaneers,New Orleans Saints,20,10,260,1,308,5,2022,True,New Orleans Saints,Tampa Bay Buccaneers,NO,TB
+2022_02_NE_PIT,02,Sun,9/18/22,1:00PM,New England Patriots,Pittsburgh Steelers,17,14,376,1,243,2,2022,True,Pittsburgh Steelers,New England Patriots,PIT,NE
+2022_02_ATL_LAR,02,Sun,9/18/22,4:05PM,Los Angeles Rams,Atlanta Falcons,31,27,337,3,261,3,2022,False,Los Angeles Rams,Atlanta Falcons,LAR,ATL
+2022_02_SEA_SF,02,Sun,9/18/22,4:05PM,San Francisco 49ers,Seattle Seahawks,27,7,373,0,216,3,2022,False,San Francisco 49ers,Seattle Seahawks,SF,SEA
+2022_02_CIN_DAL,02,Sun,9/18/22,4:25PM,Dallas Cowboys,Cincinnati Bengals,20,17,337,1,254,0,2022,False,Dallas Cowboys,Cincinnati Bengals,DAL,CIN
+2022_02_ARI_LV,02,Sun,9/18/22,4:25PM,Arizona Cardinals,Las Vegas Raiders,29,23,413,1,324,1,2022,True,Las Vegas Raiders,Arizona Cardinals,LV,ARI
+2022_02_HOU_DEN,02,Sun,9/18/22,4:25PM,Denver Broncos,Houston Texans,16,9,350,1,234,0,2022,False,Denver Broncos,Houston Texans,DEN,HOU
+2022_02_CHI_GB,02,Sun,9/18/22,8:20PM,Green Bay Packers,Chicago Bears,27,10,414,1,228,1,2022,False,Green Bay Packers,Chicago Bears,GB,CHI
+2022_02_TEN_BUF,02,Mon,9/19/22,7:15PM,Buffalo Bills,Tennessee Titans,41,7,414,0,187,4,2022,False,Buffalo Bills,Tennessee Titans,BUF,TEN
+2022_02_MIN_PHI,02,Mon,9/19/22,8:30PM,Philadelphia Eagles,Minnesota Vikings,24,7,486,1,264,3,2022,False,Philadelphia Eagles,Minnesota Vikings,PHI,MIN
+2022_03_PIT_CLE,03,Thu,9/22/22,8:15PM,Cleveland Browns,Pittsburgh Steelers,29,17,376,0,308,1,2022,False,Cleveland Browns,Pittsburgh Steelers,CLE,PIT
+2022_03_BUF_MIA,03,Sun,9/25/22,1:00PM,Miami Dolphins,Buffalo Bills,21,19,212,0,497,1,2022,False,Miami Dolphins,Buffalo Bills,MIA,BUF
+2022_03_NO_CAR,03,Sun,9/25/22,1:00PM,Carolina Panthers,New Orleans Saints,22,14,293,0,426,3,2022,False,Carolina Panthers,New Orleans Saints,CAR,NO
+2022_03_HOU_CHI,03,Sun,9/25/22,1:00PM,Chicago Bears,Houston Texans,23,20,363,2,329,2,2022,False,Chicago Bears,Houston Texans,CHI,HOU
+2022_03_CIN_NYJ,03,Sun,9/25/22,1:00PM,Cincinnati Bengals,New York Jets,27,12,330,1,328,4,2022,True,New York Jets,Cincinnati Bengals,NYJ,CIN
+2022_03_KC_IND,03,Sun,9/25/22,1:00PM,Indianapolis Colts,Kansas City Chiefs,20,17,259,1,315,2,2022,False,Indianapolis Colts,Kansas City Chiefs,IND,KC
+2022_03_DET_MIN,03,Sun,9/25/22,1:00PM,Minnesota Vikings,Detroit Lions,28,24,373,1,416,1,2022,False,Minnesota Vikings,Detroit Lions,MIN,DET
+2022_03_BAL_NE,03,Sun,9/25/22,1:00PM,Baltimore Ravens,New England Patriots,37,26,394,2,447,4,2022,True,New England Patriots,Baltimore Ravens,NE,BAL
+2022_03_LV_TEN,03,Sun,9/25/22,1:00PM,Tennessee Titans,Las Vegas Raiders,24,22,361,1,396,1,2022,False,Tennessee Titans,Las Vegas Raiders,TEN,LV
+2022_03_PHI_WAS,03,Sun,9/25/22,1:00PM,Philadelphia Eagles,Washington Commanders,24,8,400,0,240,1,2022,True,Washington Commanders,Philadelphia Eagles,WAS,PHI
+2022_03_JAX_LAC,03,Sun,9/25/22,4:05PM,Jacksonville Jaguars,Los Angeles Chargers,38,10,413,0,312,2,2022,True,Los Angeles Chargers,Jacksonville Jaguars,LAC,JAX
+2022_03_ATL_SEA,03,Sun,9/25/22,4:25PM,Atlanta Falcons,Seattle Seahawks,27,23,386,2,420,1,2022,True,Seattle Seahawks,Atlanta Falcons,SEA,ATL
+2022_03_LAR_ARI,03,Sun,9/25/22,4:25PM,Los Angeles Rams,Arizona Cardinals,20,12,339,1,365,0,2022,True,Arizona Cardinals,Los Angeles Rams,ARI,LAR
+2022_03_GB_TB,03,Sun,9/25/22,4:25PM,Green Bay Packers,Tampa Bay Buccaneers,14,12,315,2,285,2,2022,True,Tampa Bay Buccaneers,Green Bay Packers,TB,GB
+2022_03_SF_DEN,03,Sun,9/25/22,8:20PM,Denver Broncos,San Francisco 49ers,11,10,261,0,267,3,2022,False,Denver Broncos,San Francisco 49ers,DEN,SF
+2022_03_DAL_NYG,03,Mon,9/26/22,8:15PM,Dallas Cowboys,New York Giants,23,16,391,0,336,1,2022,True,New York Giants,Dallas Cowboys,NYG,DAL
+2022_04_MIA_CIN,04,Thu,9/29/22,8:15PM,Cincinnati Bengals,Miami Dolphins,27,15,371,0,378,2,2022,False,Cincinnati Bengals,Miami Dolphins,CIN,MIA
+2022_04_MIN_NO,04,Sun,10/2/22,9:30AM,Minnesota Vikings,New Orleans Saints,28,25,344,1,338,2,2022,True,New Orleans Saints,Minnesota Vikings,NO,MIN
+2022_04_CLE_ATL,04,Sun,10/2/22,1:00PM,Atlanta Falcons,Cleveland Browns,23,20,333,1,403,2,2022,False,Atlanta Falcons,Cleveland Browns,ATL,CLE
+2022_04_BUF_BAL,04,Sun,10/2/22,1:00PM,Buffalo Bills,Baltimore Ravens,23,20,326,2,296,2,2022,True,Baltimore Ravens,Buffalo Bills,BAL,BUF
+2022_04_CHI_NYG,04,Sun,10/2/22,1:00PM,New York Giants,Chicago Bears,20,12,333,2,304,3,2022,False,New York Giants,Chicago Bears,NYG,CHI
+2022_04_TEN_IND,04,Sun,10/2/22,1:00PM,Tennessee Titans,Indianapolis Colts,24,17,243,0,365,3,2022,True,Indianapolis Colts,Tennessee Titans,IND,TEN
+2022_04_WAS_DAL,04,Sun,10/2/22,1:00PM,Dallas Cowboys,Washington Commanders,25,10,279,0,297,2,2022,False,Dallas Cowboys,Washington Commanders,DAL,WAS
+2022_04_SEA_DET,04,Sun,10/2/22,1:00PM,Seattle Seahawks,Detroit Lions,48,45,555,1,520,2,2022,True,Detroit Lions,Seattle Seahawks,DET,SEA
+2022_04_LAC_HOU,04,Sun,10/2/22,1:00PM,Los Angeles Chargers,Houston Texans,34,24,419,1,346,2,2022,True,Houston Texans,Los Angeles Chargers,HOU,LAC
+2022_04_JAX_PHI,04,Sun,10/2/22,1:00PM,Philadelphia Eagles,Jacksonville Jaguars,29,21,401,1,219,5,2022,False,Philadelphia Eagles,Jacksonville Jaguars,PHI,JAX
+2022_04_NYJ_PIT,04,Sun,10/2/22,1:00PM,New York Jets,Pittsburgh Steelers,24,20,348,2,297,4,2022,True,Pittsburgh Steelers,New York Jets,PIT,NYJ
+2022_04_ARI_CAR,04,Sun,10/2/22,4:05PM,Arizona Cardinals,Carolina Panthers,26,16,338,1,220,3,2022,True,Carolina Panthers,Arizona Cardinals,CAR,ARI
+2022_04_DEN_LV,04,Sun,10/2/22,4:25PM,Las Vegas Raiders,Denver Broncos,32,23,385,0,299,1,2022,False,Las Vegas Raiders,Denver Broncos,LV,DEN
+2022_04_NE_GB,04,Sun,10/2/22,4:25PM,Green Bay Packers,New England Patriots,27,24,443,2,271,1,2022,False,Green Bay Packers,New England Patriots,GB,NE
+2022_04_KC_TB,04,Sun,10/2/22,8:20PM,Kansas City Chiefs,Tampa Bay Buccaneers,41,31,417,1,376,2,2022,True,Tampa Bay Buccaneers,Kansas City Chiefs,TB,KC
+2022_04_LAR_SF,04,Mon,10/3/22,8:15PM,San Francisco 49ers,Los Angeles Rams,24,9,327,0,257,2,2022,False,San Francisco 49ers,Los Angeles Rams,SF,LAR
+2022_05_IND_DEN,05,Thu,10/6/22,8:15PM,Indianapolis Colts,Denver Broncos,12,9,306,2,375,2,2022,True,Denver Broncos,Indianapolis Colts,DEN,IND
+2022_05_NYG_GB,05,Sun,10/9/22,9:30AM,New York Giants,Green Bay Packers,27,22,338,0,301,0,2022,True,Green Bay Packers,New York Giants,GB,NYG
+2022_05_ATL_TB,05,Sun,10/9/22,1:00PM,Tampa Bay Buccaneers,Atlanta Falcons,21,15,420,0,261,0,2022,False,Tampa Bay Buccaneers,Atlanta Falcons,TB,ATL
+2022_05_PIT_BUF,05,Sun,10/9/22,1:00PM,Buffalo Bills,Pittsburgh Steelers,38,3,552,2,364,2,2022,False,Buffalo Bills,Pittsburgh Steelers,BUF,PIT
+2022_05_CHI_MIN,05,Sun,10/9/22,1:00PM,Minnesota Vikings,Chicago Bears,29,22,429,1,271,1,2022,False,Minnesota Vikings,Chicago Bears,MIN,CHI
+2022_05_LAC_CLE,05,Sun,10/9/22,1:00PM,Los Angeles Chargers,Cleveland Browns,30,28,465,0,443,1,2022,True,Cleveland Browns,Los Angeles Chargers,CLE,LAC
+2022_05_DET_NE,05,Sun,10/9/22,1:00PM,New England Patriots,Detroit Lions,29,0,364,1,312,2,2022,False,New England Patriots,Detroit Lions,NE,DET
+2022_05_HOU_JAX,05,Sun,10/9/22,1:00PM,Houston Texans,Jacksonville Jaguars,13,6,248,0,422,2,2022,True,Jacksonville Jaguars,Houston Texans,JAX,HOU
+2022_05_MIA_NYJ,05,Sun,10/9/22,1:00PM,New York Jets,Miami Dolphins,40,17,322,0,295,2,2022,False,New York Jets,Miami Dolphins,NYJ,MIA
+2022_05_SEA_NO,05,Sun,10/9/22,1:00PM,New Orleans Saints,Seattle Seahawks,39,32,438,2,396,1,2022,False,New Orleans Saints,Seattle Seahawks,NO,SEA
+2022_05_TEN_WAS,05,Sun,10/9/22,1:00PM,Tennessee Titans,Washington Commanders,21,17,241,0,385,1,2022,True,Washington Commanders,Tennessee Titans,WAS,TEN
+2022_05_SF_CAR,05,Sun,10/9/22,4:05PM,San Francisco 49ers,Carolina Panthers,37,15,397,1,308,1,2022,True,Carolina Panthers,San Francisco 49ers,CAR,SF
+2022_05_PHI_ARI,05,Sun,10/9/22,4:25PM,Philadelphia Eagles,Arizona Cardinals,20,17,357,0,363,1,2022,True,Arizona Cardinals,Philadelphia Eagles,ARI,PHI
+2022_05_DAL_LAR,05,Sun,10/9/22,4:25PM,Dallas Cowboys,Los Angeles Rams,22,10,239,0,323,3,2022,True,Los Angeles Rams,Dallas Cowboys,LAR,DAL
+2022_05_CIN_BAL,05,Sun,10/9/22,8:20PM,Baltimore Ravens,Cincinnati Bengals,19,17,325,1,291,1,2022,False,Baltimore Ravens,Cincinnati Bengals,BAL,CIN
+2022_05_LV_KC,05,Mon,10/10/22,8:15PM,Kansas City Chiefs,Las Vegas Raiders,30,29,368,0,378,0,2022,False,Kansas City Chiefs,Las Vegas Raiders,KC,LV
+2022_06_WAS_CHI,06,Thu,10/13/22,8:15PM,Washington Commanders,Chicago Bears,12,7,214,0,391,2,2022,True,Chicago Bears,Washington Commanders,CHI,WAS
+2022_06_SF_ATL,06,Sun,10/16/22,1:00PM,Atlanta Falcons,San Francisco 49ers,28,14,289,0,346,3,2022,False,Atlanta Falcons,San Francisco 49ers,ATL,SF
+2022_06_CIN_NO,06,Sun,10/16/22,1:00PM,Cincinnati Bengals,New Orleans Saints,30,26,348,1,399,0,2022,True,New Orleans Saints,Cincinnati Bengals,NO,CIN
+2022_06_NE_CLE,06,Sun,10/16/22,1:00PM,New England Patriots,Cleveland Browns,38,15,399,1,328,4,2022,True,Cleveland Browns,New England Patriots,CLE,NE
+2022_06_JAX_IND,06,Sun,10/16/22,1:00PM,Indianapolis Colts,Jacksonville Jaguars,34,27,434,0,379,1,2022,False,Indianapolis Colts,Jacksonville Jaguars,IND,JAX
+2022_06_NYJ_GB,06,Sun,10/16/22,1:00PM,New York Jets,Green Bay Packers,27,10,278,0,278,1,2022,True,Green Bay Packers,New York Jets,GB,NYJ
+2022_06_MIN_MIA,06,Sun,10/16/22,1:00PM,Minnesota Vikings,Miami Dolphins,24,16,234,0,458,3,2022,True,Miami Dolphins,Minnesota Vikings,MIA,MIN
+2022_06_BAL_NYG,06,Sun,10/16/22,1:00PM,New York Giants,Baltimore Ravens,24,20,238,1,406,2,2022,False,New York Giants,Baltimore Ravens,NYG,BAL
+2022_06_TB_PIT,06,Sun,10/16/22,1:00PM,Pittsburgh Steelers,Tampa Bay Buccaneers,20,18,270,0,304,0,2022,False,Pittsburgh Steelers,Tampa Bay Buccaneers,PIT,TB
+2022_06_CAR_LAR,06,Sun,10/16/22,4:05PM,Los Angeles Rams,Carolina Panthers,24,10,360,1,203,1,2022,False,Los Angeles Rams,Carolina Panthers,LAR,CAR
+2022_06_ARI_SEA,06,Sun,10/16/22,4:05PM,Seattle Seahawks,Arizona Cardinals,19,9,296,1,315,2,2022,False,Seattle Seahawks,Arizona Cardinals,SEA,ARI
+2022_06_BUF_KC,06,Sun,10/16/22,4:25PM,Buffalo Bills,Kansas City Chiefs,24,20,443,1,387,2,2022,True,Kansas City Chiefs,Buffalo Bills,KC,BUF
+2022_06_DAL_PHI,06,Sun,10/16/22,8:20PM,Philadelphia Eagles,Dallas Cowboys,26,17,268,0,315,3,2022,False,Philadelphia Eagles,Dallas Cowboys,PHI,DAL
+2022_06_DEN_LAC,06,Mon,10/17/22,8:15PM,Los Angeles Chargers,Denver Broncos,19,16,297,1,258,1,2022,False,Los Angeles Chargers,Denver Broncos,LAC,DEN
+2022_07_NO_ARI,07,Thu,10/20/22,8:15PM,Arizona Cardinals,New Orleans Saints,42,34,326,0,494,3,2022,False,Arizona Cardinals,New Orleans Saints,ARI,NO
+2022_07_ATL_CIN,07,Sun,10/23/22,1:00PM,Cincinnati Bengals,Atlanta Falcons,35,17,537,0,214,0,2022,False,Cincinnati Bengals,Atlanta Falcons,CIN,ATL
+2022_07_TB_CAR,07,Sun,10/23/22,1:00PM,Carolina Panthers,Tampa Bay Buccaneers,21,3,343,0,322,0,2022,False,Carolina Panthers,Tampa Bay Buccaneers,CAR,TB
+2022_07_CLE_BAL,07,Sun,10/23/22,1:00PM,Baltimore Ravens,Cleveland Browns,23,20,254,1,336,2,2022,False,Baltimore Ravens,Cleveland Browns,BAL,CLE
+2022_07_IND_TEN,07,Sun,10/23/22,1:00PM,Tennessee Titans,Indianapolis Colts,19,10,254,1,292,3,2022,False,Tennessee Titans,Indianapolis Colts,TEN,IND
+2022_07_DET_DAL,07,Sun,10/23/22,1:00PM,Dallas Cowboys,Detroit Lions,24,6,330,1,312,5,2022,False,Dallas Cowboys,Detroit Lions,DAL,DET
+2022_07_GB_WAS,07,Sun,10/23/22,1:00PM,Washington Commanders,Green Bay Packers,23,21,364,1,232,1,2022,False,Washington Commanders,Green Bay Packers,WAS,GB
+2022_07_NYG_JAX,07,Sun,10/23/22,1:00PM,New York Giants,Jacksonville Jaguars,23,17,436,0,452,1,2022,True,Jacksonville Jaguars,New York Giants,JAX,NYG
+2022_07_HOU_LV,07,Sun,10/23/22,4:05PM,Las Vegas Raiders,Houston Texans,38,20,400,0,404,1,2022,False,Las Vegas Raiders,Houston Texans,LV,HOU
+2022_07_NYJ_DEN,07,Sun,10/23/22,4:05PM,New York Jets,Denver Broncos,16,9,260,0,324,1,2022,True,Denver Broncos,New York Jets,DEN,NYJ
+2022_07_KC_SF,07,Sun,10/23/22,4:25PM,Kansas City Chiefs,San Francisco 49ers,44,23,529,2,444,3,2022,True,San Francisco 49ers,Kansas City Chiefs,SF,KC
+2022_07_SEA_LAC,07,Sun,10/23/22,4:25PM,Seattle Seahawks,Los Angeles Chargers,37,23,404,2,329,2,2022,True,Los Angeles Chargers,Seattle Seahawks,LAC,SEA
+2022_07_PIT_MIA,07,Sun,10/23/22,8:20PM,Miami Dolphins,Pittsburgh Steelers,16,10,372,0,341,3,2022,False,Miami Dolphins,Pittsburgh Steelers,MIA,PIT
+2022_07_CHI_NE,07,Mon,10/24/22,8:15PM,Chicago Bears,New England Patriots,33,14,390,1,260,4,2022,True,New England Patriots,Chicago Bears,NE,CHI
+2022_08_BAL_TB,08,Thu,10/27/22,8:15PM,Baltimore Ravens,Tampa Bay Buccaneers,27,22,453,0,349,1,2022,True,Tampa Bay Buccaneers,Baltimore Ravens,TB,BAL
+2022_08_DEN_JAX,08,Sun,10/30/22,9:30AM,Denver Broncos,Jacksonville Jaguars,21,17,331,1,305,2,2022,True,Jacksonville Jaguars,Denver Broncos,JAX,DEN
+2022_08_MIA_DET,08,Sun,10/30/22,1:00PM,Miami Dolphins,Detroit Lions,31,27,476,1,393,0,2022,True,Detroit Lions,Miami Dolphins,DET,MIA
+2022_08_PIT_PHI,08,Sun,10/30/22,1:00PM,Philadelphia Eagles,Pittsburgh Steelers,35,13,401,0,302,2,2022,False,Philadelphia Eagles,Pittsburgh Steelers,PHI,PIT
+2022_08_CAR_ATL,08,Sun,10/30/22,1:00PM,Atlanta Falcons,Carolina Panthers,37,34,406,2,478,1,2022,False,Atlanta Falcons,Carolina Panthers,ATL,CAR
+2022_08_CHI_DAL,08,Sun,10/30/22,1:00PM,Dallas Cowboys,Chicago Bears,49,29,442,1,371,1,2022,False,Dallas Cowboys,Chicago Bears,DAL,CHI
+2022_08_ARI_MIN,08,Sun,10/30/22,1:00PM,Minnesota Vikings,Arizona Cardinals,34,26,381,1,375,3,2022,False,Minnesota Vikings,Arizona Cardinals,MIN,ARI
+2022_08_LV_NO,08,Sun,10/30/22,1:00PM,New Orleans Saints,Las Vegas Raiders,24,0,367,0,183,1,2022,False,New Orleans Saints,Las Vegas Raiders,NO,LV
+2022_08_NE_NYJ,08,Sun,10/30/22,1:00PM,New England Patriots,New York Jets,22,17,288,1,387,3,2022,True,New York Jets,New England Patriots,NYJ,NE
+2022_08_TEN_HOU,08,Sun,10/30/22,4:05PM,Tennessee Titans,Houston Texans,17,10,354,2,161,1,2022,True,Houston Texans,Tennessee Titans,HOU,TEN
+2022_08_SF_LAR,08,Sun,10/30/22,4:25PM,San Francisco 49ers,Los Angeles Rams,31,14,368,0,223,0,2022,True,Los Angeles Rams,San Francisco 49ers,LAR,SF
+2022_08_WAS_IND,08,Sun,10/30/22,4:25PM,Washington Commanders,Indianapolis Colts,17,16,362,1,324,2,2022,True,Indianapolis Colts,Washington Commanders,IND,WAS
+2022_08_NYG_SEA,08,Sun,10/30/22,4:25PM,Seattle Seahawks,New York Giants,27,13,277,1,225,2,2022,False,Seattle Seahawks,New York Giants,SEA,NYG
+2022_08_GB_BUF,08,Sun,10/30/22,8:20PM,Buffalo Bills,Green Bay Packers,27,17,369,2,398,1,2022,False,Buffalo Bills,Green Bay Packers,BUF,GB
+2022_08_CIN_CLE,08,Mon,10/31/22,8:15PM,Cleveland Browns,Cincinnati Bengals,32,13,440,2,229,2,2022,False,Cleveland Browns,Cincinnati Bengals,CLE,CIN
+2022_09_PHI_HOU,09,Thu,11/3/22,8:15PM,Philadelphia Eagles,Houston Texans,29,17,360,1,303,2,2022,True,Houston Texans,Philadelphia Eagles,HOU,PHI
+2022_09_BUF_NYJ,09,Sun,11/6/22,1:00PM,New York Jets,Buffalo Bills,20,17,310,1,317,2,2022,False,New York Jets,Buffalo Bills,NYJ,BUF
+2022_09_GB_DET,09,Sun,11/6/22,1:00PM,Detroit Lions,Green Bay Packers,15,9,254,1,389,3,2022,False,Detroit Lions,Green Bay Packers,DET,GB
+2022_09_MIN_WAS,09,Sun,11/6/22,1:00PM,Minnesota Vikings,Washington Commanders,20,17,301,1,263,1,2022,True,Washington Commanders,Minnesota Vikings,WAS,MIN
+2022_09_LAC_ATL,09,Sun,11/6/22,1:00PM,Los Angeles Chargers,Atlanta Falcons,20,17,336,2,315,2,2022,True,Atlanta Falcons,Los Angeles Chargers,ATL,LAC
+2022_09_CAR_CIN,09,Sun,11/6/22,1:00PM,Cincinnati Bengals,Carolina Panthers,42,21,464,0,228,3,2022,False,Cincinnati Bengals,Carolina Panthers,CIN,CAR
+2022_09_MIA_CHI,09,Sun,11/6/22,1:00PM,Miami Dolphins,Chicago Bears,35,32,379,0,368,0,2022,True,Chicago Bears,Miami Dolphins,CHI,MIA
+2022_09_IND_NE,09,Sun,11/6/22,1:00PM,New England Patriots,Indianapolis Colts,26,3,203,1,121,1,2022,False,New England Patriots,Indianapolis Colts,NE,IND
+2022_09_LV_JAX,09,Sun,11/6/22,1:00PM,Jacksonville Jaguars,Las Vegas Raiders,27,20,403,1,321,1,2022,False,Jacksonville Jaguars,Las Vegas Raiders,JAX,LV
+2022_09_SEA_ARI,09,Sun,11/6/22,4:05PM,Seattle Seahawks,Arizona Cardinals,31,21,421,1,262,1,2022,True,Arizona Cardinals,Seattle Seahawks,ARI,SEA
+2022_09_LAR_TB,09,Sun,11/6/22,4:25PM,Tampa Bay Buccaneers,Los Angeles Rams,16,13,323,0,206,0,2022,False,Tampa Bay Buccaneers,Los Angeles Rams,TB,LAR
+2022_09_TEN_KC,09,Sun,11/6/22,8:20PM,Kansas City Chiefs,Tennessee Titans,20,17,499,1,229,0,2022,False,Kansas City Chiefs,Tennessee Titans,KC,TEN
+2022_09_BAL_NO,09,Mon,11/7/22,8:15PM,Baltimore Ravens,New Orleans Saints,27,13,319,0,243,1,2022,True,New Orleans Saints,Baltimore Ravens,NO,BAL
+2022_10_ATL_CAR,10,Thu,11/10/22,8:15PM,Carolina Panthers,Atlanta Falcons,25,15,333,0,291,1,2022,False,Carolina Panthers,Atlanta Falcons,CAR,ATL
+2022_10_SEA_TB,10,Sun,11/13/22,9:30AM,Tampa Bay Buccaneers,Seattle Seahawks,21,16,419,2,283,1,2022,False,Tampa Bay Buccaneers,Seattle Seahawks,TB,SEA
+2022_10_MIN_BUF,10,Sun,11/13/22,1:00PM,Minnesota Vikings,Buffalo Bills,33,30,481,2,486,4,2022,True,Buffalo Bills,Minnesota Vikings,BUF,MIN
+2022_10_CLE_MIA,10,Sun,11/13/22,1:00PM,Miami Dolphins,Cleveland Browns,39,17,491,0,297,1,2022,False,Miami Dolphins,Cleveland Browns,MIA,CLE
+2022_10_DEN_TEN,10,Sun,11/13/22,1:00PM,Tennessee Titans,Denver Broncos,17,10,307,1,313,1,2022,False,Tennessee Titans,Denver Broncos,TEN,DEN
+2022_10_HOU_NYG,10,Sun,11/13/22,1:00PM,New York Giants,Houston Texans,24,16,367,0,387,2,2022,False,New York Giants,Houston Texans,NYG,HOU
+2022_10_DET_CHI,10,Sun,11/13/22,1:00PM,Detroit Lions,Chicago Bears,31,30,323,0,408,1,2022,True,Chicago Bears,Detroit Lions,CHI,DET
+2022_10_JAX_KC,10,Sun,11/13/22,1:00PM,Kansas City Chiefs,Jacksonville Jaguars,27,17,486,3,315,0,2022,False,Kansas City Chiefs,Jacksonville Jaguars,KC,JAX
+2022_10_NO_PIT,10,Sun,11/13/22,1:00PM,Pittsburgh Steelers,New Orleans Saints,20,10,379,0,186,2,2022,False,Pittsburgh Steelers,New Orleans Saints,PIT,NO
+2022_10_IND_LV,10,Sun,11/13/22,4:05PM,Indianapolis Colts,Las Vegas Raiders,25,20,415,1,309,0,2022,True,Las Vegas Raiders,Indianapolis Colts,LV,IND
+2022_10_DAL_GB,10,Sun,11/13/22,4:25PM,Green Bay Packers,Dallas Cowboys,31,28,415,2,421,2,2022,False,Green Bay Packers,Dallas Cowboys,GB,DAL
+2022_10_ARI_LAR,10,Sun,11/13/22,4:25PM,Arizona Cardinals,Los Angeles Rams,27,17,298,0,256,2,2022,True,Los Angeles Rams,Arizona Cardinals,LAR,ARI
+2022_10_LAC_SF,10,Sun,11/13/22,8:20PM,San Francisco 49ers,Los Angeles Chargers,22,16,387,1,238,1,2022,False,San Francisco 49ers,Los Angeles Chargers,SF,LAC
+2022_10_WAS_PHI,10,Mon,11/14/22,8:15PM,Washington Commanders,Philadelphia Eagles,32,21,330,2,264,4,2022,True,Philadelphia Eagles,Washington Commanders,PHI,WAS
+2022_11_TEN_GB,11,Thu,11/17/22,8:15PM,Tennessee Titans,Green Bay Packers,27,17,408,1,271,0,2022,True,Green Bay Packers,Tennessee Titans,GB,TEN
+2022_11_CLE_BUF,11,Sun,11/20/22,1:00PM,Buffalo Bills,Cleveland Browns,31,23,357,0,396,1,2022,False,Buffalo Bills,Cleveland Browns,BUF,CLE
+2022_11_DET_NYG,11,Sun,11/20/22,1:00PM,Detroit Lions,New York Giants,31,18,325,0,413,3,2022,True,New York Giants,Detroit Lions,NYG,DET
+2022_11_WAS_HOU,11,Sun,11/20/22,1:00PM,Washington Commanders,Houston Texans,23,10,344,0,148,2,2022,True,Houston Texans,Washington Commanders,HOU,WAS
+2022_11_NYJ_NE,11,Sun,11/20/22,1:00PM,New England Patriots,New York Jets,10,3,297,0,103,0,2022,False,New England Patriots,New York Jets,NE,NYJ
+2022_11_CHI_ATL,11,Sun,11/20/22,1:00PM,Atlanta Falcons,Chicago Bears,27,24,280,2,288,1,2022,False,Atlanta Falcons,Chicago Bears,ATL,CHI
+2022_11_CAR_BAL,11,Sun,11/20/22,1:00PM,Baltimore Ravens,Carolina Panthers,13,3,308,1,205,3,2022,False,Baltimore Ravens,Carolina Panthers,BAL,CAR
+2022_11_PHI_IND,11,Sun,11/20/22,1:00PM,Philadelphia Eagles,Indianapolis Colts,17,16,314,2,284,1,2022,True,Indianapolis Colts,Philadelphia Eagles,IND,PHI
+2022_11_LAR_NO,11,Sun,11/20/22,1:00PM,New Orleans Saints,Los Angeles Rams,27,20,323,0,336,0,2022,False,New Orleans Saints,Los Angeles Rams,NO,LAR
+2022_11_LV_DEN,11,Sun,11/20/22,4:05PM,Las Vegas Raiders,Denver Broncos,22,16,407,0,320,0,2022,True,Denver Broncos,Las Vegas Raiders,DEN,LV
+2022_11_CIN_PIT,11,Sun,11/20/22,4:25PM,Cincinnati Bengals,Pittsburgh Steelers,37,30,408,2,351,0,2022,True,Pittsburgh Steelers,Cincinnati Bengals,PIT,CIN
+2022_11_DAL_MIN,11,Sun,11/20/22,4:25PM,Dallas Cowboys,Minnesota Vikings,40,3,458,0,183,1,2022,True,Minnesota Vikings,Dallas Cowboys,MIN,DAL
+2022_11_KC_LAC,11,Sun,11/20/22,8:20PM,Kansas City Chiefs,Los Angeles Chargers,30,27,485,1,365,2,2022,True,Los Angeles Chargers,Kansas City Chiefs,LAC,KC
+2022_11_SF_ARI,11,Mon,11/21/22,8:15PM,San Francisco 49ers,Arizona Cardinals,38,10,387,0,314,2,2022,True,Arizona Cardinals,San Francisco 49ers,ARI,SF
+2022_12_BUF_DET,12,Thu,11/24/22,12:30PM,Buffalo Bills,Detroit Lions,28,25,401,1,326,2,2022,True,Detroit Lions,Buffalo Bills,DET,BUF
+2022_12_NYG_DAL,12,Thu,11/24/22,4:30PM,Dallas Cowboys,New York Giants,28,20,430,2,300,0,2022,False,Dallas Cowboys,New York Giants,DAL,NYG
+2022_12_NE_MIN,12,Thu,11/24/22,8:20PM,Minnesota Vikings,New England Patriots,33,26,358,1,409,0,2022,False,Minnesota Vikings,New England Patriots,MIN,NE
+2022_12_CIN_TEN,12,Sun,11/27/22,1:00PM,Cincinnati Bengals,Tennessee Titans,20,16,374,0,344,0,2022,True,Tennessee Titans,Cincinnati Bengals,TEN,CIN
+2022_12_TB_CLE,12,Sun,11/27/22,1:00PM,Cleveland Browns,Tampa Bay Buccaneers,23,17,367,1,325,0,2022,False,Cleveland Browns,Tampa Bay Buccaneers,CLE,TB
+2022_12_HOU_MIA,12,Sun,11/27/22,1:00PM,Miami Dolphins,Houston Texans,30,15,339,1,210,3,2022,False,Miami Dolphins,Houston Texans,MIA,HOU
+2022_12_BAL_JAX,12,Sun,11/27/22,1:00PM,Jacksonville Jaguars,Baltimore Ravens,28,27,332,1,415,2,2022,False,Jacksonville Jaguars,Baltimore Ravens,JAX,BAL
+2022_12_ATL_WAS,12,Sun,11/27/22,1:00PM,Washington Commanders,Atlanta Falcons,19,13,314,1,332,1,2022,False,Washington Commanders,Atlanta Falcons,WAS,ATL
+2022_12_DEN_CAR,12,Sun,11/27/22,1:00PM,Carolina Panthers,Denver Broncos,23,10,349,1,246,2,2022,False,Carolina Panthers,Denver Broncos,CAR,DEN
+2022_12_CHI_NYJ,12,Sun,11/27/22,1:00PM,New York Jets,Chicago Bears,31,10,466,0,292,1,2022,False,New York Jets,Chicago Bears,NYJ,CHI
+2022_12_LV_SEA,12,Sun,11/27/22,4:05PM,Las Vegas Raiders,Seattle Seahawks,40,34,576,2,372,2,2022,True,Seattle Seahawks,Las Vegas Raiders,SEA,LV
+2022_12_LAC_ARI,12,Sun,11/27/22,4:05PM,Los Angeles Chargers,Arizona Cardinals,25,24,311,0,366,2,2022,True,Arizona Cardinals,Los Angeles Chargers,ARI,LAC
+2022_12_LAR_KC,12,Sun,11/27/22,4:25PM,Kansas City Chiefs,Los Angeles Rams,26,10,437,2,198,2,2022,False,Kansas City Chiefs,Los Angeles Rams,KC,LAR
+2022_12_NO_SF,12,Sun,11/27/22,4:25PM,San Francisco 49ers,New Orleans Saints,13,0,317,0,260,2,2022,False,San Francisco 49ers,New Orleans Saints,SF,NO
+2022_12_GB_PHI,12,Sun,11/27/22,8:20PM,Philadelphia Eagles,Green Bay Packers,40,33,500,1,342,2,2022,False,Philadelphia Eagles,Green Bay Packers,PHI,GB
+2022_12_PIT_IND,12,Mon,11/28/22,8:15PM,Pittsburgh Steelers,Indianapolis Colts,24,17,323,0,290,2,2022,True,Indianapolis Colts,Pittsburgh Steelers,IND,PIT
+2022_13_BUF_NE,13,Thu,12/1/22,8:15PM,Buffalo Bills,New England Patriots,24,10,355,1,242,0,2022,True,New England Patriots,Buffalo Bills,NE,BUF
+2022_13_CLE_HOU,13,Sun,12/4/22,1:00PM,Cleveland Browns,Houston Texans,27,14,304,2,283,4,2022,True,Houston Texans,Cleveland Browns,HOU,CLE
+2022_13_DEN_BAL,13,Sun,12/4/22,1:00PM,Baltimore Ravens,Denver Broncos,10,9,285,2,272,0,2022,False,Baltimore Ravens,Denver Broncos,BAL,DEN
+2022_13_JAX_DET,13,Sun,12/4/22,1:00PM,Detroit Lions,Jacksonville Jaguars,40,14,437,0,266,1,2022,False,Detroit Lions,Jacksonville Jaguars,DET,JAX
+2022_13_NYJ_MIN,13,Sun,12/4/22,1:00PM,Minnesota Vikings,New York Jets,27,22,287,0,486,2,2022,False,Minnesota Vikings,New York Jets,MIN,NYJ
+2022_13_WAS_NYG,13,Sun,12/4/22,1:00PM,Washington Commanders,New York Giants,20,20,411,1,316,1,2022,True,New York Giants,Washington Commanders,NYG,WAS
+2022_13_TEN_PHI,13,Sun,12/4/22,1:00PM,Philadelphia Eagles,Tennessee Titans,35,10,453,0,209,0,2022,False,Philadelphia Eagles,Tennessee Titans,PHI,TEN
+2022_13_PIT_ATL,13,Sun,12/4/22,1:00PM,Pittsburgh Steelers,Atlanta Falcons,19,16,351,0,306,1,2022,True,Atlanta Falcons,Pittsburgh Steelers,ATL,PIT
+2022_13_GB_CHI,13,Sun,12/4/22,1:00PM,Green Bay Packers,Chicago Bears,28,19,357,0,409,3,2022,True,Chicago Bears,Green Bay Packers,CHI,GB
+2022_13_MIA_SF,13,Sun,12/4/22,4:05PM,San Francisco 49ers,Miami Dolphins,33,17,351,1,308,4,2022,False,San Francisco 49ers,Miami Dolphins,SF,MIA
+2022_13_SEA_LAR,13,Sun,12/4/22,4:05PM,Seattle Seahawks,Los Angeles Rams,27,23,438,2,319,2,2022,True,Los Angeles Rams,Seattle Seahawks,LAR,SEA
+2022_13_KC_CIN,13,Sun,12/4/22,4:25PM,Cincinnati Bengals,Kansas City Chiefs,27,24,431,0,349,1,2022,False,Cincinnati Bengals,Kansas City Chiefs,CIN,KC
+2022_13_LAC_LV,13,Sun,12/4/22,4:25PM,Las Vegas Raiders,Los Angeles Chargers,27,20,404,2,386,1,2022,False,Las Vegas Raiders,Los Angeles Chargers,LV,LAC
+2022_13_IND_DAL,13,Sun,12/4/22,8:20PM,Dallas Cowboys,Indianapolis Colts,54,19,385,1,309,5,2022,False,Dallas Cowboys,Indianapolis Colts,DAL,IND
+2022_13_NO_TB,13,Mon,12/5/22,8:15PM,Tampa Bay Buccaneers,New Orleans Saints,17,16,350,2,298,0,2022,False,Tampa Bay Buccaneers,New Orleans Saints,TB,NO
+2022_14_LV_LAR,14,Thu,12/8/22,8:15PM,Los Angeles Rams,Las Vegas Raiders,17,16,282,1,302,2,2022,False,Los Angeles Rams,Las Vegas Raiders,LAR,LV
+2022_14_NYJ_BUF,14,Sun,12/11/22,1:00PM,Buffalo Bills,New York Jets,20,12,232,0,309,2,2022,False,Buffalo Bills,New York Jets,BUF,NYJ
+2022_14_CLE_CIN,14,Sun,12/11/22,1:00PM,Cincinnati Bengals,Cleveland Browns,23,10,363,1,344,1,2022,False,Cincinnati Bengals,Cleveland Browns,CIN,CLE
+2022_14_HOU_DAL,14,Sun,12/11/22,1:00PM,Dallas Cowboys,Houston Texans,27,23,404,3,327,2,2022,False,Dallas Cowboys,Houston Texans,DAL,HOU
+2022_14_MIN_DET,14,Sun,12/11/22,1:00PM,Detroit Lions,Minnesota Vikings,34,23,464,0,416,2,2022,False,Detroit Lions,Minnesota Vikings,DET,MIN
+2022_14_JAX_TEN,14,Sun,12/11/22,1:00PM,Jacksonville Jaguars,Tennessee Titans,36,22,428,0,364,4,2022,True,Tennessee Titans,Jacksonville Jaguars,TEN,JAX
+2022_14_PHI_NYG,14,Sun,12/11/22,1:00PM,Philadelphia Eagles,New York Giants,48,22,437,0,304,1,2022,True,New York Giants,Philadelphia Eagles,NYG,PHI
+2022_14_BAL_PIT,14,Sun,12/11/22,1:00PM,Baltimore Ravens,Pittsburgh Steelers,16,14,309,0,329,3,2022,True,Pittsburgh Steelers,Baltimore Ravens,PIT,BAL
+2022_14_KC_DEN,14,Sun,12/11/22,4:20PM,Kansas City Chiefs,Denver Broncos,34,28,431,3,320,2,2022,True,Denver Broncos,Kansas City Chiefs,DEN,KC
+2022_14_CAR_SEA,14,Sun,12/11/22,4:25PM,Carolina Panthers,Seattle Seahawks,30,24,328,0,287,2,2022,True,Seattle Seahawks,Carolina Panthers,SEA,CAR
+2022_14_TB_SF,14,Sun,12/11/22,4:25PM,San Francisco 49ers,Tampa Bay Buccaneers,35,7,404,1,322,3,2022,False,San Francisco 49ers,Tampa Bay Buccaneers,SF,TB
+2022_14_MIA_LAC,14,Sun,12/11/22,8:20PM,Los Angeles Chargers,Miami Dolphins,23,17,432,0,219,0,2022,False,Los Angeles Chargers,Miami Dolphins,LAC,MIA
+2022_14_NE_ARI,14,Mon,12/12/22,8:15PM,New England Patriots,Arizona Cardinals,27,13,328,1,323,2,2022,True,Arizona Cardinals,New England Patriots,ARI,NE
+2022_15_SF_SEA,15,Thu,12/15/22,8:15PM,San Francisco 49ers,Seattle Seahawks,21,13,381,0,277,1,2022,True,Seattle Seahawks,San Francisco 49ers,SEA,SF
+2022_15_IND_MIN,15,Sat,12/17/22,1:00PM,Minnesota Vikings,Indianapolis Colts,39,36,518,3,341,1,2022,False,Minnesota Vikings,Indianapolis Colts,MIN,IND
+2022_15_BAL_CLE,15,Sat,12/17/22,4:30PM,Cleveland Browns,Baltimore Ravens,13,3,283,0,324,2,2022,False,Cleveland Browns,Baltimore Ravens,CLE,BAL
+2022_15_MIA_BUF,15,Sat,12/17/22,8:15PM,Buffalo Bills,Miami Dolphins,32,29,446,1,405,0,2022,False,Buffalo Bills,Miami Dolphins,BUF,MIA
+2022_15_ATL_NO,15,Sun,12/18/22,1:00PM,New Orleans Saints,Atlanta Falcons,21,18,348,1,320,1,2022,False,New Orleans Saints,Atlanta Falcons,NO,ATL
+2022_15_PIT_CAR,15,Sun,12/18/22,1:00PM,Pittsburgh Steelers,Carolina Panthers,24,16,325,0,209,0,2022,True,Carolina Panthers,Pittsburgh Steelers,CAR,PIT
+2022_15_PHI_CHI,15,Sun,12/18/22,1:00PM,Philadelphia Eagles,Chicago Bears,25,20,421,3,248,1,2022,True,Chicago Bears,Philadelphia Eagles,CHI,PHI
+2022_15_DAL_JAX,15,Sun,12/18/22,1:00PM,Jacksonville Jaguars,Dallas Cowboys,40,34,503,3,397,2,2022,False,Jacksonville Jaguars,Dallas Cowboys,JAX,DAL
+2022_15_DET_NYJ,15,Sun,12/18/22,1:00PM,Detroit Lions,New York Jets,20,17,359,0,337,1,2022,True,New York Jets,Detroit Lions,NYJ,DET
+2022_15_KC_HOU,15,Sun,12/18/22,1:00PM,Kansas City Chiefs,Houston Texans,30,24,502,2,219,1,2022,True,Houston Texans,Kansas City Chiefs,HOU,KC
+2022_15_ARI_DEN,15,Sun,12/18/22,4:05PM,Denver Broncos,Arizona Cardinals,24,15,324,2,240,3,2022,False,Denver Broncos,Arizona Cardinals,DEN,ARI
+2022_15_CIN_TB,15,Sun,12/18/22,4:25PM,Cincinnati Bengals,Tampa Bay Buccaneers,34,23,237,1,396,4,2022,True,Tampa Bay Buccaneers,Cincinnati Bengals,TB,CIN
+2022_15_TEN_LAC,15,Sun,12/18/22,4:25PM,Los Angeles Chargers,Tennessee Titans,17,14,365,2,284,1,2022,False,Los Angeles Chargers,Tennessee Titans,LAC,TEN
+2022_15_NYG_WAS,15,Sun,12/18/22,8:15PM,New York Giants,Washington Commanders,20,12,288,0,387,2,2022,True,Washington Commanders,New York Giants,WAS,NYG
+2022_15_NE_LV,15,Sun,12/18/22,8:20PM,Las Vegas Raiders,New England Patriots,30,24,308,1,318,1,2022,False,Las Vegas Raiders,New England Patriots,LV,NE
+2022_15_LAR_GB,15,Mon,12/19/22,8:15PM,Green Bay Packers,Los Angeles Rams,24,12,345,2,156,1,2022,False,Green Bay Packers,Los Angeles Rams,GB,LAR
+2022_16_JAX_NYJ,16,Thu,12/22/22,8:15PM,Jacksonville Jaguars,New York Jets,19,3,365,1,227,2,2022,True,New York Jets,Jacksonville Jaguars,NYJ,JAX
+2022_16_ATL_BAL,16,Sat,12/24/22,1:00PM,Baltimore Ravens,Atlanta Falcons,17,9,299,0,327,1,2022,False,Baltimore Ravens,Atlanta Falcons,BAL,ATL
+2022_16_BUF_CHI,16,Sat,12/24/22,1:00PM,Buffalo Bills,Chicago Bears,35,13,426,3,209,2,2022,True,Chicago Bears,Buffalo Bills,CHI,BUF
+2022_16_DET_CAR,16,Sat,12/24/22,1:00PM,Carolina Panthers,Detroit Lions,37,23,570,0,381,1,2022,False,Carolina Panthers,Detroit Lions,CAR,DET
+2022_16_CIN_NE,16,Sat,12/24/22,1:00PM,Cincinnati Bengals,New England Patriots,22,18,442,3,285,1,2022,True,New England Patriots,Cincinnati Bengals,NE,CIN
+2022_16_NO_CLE,16,Sat,12/24/22,1:00PM,New Orleans Saints,Cleveland Browns,17,10,244,1,249,1,2022,True,Cleveland Browns,New Orleans Saints,CLE,NO
+2022_16_HOU_TEN,16,Sat,12/24/22,1:00PM,Houston Texans,Tennessee Titans,19,14,285,1,272,3,2022,True,Tennessee Titans,Houston Texans,TEN,HOU
+2022_16_SEA_KC,16,Sat,12/24/22,1:00PM,Kansas City Chiefs,Seattle Seahawks,24,10,297,0,333,1,2022,False,Kansas City Chiefs,Seattle Seahawks,KC,SEA
+2022_16_NYG_MIN,16,Sat,12/24/22,1:00PM,Minnesota Vikings,New York Giants,27,24,353,0,445,2,2022,False,Minnesota Vikings,New York Giants,MIN,NYG
+2022_16_WAS_SF,16,Sat,12/24/22,4:05PM,San Francisco 49ers,Washington Commanders,37,20,371,1,349,2,2022,False,San Francisco 49ers,Washington Commanders,SF,WAS
+2022_16_PHI_DAL,16,Sat,12/24/22,4:25PM,Dallas Cowboys,Philadelphia Eagles,40,34,419,1,442,4,2022,False,Dallas Cowboys,Philadelphia Eagles,DAL,PHI
+2022_16_LV_PIT,16,Sat,12/24/22,8:15PM,Pittsburgh Steelers,Las Vegas Raiders,13,10,350,1,201,3,2022,False,Pittsburgh Steelers,Las Vegas Raiders,PIT,LV
+2022_16_GB_MIA,16,Sun,12/25/22,1:00PM,Green Bay Packers,Miami Dolphins,26,20,301,1,376,4,2022,True,Miami Dolphins,Green Bay Packers,MIA,GB
+2022_16_DEN_LAR,16,Sun,12/25/22,4:30PM,Los Angeles Rams,Denver Broncos,51,14,388,0,323,4,2022,False,Los Angeles Rams,Denver Broncos,LAR,DEN
+2022_16_TB_ARI,16,Sun,12/25/22,8:20PM,Tampa Bay Buccaneers,Arizona Cardinals,19,16,396,2,325,3,2022,True,Arizona Cardinals,Tampa Bay Buccaneers,ARI,TB
+2022_16_LAC_IND,16,Mon,12/26/22,8:15PM,Los Angeles Chargers,Indianapolis Colts,20,3,314,2,173,3,2022,True,Indianapolis Colts,Los Angeles Chargers,IND,LAC
+2022_17_DAL_TEN,17,Thu,12/29/22,8:15PM,Dallas Cowboys,Tennessee Titans,27,13,361,3,317,2,2022,True,Tennessee Titans,Dallas Cowboys,TEN,DAL
+2022_17_ARI_ATL,17,Sun,1/1/23,1:00PM,Atlanta Falcons,Arizona Cardinals,20,19,298,1,339,0,2022,False,Atlanta Falcons,Arizona Cardinals,ATL,ARI
+2022_17_CAR_TB,17,Sun,1/1/23,1:00PM,Tampa Bay Buccaneers,Carolina Panthers,30,24,478,1,400,3,2022,False,Tampa Bay Buccaneers,Carolina Panthers,TB,CAR
+2022_17_CHI_DET,17,Sun,1/1/23,1:00PM,Detroit Lions,Chicago Bears,41,10,504,0,230,2,2022,False,Detroit Lions,Chicago Bears,DET,CHI
+2022_17_CLE_WAS,17,Sun,1/1/23,1:00PM,Cleveland Browns,Washington Commanders,24,10,301,0,260,3,2022,True,Washington Commanders,Cleveland Browns,WAS,CLE
+2022_17_IND_NYG,17,Sun,1/1/23,1:00PM,New York Giants,Indianapolis Colts,38,10,394,1,252,1,2022,False,New York Giants,Indianapolis Colts,NYG,IND
+2022_17_DEN_KC,17,Sun,1/1/23,1:00PM,Kansas City Chiefs,Denver Broncos,27,24,374,2,307,2,2022,False,Kansas City Chiefs,Denver Broncos,KC,DEN
+2022_17_JAX_HOU,17,Sun,1/1/23,1:00PM,Jacksonville Jaguars,Houston Texans,31,3,337,2,277,1,2022,True,Houston Texans,Jacksonville Jaguars,HOU,JAX
+2022_17_MIA_NE,17,Sun,1/1/23,1:00PM,New England Patriots,Miami Dolphins,23,21,249,0,333,2,2022,False,New England Patriots,Miami Dolphins,NE,MIA
+2022_17_NO_PHI,17,Sun,1/1/23,1:00PM,New Orleans Saints,Philadelphia Eagles,20,10,313,1,313,1,2022,True,Philadelphia Eagles,New Orleans Saints,PHI,NO
+2022_17_PIT_BAL,17,Sun,1/1/23,1:00PM,Pittsburgh Steelers,Baltimore Ravens,16,13,351,0,240,1,2022,True,Baltimore Ravens,Pittsburgh Steelers,BAL,PIT
+2022_17_NYJ_SEA,17,Sun,1/1/23,4:05PM,Seattle Seahawks,New York Jets,23,6,346,0,279,3,2022,False,Seattle Seahawks,New York Jets,SEA,NYJ
+2022_17_SF_LV,17,Sun,1/1/23,4:05PM,San Francisco 49ers,Las Vegas Raiders,37,34,454,1,500,2,2022,True,Las Vegas Raiders,San Francisco 49ers,LV,SF
+2022_17_MIN_GB,17,Sun,1/1/23,4:25PM,Green Bay Packers,Minnesota Vikings,41,17,315,0,346,4,2022,False,Green Bay Packers,Minnesota Vikings,GB,MIN
+2022_17_LAR_LAC,17,Sun,1/1/23,4:25PM,Los Angeles Chargers,Los Angeles Rams,31,10,431,0,277,1,2022,False,Los Angeles Chargers,Los Angeles Rams,LAC,LAR
+2022_18_KC_LV,18,Sat,1/7/23,4:30PM,Kansas City Chiefs,Las Vegas Raiders,31,13,349,0,279,2,2022,True,Las Vegas Raiders,Kansas City Chiefs,LV,KC
+2022_18_TEN_JAX,18,Sat,1/7/23,8:15PM,Jacksonville Jaguars,Tennessee Titans,20,16,222,1,312,2,2022,False,Jacksonville Jaguars,Tennessee Titans,JAX,TEN
+2022_18_NE_BUF,18,Sun,1/8/23,1:00PM,Buffalo Bills,New England Patriots,35,23,327,3,341,3,2022,False,Buffalo Bills,New England Patriots,BUF,NE
+2022_18_BAL_CIN,18,Sun,1/8/23,1:00PM,Cincinnati Bengals,Baltimore Ravens,27,16,257,1,386,4,2022,False,Cincinnati Bengals,Baltimore Ravens,CIN,BAL
+2022_18_TB_ATL,18,Sun,1/8/23,1:00PM,Atlanta Falcons,Tampa Bay Buccaneers,30,17,382,1,222,1,2022,False,Atlanta Falcons,Tampa Bay Buccaneers,ATL,TB
+2022_18_CAR_NO,18,Sun,1/8/23,1:00PM,Carolina Panthers,New Orleans Saints,10,7,203,2,304,1,2022,True,New Orleans Saints,Carolina Panthers,NO,CAR
+2022_18_MIN_CHI,18,Sun,1/8/23,1:00PM,Minnesota Vikings,Chicago Bears,29,13,482,2,259,2,2022,True,Chicago Bears,Minnesota Vikings,CHI,MIN
+2022_18_CLE_PIT,18,Sun,1/8/23,1:00PM,Pittsburgh Steelers,Cleveland Browns,28,14,333,1,307,2,2022,False,Pittsburgh Steelers,Cleveland Browns,PIT,CLE
+2022_18_HOU_IND,18,Sun,1/8/23,1:00PM,Houston Texans,Indianapolis Colts,32,31,360,3,398,3,2022,True,Indianapolis Colts,Houston Texans,IND,HOU
+2022_18_NYJ_MIA,18,Sun,1/8/23,1:00PM,Miami Dolphins,New York Jets,11,6,302,0,187,0,2022,False,Miami Dolphins,New York Jets,MIA,NYJ
+2022_18_ARI_SF,18,Sun,1/8/23,4:25PM,San Francisco 49ers,Arizona Cardinals,38,13,311,0,255,4,2022,False,San Francisco 49ers,Arizona Cardinals,SF,ARI
+2022_18_DAL_WAS,18,Sun,1/8/23,4:25PM,Washington Commanders,Dallas Cowboys,26,6,309,1,182,2,2022,False,Washington Commanders,Dallas Cowboys,WAS,DAL
+2022_18_LAC_DEN,18,Sun,1/8/23,4:25PM,Denver Broncos,Los Angeles Chargers,31,28,471,2,352,2,2022,False,Denver Broncos,Los Angeles Chargers,DEN,LAC
+2022_18_NYG_PHI,18,Sun,1/8/23,4:25PM,Philadelphia Eagles,New York Giants,22,16,342,1,284,0,2022,False,Philadelphia Eagles,New York Giants,PHI,NYG
+2022_18_LAR_SEA,18,Sun,1/8/23,4:25PM,Seattle Seahawks,Los Angeles Rams,19,16,402,2,269,1,2022,False,Seattle Seahawks,Los Angeles Rams,SEA,LAR
+2022_18_DET_GB,18,Sun,1/8/23,8:20PM,Detroit Lions,Green Bay Packers,20,16,323,0,291,2,2022,True,Green Bay Packers,Detroit Lions,GB,DET
+2022_19_SEA_SF,19,Sat,1/14/23,4:30PM,San Francisco 49ers,Seattle Seahawks,41,23,505,0,332,2,2022,False,San Francisco 49ers,Seattle Seahawks,SF,SEA
+2022_19_LAC_JAX,19,Sat,1/14/23,8:15PM,Jacksonville Jaguars,Los Angeles Chargers,31,30,390,5,320,0,2022,False,Jacksonville Jaguars,Los Angeles Chargers,JAX,LAC
+2022_19_MIA_BUF,19,Sun,1/15/23,1:00PM,Buffalo Bills,Miami Dolphins,34,31,423,3,231,2,2022,False,Buffalo Bills,Miami Dolphins,BUF,MIA
+2022_19_NYG_MIN,19,Sun,1/15/23,4:30PM,New York Giants,Minnesota Vikings,31,24,431,0,332,0,2022,True,Minnesota Vikings,New York Giants,MIN,NYG
+2022_19_BAL_CIN,19,Sun,1/15/23,8:15PM,Cincinnati Bengals,Baltimore Ravens,24,17,234,1,364,2,2022,False,Cincinnati Bengals,Baltimore Ravens,CIN,BAL
+2022_19_DAL_TB,19,Mon,1/16/23,8:15PM,Dallas Cowboys,Tampa Bay Buccaneers,31,14,425,0,386,1,2022,True,Tampa Bay Buccaneers,Dallas Cowboys,TB,DAL
+2022_20_JAX_KC,20,Sat,1/21/23,4:30PM,Kansas City Chiefs,Jacksonville Jaguars,27,20,362,0,349,2,2022,False,Kansas City Chiefs,Jacksonville Jaguars,KC,JAX
+2022_20_NYG_PHI,20,Sat,1/21/23,8:15PM,Philadelphia Eagles,New York Giants,38,7,416,0,227,1,2022,False,Philadelphia Eagles,New York Giants,PHI,NYG
+2022_20_CIN_BUF,20,Sun,1/22/23,3:00PM,Cincinnati Bengals,Buffalo Bills,27,10,412,0,325,1,2022,True,Buffalo Bills,Cincinnati Bengals,BUF,CIN
+2022_20_DAL_SF,20,Sun,1/22/23,6:30PM,San Francisco 49ers,Dallas Cowboys,19,12,312,1,282,2,2022,False,San Francisco 49ers,Dallas Cowboys,SF,DAL
+2022_21_SF_PHI,21,Sun,1/29/23,3:00PM,Philadelphia Eagles,San Francisco 49ers,31,7,269,0,164,3,2022,False,Philadelphia Eagles,San Francisco 49ers,PHI,SF
+2022_21_CIN_KC,21,Sun,1/29/23,6:30PM,Kansas City Chiefs,Cincinnati Bengals,23,20,357,1,309,2,2022,False,Kansas City Chiefs,Cincinnati Bengals,KC,CIN
+2022_22_PHI_KC,22,Sun,2/12/23,6:30PM,Kansas City Chiefs,Philadelphia Eagles,38,35,340,0,417,1,2022,False,Kansas City Chiefs,Philadelphia Eagles,KC,PHI
