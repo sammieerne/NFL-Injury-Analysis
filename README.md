@@ -8,12 +8,19 @@ We are currently writing 2 research papers to submit to the American Journal of 
 detailing our findings.
 
 Folder Descriptions
+
 Data: Contains csv data files of all information that we collected and used in our analysis
+
 Documentation: Contains documentation related to our research
+
 Models: Contains the models that we created based on the data
+
 PowerBI: Contains PowerBI files that we used to visualize the data
+
 Schedule: Contains information on the schedule of NFL seasons between '19'-20 and '22-'23
+
 Scripts: Contains scripts of our R data files and RMarkdown files
+
 
 We showcased our research at the Miami University Undergraduate Research Forum in mid-April. An article
 featuring our team is linked here.
