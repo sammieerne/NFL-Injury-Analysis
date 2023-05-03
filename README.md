@@ -11,8 +11,6 @@ detailing our findings.
 
 Data: Contains csv data files of all information that we collected and used in our analysis
 
-Documentation: Contains documentation related to our research
-
 Models: Contains the models that we created based on the data
 
 PowerBI: Contains PowerBI files that we used to visualize the data
