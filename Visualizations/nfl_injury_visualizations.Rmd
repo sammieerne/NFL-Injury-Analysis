@@ -1,0 +1,434 @@
+---
+title: "NFL Injuries: Visualizations"
+author:
+- name: 'Samantha Erne ^[Email: ernesm@miamioh.edu]'
+  affiliation: Farmer School of Business, Miami University
+- name: 'Brendan Beattie ^[Email: beattibs@miamioh.edu]'
+  affiliation: Farmer School of Business, Miami University
+- name: 'Jake Holroyd 2 ^[Email: holroyjm@miamioh.edu]'
+  affiliation: Farmer School of Business, Miami University
+- name: 'Peter Walsh ^[Email: walshpd2@miamioh.edu]'
+  affiliation: Farmer School of Business, Miami University
+- name: 'Dr. Fadel Megahed ^[Email: fmegahed@miamioh.edu]'
+  affiliation: Farmer School of Business, Miami University
+date: 'Date: `r Sys.Date()`'
+output:
+  html_document:
+    fig.retina: yes
+    code_folding: show
+    code_download: yes
+    number_sections: no
+    paged_df: yes
+    toc: yes
+    toc_float: yes
+    theme: readable
+    keep_md: yes
+---
+
+```{r setup, include=FALSE, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE,
+                      progress = FALSE,
+                      verbose = TRUE,
+                      cache = TRUE)
+
+```
+
+```{r, echo = FALSE}
+if(require(pacman)== FALSE) install.packages("pacman")
+pacman::p_load(tidyverse, 
+               tidycensus, # for getting the census data
+               httr, jsonlite, # pkgs that we might use for API,
+               janitor,
+               lubridate,# for making a column name from row 1
+               magrittr, rvest, nflreadr, nflfastR, reticulate, geosphere, ggplot2, plotly, cowplot, ggtext,patchwork,htmlwidgets)
+```
+
+# **Introduction**
+
+This report presents a series of visualizations examining NFL injuries from the 2019 and 2020 seasons. We will look at various factors, such as the distribution of injuries by team, the effect of distance traveled on injury rates, and the impact of stadium and field surface type on injuries.
+
+### **Hypothesis**
+
+In this analysis, we will test the following hypotheses:
+
+- Players that are playing on natural grass, synthetic turf fields, and hybrid fields
+will have **different rates of injuries**.
+
+- We can better explain injuries by including **additional factors** into models that
+analyze NFL injuries.
+
+- There may be a team effect on injuries due to **poor training or stadium**.
+
+- We predict that the following factors will impact injury rates:
+  - Cold weather (**↑**)
+  - Greater distance traveled (**↑**)
+  - Home games (**↓**)
+  - Dome stadium (**↑**)
+  - Turf or Hybrid surfaces (**↑**) compared to Grass(**↓**)
+  - Greater number of days since last game (**↓**) compared to less
+  
+Our visualizations aim to provide a clear and insightful representation of the relationships between these factors and injury rates, enabling us to better understand and validate the proposed hypotheses.
+
+
+# **Total Injuries by Team**
+```{r visual_Total_Injuries_by_Team}
+
+##INTERACTIVE CODE
+sum_injury = read_csv("final_files/injury_sum_by_team_home_away_2019_to_2020.csv")
+library(ggplot2)
+library(ggtext)
+
+# reshape data to long format
+injuries_data_long <- sum_injury %>%
+  tidyr::gather(key = "injury_type", value = "count", Home_injuries, Away_injuries) %>%
+  mutate(injury_type = ifelse(injury_type == "Home_injuries", "Home Game Injuries", "Away Game Injuries"),
+         home_percent = paste0(round(100*count[injury_type == "Home"]/Total_injuries), "%"),
+         away_percent = paste0(round(100*count[injury_type == "Away"]/Total_injuries), "%")) %>%
+  ungroup()
+
+# create stacked bar chart
+p <- ggplot(injuries_data_long, aes(y = reorder(injured_team,count), x = count, fill = injury_type,
+                                    text = paste("Team: ", injured_team, "<br>",
+                                                 "Home injuries: ", ifelse(injury_type == "Home", count, 0),
+                                                 ifelse(injury_type == "Home", paste(" | Home Injury Rate: ", home_percent), " | Home Injury Rate: 0%"), "<br>",
+                                                 "Away injuries: ", ifelse(injury_type == "Away", count, 0),
+                                                 ifelse(injury_type == "Away", paste(" | Away Injury Rate: ", away_percent), " | Away Injury Rate: 0%"), "<br>",
+                                                 "Total injuries: ", Total_injuries)))  +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("#619CFF", "#FF7942"), name = "Injury Type",
+                    labels = c("Home Games", "Away Games")) +
+  labs(y = "Team", x = "Total Injuries") +
+  theme(axis.text.x = element_text(size = 12, angle = 90, hjust = 1),
+        axis.title.x = element_text(size = 12, margin = margin(t = 20), vjust = 1, face = "bold"),
+        plot.title = element_text(size = 20),
+        legend.title = element_text(size = 11, face = "bold"),
+        legend.text = element_text(size = 11, face = "bold"),
+        #axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 12, margin = margin(l=0), vjust =1, face = "bold"))
+
+# convert to plotly object and add tooltip settings
+p <- ggplotly(p, tooltip = c("text"))
+p <- p %>% layout(hovermode = "closest")
+p
+
+```
+
+Our goal in analyzing the proportion of injuries that occur when a team is home compared to away is to understand how different surfaces impact teams as a whole. Due to teams playing about half of their games on their own surface, we wanted to highlight the teams that experienced the most injuries when playing at opponent stadiums. We will later provide insights about the number of injuries per stadium, but this graphic is meant to show teams that were more susceptible to injury during the 2019 and 2020 seasons. Our hypotheses from the output is as follows:
+
+- Teams with *high total injuries* tend to play in the *more weather extreme cities that do not have domes* compared to the rest of the league.
+<br>
+
+- The teams with the *highest proportion of injuries* may have *poor strength and conditioning coaches* who are not properly determining the adequate amount of time required for injured players to return to full strength.
+  - These teams may lag behind the rest of the league in terms of facilities that aid in recovery and athlete longevity.
+
+
+# **Number of Injuries by Team and Bucketed by Distance Traveled**
+```{r injuries_by_distance_bucket}
+df10 = read_csv("final_files/game_injury_player_2019_2020_complete_update_vegas_weeks_bucketed_2.csv")
+library(RColorBrewer)
+
+# create new columns for home and away injuries
+distance_data_filtered <- df10 %>%
+  mutate(Home_injuries = ifelse(injured_team != Away_abbr, 1, 0),
+         Away_injuries = ifelse(injured_team == Away_abbr, 1, 0))
+
+distance_data_filtered <- distance_data_filtered %>%
+  filter(injured_team == Away_abbr)
+
+# count number of observations in each distance bucket by injured team
+distance_counts <- distance_data_filtered %>%
+  group_by(injured_team, distance_bucket = cut(distance_miles_away,
+                                               breaks = c(0,500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 4850),
+                                               right = FALSE)) %>%
+  summarise(n = n(), 
+            total_home_injuries = sum(Home_injuries), 
+            total_away_injuries = sum(Away_injuries)) %>%
+  ungroup()
+
+# add a small amount of random noise to y-coordinates for points with the same count
+distance_counts$n_jittered <- distance_counts$n + runif(nrow(distance_counts), -0.2, 0.2)
+
+# calculate mean num_injuries for each bucket
+mean_num_injuries = distance_counts %>% 
+  group_by(distance_bucket) %>% 
+  summarise(mean_num_injuries = mean(n_jittered, na.rm = T)) %>% 
+  ungroup()
+
+
+
+my_palette <- colorRampPalette(c("#8dd3c7", "#ffffb3", "#bebada", "#fb8072", "#80b1d3", "#fdb462", "#b3de69", "#fccde5", "#d9d9d9", "#bc80bd", "#ccebc5", "#ffed6f", "#1f78b4", "#33a02c", "#e31a1c", "#ff7f00", "#cab2d6", "#6a3d9a", "#a6cee3", "#b2df8a", "#fb9a99", "#fdbf6f", "#ffff99", "#8dd3c7", "#ffffb3", "#bebada", "#fb8072", "#80b1d3", "#fdb462", "#b3de69", "#b9efc2d4", "#6F88A6"))
+
+combined_data = merge(distance_counts, mean_num_injuries, by = "distance_bucket")
+
+
+p <- ggplot(distance_counts, aes(x = distance_bucket, y = n_jittered, fill = injured_team,
+                                 text = paste("Team: ", injured_team, "<br>",
+                                              "Distance: ", distance_bucket, "<br>",
+                                              "Total Away Injuries: ", total_away_injuries))) +
+   #geom_point(stat = "summary", fun.y = mean, shape = 18, size = 3, position = position_jitter(width = 0, height = 0)) +
+  #geom_boxplot(aes(fill = injured_team),outlier.shape = NA) +
+   geom_jitter(aes(color = injured_team), width = 0.2, alpha = 0.6)+
+   #stat_summary(fun = mean, geom = "point", shape = 18, size = 3, fill = "black", position = position_jitter(width = 0, height = 0))+
+   scale_fill_manual(values = my_palette(32)) +
+   labs(x = bquote("Distance Bucket"), y = bquote("Total Injuries")) +
+   scale_x_discrete(labels = c("[0, 500]", "(500, 1000]", "(1000, 1500]", 
+                               "(1500, 2000]", "(2000, 2500]", "(2500, 3000]", "(3500, 4000]", 
+                               "(4000, 4500]", "(4500, 5000]")) + 
+  theme(legend.position = "none",
+        axis.text.x = element_text(face = "bold"),
+        axis.text.y = element_text(face = "bold"),
+        axis.title.x = element_text(face = "bold"),
+        axis.title.y = element_text(face = "bold"))
+
+#p <- ggplotly(p, tooltip = c("injured_team", "text"))
+#p <- p %>% layout(hovermode = "closest")
+
+
+p2 <- ggplot(mean_num_injuries, aes(x = distance_bucket, y = mean_num_injuries)) +
+  geom_point(size = 3, shape = 18, color = "black", fill = "black") +
+  #geom_line(size =1, color = "black")+
+  labs(title = bquote(""), x = bquote("Distance Bucket"), y = bquote("")) +
+  scale_x_discrete(labels = c("[0, 500]", "(500, 1000]", "(1000, 1500]", "(1500, 2000]", 
+                              "(2000, 2500]", "(2500, 3000]", "(3500, 4000]", "(4000, 4500]", 
+                              "(4500, 5000]")) + 
+  theme(legend.position = "none",
+        axis.text.x = element_text(face = "bold", size = 8),
+        axis.text.y = element_text(face = "bold"),
+        axis.title.x = element_text(face = "bold"),
+        axis.title.y = element_text(face = "bold"))
+
+#p2 <- ggplotly(p2, tooltip = c("mean_num_injuries", "text"))
+#p2 <- p2 %>% layout(hovermode = "closest")
+
+library(RColorBrewer)
+library(viridis)
+
+# Define a custom color palette with 33 colors
+my_palette1 <- viridis(n = 32, alpha = 0.8, begin = 0.2, end = 0.8, direction = -1)
+
+
+# Combine the two data frames into a single data frame
+combined_data <- merge(distance_counts, mean_num_injuries, by = "distance_bucket")
+
+# Create the combined plot p3
+p3 <- ggplot(combined_data, aes(x = distance_bucket, y = n_jittered, fill = injured_team, 
+                                color = injured_team, text = paste("Team: ", injured_team, "<br>", "Distance: ",  distance_bucket, "<br>", "Total Away Injuries: ", total_away_injuries))) +
+  geom_jitter(width = 0.2, alpha = 0.6) +
+  geom_point(data = mean_num_injuries, aes(x = distance_bucket,y = mean_num_injuries, text = paste("Distance Bucket: ", distance_bucket, "<br>", "Mean Number of Injuries: ", round(mean_num_injuries,2))), size = 3, shape = 18,inherit.aes = FALSE ,color = "black", hoverinfo = "text") +
+  scale_fill_manual(values = my_palette1) +
+  labs(x = bquote("Distance Bucket"), y = bquote("Total Injuries")) +
+  scale_x_discrete(labels = c("[0, 500]", "(500, 1000]", "(1000, 1500]", "(1500, 2000]", "(2000, 2500]", 
+                              "(2500, 3000]", "(3500, 4000]", "(4000, 4500]", "(4500, 5000]")) +
+  theme(legend.position = "none",
+        axis.text.x = element_text(size = 10,face = "bold", hjust = 1),
+        axis.text.y = element_text(face = "bold"),
+        axis.title.x = element_text(face = "bold", hjust = 1),
+        axis.title.y = element_text(face = "bold"),
+        legend.title = element_text(size = 11, face = "bold"),
+        legend.text = element_text(size = 10, face = "bold"),
+        plot.margin = margin(l = 20, r = 200, b = 100, t= 150))
+
+p3 <- ggplotly(p3, tooltip = c("text", "total_away_injuries"),height = 600, width = 1150)
+p3 <- p3 %>% layout(hovermode = "closest",
+                    annotations = list(
+                      list(
+                        x = 0.5,
+                        y = -0.25,
+                        text = "<b>*Distance Bucket from (3000,3500] is not included due to having no injuries. <br>This marks the distinction of neutral site and abroad games (4 entries)-- to the right of (2500, 3000]</b>",
+                        showarrow = FALSE,
+                        xref = "paper",
+                        yref = "paper",
+                        font = list(size = 11)
+                      )
+                    ),
+                    margin = list(l = 20, r = 200, b = 170, t = 25)
+)
+p3
+
+```
+
+In plotting the **total number of injuries by bucketed distance(miles) traveled for the away team**, we are looking to see if there is greater fatigue, leading to more injuries. With teams in the NFL playing a majority of their games with their division, the distance traveled should be between the first two buckets. Teams that are located on the coasts and play their out-of-division games will travel much further (*i.e., San Francisco 49ers and Seattle Seahawks*) experience total injuries that are much higher than the average. Our insights from the visualization are as follows:
+
+- Teams that tend to have a *lower total distance traveled* throughout the season will sustain *less injuries*.
+
+- Teams that have *above average injuries in each bucket* tend to have *high injuries* throughout all of the buckets.
+
+
+# **Injuries by Stadium Segmented by Home and Away Team**
+```{r interactive_stadium_injuries_home_away}
+
+library(tidyverse)
+library(plotly)
+
+# read in data
+df_stadium_injuries <- read_csv("final_files/game_injury_player_2019_2020_complete_update_vegas_weeks_bucketed_2.csv")
+
+#unique(df_stadium_injuries$stadium)
+
+# create new columns for home and away injuries
+df_stadium_injuries <- df_stadium_injuries %>%
+  mutate(home_injuries = if_else(injured_team == Home_abbr, 1, 0),
+         away_injuries = if_else(injured_team == Away_abbr, 1, 0))
+
+# group by stadium and summarize counts of home and away injuries
+stadium_counts2 <- df_stadium_injuries %>%
+  group_by(stadium, surface_type) %>%
+  summarize(home_injuries = sum(home_injuries),
+            away_injuries = sum(away_injuries),
+            total_injuries = sum(home_injuries) + sum(away_injuries))
+
+# calculate total injuries across all stadiums
+total_injuries1 <- sum(stadium_counts2$total_injuries1)
+
+# convert data to long format and create injury_type column
+stadium_counts_long2 <- stadium_counts2 %>%
+  gather(key = "injury_type", value = "count", home_injuries, away_injuries) %>%
+  mutate(injury_type = if_else(injury_type == "home_injuries", "Home Team", "Away Team"),
+         percent_total = scales::percent(count/total_injuries),
+         total_count = sum(count),
+         stadium = paste0(stadium, " (", substr(surface_type,1,1), ")"))
+
+# calculate total injuries per stadium
+stadium_totals2 <- stadium_counts_long2 %>%
+  group_by(stadium) %>%
+  summarise(total_injuries = sum(count))
+
+# merge stadium_totals with stadium_counts_long
+stadium_counts_long2 <- stadium_counts_long2 %>%
+  left_join(stadium_totals2)
+
+
+# create stacked bar chart with plotly
+p4 <- ggplot(stadium_counts_long2, aes(y = reorder(stadium,count), x = count, fill = injury_type,
+                                     text = paste("Stadium: ", stadium, "<br>",
+                                                  if_else(injury_type == "Home", 
+                                                          paste("Home injuries: ", count, "<br>"), ""),
+                                                  if_else(injury_type == "Away",
+                                                          paste("Away injuries: ", count, "<br>"), ""),
+                                                  paste("Percent of total stadium injuries: ", percent_total, "<br>"),
+                                                  paste("Total injuries Per Stadium: ", stadium_totals2$total_injuries, "<br>")
+                                                  ))) +
+  geom_bar(stat = "identity", position = "stack") +
+  scale_fill_manual(values = c("#619CFF", "#FF7942"), name = "Injury type",
+                    labels = c("Home Team", "Away Team")) +
+  labs(y = "Stadium by Surface Type", x = "Total Injuries") +
+  theme(axis.text.x = element_text(size = 11, angle = 90, hjust = 1),
+        #plot.title = element_text(size = 11),
+        axis.text.y = element_text(size = 11),
+        legend.title = element_text(size = 11, face = "bold"),
+        legend.text = element_text(size = 10, face = "bold"),
+        axis.title.x = element_text(size = 11, margin = margin(t = 20), vjust = 1, face = "bold"),
+        axis.title.y = element_text(size = 11, margin = margin(l=0), vjust = 1, face = "bold"),
+        plot.margin = margin(l = 200, r = 200, b = 150, t= 75))
+
+
+# convert to plotly object and add tooltip settings
+p4 <- ggplotly(p4, tooltip = c("text"), height = 800, width = 800)
+p4 <- p4 %>% layout(hovermode = "closest",
+                    annotations = list(
+                      list(
+                        x = 0.5,
+                        y = -0.175,
+                        text = "The outlier stadiums have two teams that use the field: <br><b>SoFi Stadium (Rams & Chargers)</b> <br><b>MetLife Stadium (Giants & Jets)</b>",
+                        showarrow = FALSE,
+                        xref = "paper",
+                        yref = "paper",
+                        font = list(size = 12)
+                      )
+                    ),
+                    margin = list(l = 200, r = 200, b = 125, t = 25)
+                    )
+
+p4
+```
+
+Through analyzing the breakdown of stadium injuries by home and away teams, we wanted insights into the teams that experienced a far lower rate of injuries in their own stadium compared to their opponents. Teams that have a greater proportional difference in home and away team injuries tend to have a greater competitive advantage when playing at home. While *Metlife Stadium* and *Sofi Stadium* have a greater number of injuries compared to the rest, the distribution of stadium injuries is more consistent when considering that around double the number of games are played at these stadiums. From the information provided in the figure, we hypothesize the following: 
+
+- Stadiums that are located in *more weather extreme cities(without the presence of any form of dome)* tend to have *higher rates of injuries*.
+
+- Stadiums that have surface types matching **Hybrid** or **Turf tend** to have a *higher rate of total injuries*.
+
+
+
+# **Lower Body Injuries by Field Surface Type**
+```{r visualization_lower_body_injuries_by_playing_surface}
+
+df_lb_1 <- read_csv("final_files/game_injury_player_2019_2020_complete_update_vegas_weeks_bucketed_2_lb.csv")
+
+# Subset the data to only include rows where injury_area contains a lower body injury
+#lower_body_injuries1 <- df1[df1$`injury area`, ignore.case = TRUE, ]
+
+
+# create new columns for home and away injuries
+lower_body_injuries_lb <- df_lb_1 %>%
+  mutate(grass_injuries = if_else(surface_type == "Grass", 1, 0),
+         turf_injuries = if_else(surface_type == "Turf", 1, 0),
+         hybrid_injuries = if_else(surface_type == "Hybrid", 1,0))
+
+
+surface_body_injuries_lb <- lower_body_injuries_lb %>%
+  group_by(injury_area, surface_type) %>%
+  summarize(grass_injuries = sum(grass_injuries),
+            turf_injuries = sum(turf_injuries),
+            hybrid_injuries = sum(hybrid_injuries),
+            total_injuries = sum(grass_injuries, turf_injuries, hybrid_injuries), 
+            .groups = "drop_last") %>% 
+  ungroup() %>% 
+  group_by(injury_area, surface_type) %>% 
+  summarize(grass_injuries = sum(grass_injuries),
+           turf_injuries = sum(turf_injuries),
+           hybrid_injuries = sum(hybrid_injuries),
+           total_injuries = sum(grass_injuries, turf_injuries, hybrid_injuries),
+           .groups = "drop_last")
+
+# group by injury area and calculate the total injuries for each area
+area_totals <- surface_body_injuries_lb %>%
+  group_by(injury_area) %>%
+  summarize(total_injuries = sum(grass_injuries + turf_injuries + hybrid_injuries))
+
+# join the area_totals dataframe to the surface_body_injuries_lb dataframe
+surface_body_injuries_lb <- left_join(surface_body_injuries_lb, area_totals, by = "injury_area")
+
+# replace the total_injuries column with the calculated totals for each area
+surface_body_injuries_lb$total_injuries_per_injury_area <- surface_body_injuries_lb$total_injuries.y
+
+surface_body_injuries_lb <- surface_body_injuries_lb %>%
+  mutate(surface_type = factor(surface_type, levels = c("Hybrid", "Turf", "Grass")))
+
+          
+
+# create stacked bar plot with interactive popup box
+p_lb <- ggplot(surface_body_injuries_lb, aes(y = reorder(injury_area, grass_injuries), x = grass_injuries + turf_injuries + hybrid_injuries, fill = surface_type,
+                                       text = paste("Injury_Area: ", injury_area, "<br>",
+                                                    if_else(surface_type == "Grass",
+                                                            paste("Grass Injuries: ", grass_injuries, "<br>"), ""),
+                                                    if_else(surface_type == "Turf",
+                                                            paste("Turf Injuries: ", turf_injuries, "<br>"), ""),
+                                                    if_else(surface_type == "Hybrid",
+                                                            paste("Hybrid Injuries: ", hybrid_injuries, "<br>"), ""),
+                                                    paste("Total Injuries: ", total_injuries_per_injury_area, "<br>")))) +
+  geom_bar(stat = "identity", position = "stack") +
+  labs(y = "Injury Area", x = "Number of Injuries", fill = "Playing Surface") +
+  scale_fill_manual(values = c("Grass" =  "#FF7942" , "Turf" = "#619CFF", "Hybrid" = "#D3D3D3")) +
+  #theme_classic()
+  theme(axis.text.x = element_text(size = 11, angle = 90, hjust = 1, face = "bold"),
+        #plot.title = element_text(size = 11),
+        axis.text.y = element_text(size = 11, face = "bold"),
+        legend.title = element_text(size = 11, face = "bold"),
+        legend.text = element_text(size = 10, face = "bold"),
+        axis.title.x = element_text(size = 11, margin = margin(t = 20), vjust = 1, face = "bold"),
+        axis.title.y = element_text(size = 11, margin = margin(l=0), vjust = 1, face = "bold"))
+        #plot.margin = margin(l = 200, r = 200, b = 150, t= 25))
+
+p_lb <- ggplotly(p_lb, tooltip = c("text"))
+p_lb <- p_lb %>% layout(hovermode = "closest")
+
+p_lb
+```
+
+Our analysis in this figure is to understand the distribution of lower body injuries that occur on different surfaces. In all of the categories below besides *knee*, the number of turf injuries is greater than that of grass. Hybrid lags much further behind due to significantly less teams having a hybrid surface being played on. While this figure shows both contact and non-contact injuries, we decided to focus on lower body injuries due to the belief that a greater percentage of non-contact injuries occur in the lower half of the body. Based on the ouput from the visual, we hypothesize the following:
+
+- *Turf surfaces cause a greater number of injuries* compared to Grass with the Hybrid category being too small to draw significant conclusions.
+
