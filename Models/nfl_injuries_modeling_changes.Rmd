@@ -1,0 +1,479 @@
+---
+title: "NFL Injuries: Modeling"
+author:
+  - name: "Samantha Erne ^[Email: ernesm@miamioh.edu]"
+    affiliation: Farmer School of Business, Miami University
+  - name: "Brendan Beattie ^[Email: beattibs@miamioh.edu]"
+    affiliation: Farmer School of Business, Miami University
+  - name: "Jake Holroyd 2 ^[Email: holroyjm@miamioh.edu]"
+    affiliation: Farmer School of Business, Miami University
+  - name: "Peter Walsh ^[Email: walshpd2@miamioh.edu]"
+    affiliation: Farmer School of Business, Miami University
+  - name: "Dr. Fadel Megahed ^[Email: fmegahed@miamioh.edu]"
+    affiliation: Farmer School of Business, Miami University
+date: 'Date: `r Sys.Date()`'
+output:
+  html_document:
+    code_folding: show
+    code_download: TRUE
+    number_sections: FALSE
+    paged_df: TRUE
+    toc: TRUE
+    toc_float: TRUE
+    theme: readable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE,
+                      progress = FALSE,
+                      verbose = TRUE,
+                      cache = TRUE)
+
+```
+
+### Required R Packages
+```{r}
+if(require(pacman)== FALSE) install.packages("pacman")
+pacman::p_load(tidyverse, 
+               lubridate,# for making a column name from row 1
+               magrittr, rvest, nflreadr, nflfastR, stringr, dplyr, caret, MuMIn, parallel, foreach, doParallel)
+```
+
+## Setup Block
+
+```{r}
+game_injury_player_update1 = 
+  read_csv("Independent Study/final_files/game_injury_player_2019_2020_complete_update_vegas_weeks_bucketed_2.csv")
+
+game_injury_player_update1$weeks_bucketed = as.character(game_injury_player_update1$weeks_bucketed)
+game_injury_player_update1$season = as.character(game_injury_player_update1$season)
+
+## Reducing the dimensions present in the stadium variable
+df_subset <- game_injury_player_update1 %>%  
+  select(game_id, num_injuries,
+         #stadium, 
+         dome, surface_type,season,
+         weeks_bucketed, distance_miles_away,
+         HOME_day_since_last_game,AWAY_day_since_last_game,Avg_Feels_Like,
+         Avg_Percipitation_Prob_Percent, Avg_Humidity_Percent,
+         spread_line, total_line) %>% 
+  unique() %>% 
+  mutate(num_injuries = as.integer(num_injuries))
+
+df_subset <- df_subset %>% 
+  select(-game_id) %>% 
+  mutate_if(is.character, as.factor)
+univ_poisson1 = glm(num_injuries ~ ., data = df_subset, na.action = na.pass, family="poisson")
+
+
+
+df_lb = read_csv("Independent Study/final_files/game_injury_player_2019_2020_complete_update_vegas_weeks_bucketed_2_lb.csv")
+
+df_lb$weeks_bucketed = as.character(df_lb$weeks_bucketed)
+df_lb$season = as.character(df_lb$season)
+
+
+df_lb_subset <- df_lb %>%  
+  select(game_id, num_injuries,
+         #stadium, 
+         dome, 
+         surface_type,
+         season,
+         weeks_bucketed, distance_miles_away,
+         HOME_day_since_last_game,AWAY_day_since_last_game,Avg_Feels_Like,
+         Avg_Percipitation_Prob_Percent, Avg_Humidity_Percent,
+         spread_line, total_line) %>% 
+  unique() %>% 
+  mutate(num_injuries = as.integer(num_injuries))#,
+
+
+df_lb_subset <- df_lb_subset %>% 
+  select(-game_id) %>% 
+  mutate_if(is.character, as.factor)
+
+
+lower_body_poisson = glm(num_injuries ~ ., data = df_lb_subset, na.action = na.pass, family="poisson")
+
+home_best_overall = read_csv("Independent Study/final_files/game_injury_player_2019_2020_complete_update_vegas_weeks_bucketed_2.csv")
+
+home_best_overall$weeks_bucketed = as.character(home_best_overall$weeks_bucketed)
+home_best_overall$season = as.character(home_best_overall$season)
+
+
+df_per_team = 
+  home_best_overall %>% 
+  na.omit() %>% 
+  dplyr::group_by(game_id, home_team, away_team) %>% 
+  dplyr::mutate(
+    home_injury = dplyr::if_else(injured_team == home_team, T, F),
+    away_injury = dplyr::if_else(injured_team == home_team, F, T)) %>% 
+  dplyr::summarise(
+    num_home_inj = sum(home_injury),
+    num_away_inj = sum(away_injury)
+  ) %>% 
+  dplyr::ungroup() %>% 
+  dplyr::left_join(
+    y = home_best_overall |> dplyr::select(game_id, #num_injuries,
+         #stadium, 
+         dome, 
+         surface_type,
+         season,
+         weeks_bucketed, distance_miles_home,distance_miles_away,
+         HOME_day_since_last_game,AWAY_day_since_last_game,Avg_Feels_Like,
+         Avg_Percipitation_Prob_Percent, Avg_Humidity_Percent,
+         spread_line, total_line
+    ),
+    by = 'game_id'
+  ) %>% 
+  dplyr::select(-c(game_id)) %>% 
+  unique()
+  
+
+
+home_poisson = glm(num_home_inj ~ . -away_team -home_team -num_away_inj -AWAY_day_since_last_game -distance_miles_away, data = df_per_team, na.action = na.fail, family="poisson")
+
+
+away_best_overall = read_csv("Independent Study/final_files/game_injury_player_2019_2020_complete_update_vegas_weeks_bucketed_2.csv")
+
+away_best_overall$weeks_bucketed = as.character(away_best_overall$weeks_bucketed)
+away_best_overall$season = as.character(away_best_overall$season)
+
+
+df_per_team1 = 
+  away_best_overall %>% 
+  na.omit() %>% 
+  dplyr::group_by(game_id, home_team, away_team) %>% 
+  dplyr::mutate(
+    home_injury = dplyr::if_else(injured_team == home_team, T, F),
+    away_injury = dplyr::if_else(injured_team == home_team, F, T)) %>% 
+  dplyr::summarise(
+    num_home_inj = sum(home_injury),
+    num_away_inj = sum(away_injury)
+  ) %>% 
+  dplyr::ungroup() %>% 
+  dplyr::left_join(
+    y = away_best_overall |> dplyr::select(game_id, #num_injuries,
+         #stadium, 
+         dome, 
+         surface_type,
+         season,
+         weeks_bucketed, distance_miles_home,distance_miles_away,
+         HOME_day_since_last_game,AWAY_day_since_last_game,Avg_Feels_Like,
+         Avg_Percipitation_Prob_Percent, Avg_Humidity_Percent,
+         spread_line, total_line
+    ),
+    by = 'game_id'
+  ) %>% 
+  dplyr::select(-c(game_id)) %>% 
+  unique()
+  
+
+
+away_poisson = glm(num_away_inj ~ . -home_team -away_team -num_home_inj -HOME_day_since_last_game -distance_miles_home, data = df_per_team1, na.action = na.fail, family="poisson")
+
+df_nc = read_csv("Independent Study/final_files/game_injury_player_2019_2020_complete_update_vegas_weeks_bucketed_2_noncontact.csv")
+
+df_nc$weeks_bucketed = as.character(df_nc$weeks_bucketed)
+df_nc$season = as.character(df_nc$season)
+
+
+df_nc_subset <- df_nc %>%  
+  select(game_id, num_injuries,
+         #stadium, 
+         dome, 
+         surface_type,
+         season,
+         weeks_bucketed, distance_miles_away,
+         HOME_day_since_last_game,AWAY_day_since_last_game,Avg_Feels_Like,
+         Avg_Percipitation_Prob_Percent, Avg_Humidity_Percent,
+         spread_line, total_line) %>% 
+  unique() %>% 
+  mutate(num_injuries = as.integer(num_injuries))#,
+
+
+df_nc_subset <- df_nc_subset %>% 
+  select(-game_id) %>% 
+  mutate_if(is.character, as.factor)
+
+nc_poisson = glm(num_injuries ~ ., data = df_nc_subset, na.action = na.pass, family="poisson")
+
+df_c = read_csv("Independent Study/final_files/game_injury_player_2019_2020_complete_update_vegas_weeks_bucketed_2_contact.csv")
+
+df_c$weeks_bucketed = as.character(df_c$weeks_bucketed)
+df_c$season = as.character(df_c$season)
+
+
+df_c_subset <- df_c %>%  
+  select(game_id, num_injuries,
+         #stadium, 
+         dome, 
+         surface_type,
+         season,
+         weeks_bucketed, distance_miles_away,
+         HOME_day_since_last_game,AWAY_day_since_last_game,Avg_Feels_Like,
+         Avg_Percipitation_Prob_Percent, Avg_Humidity_Percent,
+         spread_line, total_line) %>% 
+  unique() %>% 
+  mutate(num_injuries = as.integer(num_injuries))#,
+
+
+df_c_subset <- df_c_subset %>% 
+  select(-game_id) %>% 
+  mutate_if(is.character, as.factor)
+
+c_poisson = glm(num_injuries ~ ., data = df_c_subset, na.action = na.pass, family="poisson")
+
+```
+
+# Best Overall Model (No Stadium)
+
+```{r best_overall_model_no_stadium_var}
+
+
+best_univ_model_rds_no_stadium = readRDS("Independent Study/final_files/rds_models/best_univ_model_no_stadium.rds")
+# extract the model summary information
+best_univ_model_summ_no_stadium <- summary(best_univ_model_rds_no_stadium)
+coefficients <- coef(best_univ_model_summ_no_stadium)
+z_score <- summary(best_univ_model_rds_no_stadium)$coefficients[,3]
+pvalues <- summary(best_univ_model_rds_no_stadium)$coefficients[, 4]
+std_errors <- summary(best_univ_model_rds_no_stadium)$coefficients[, 2]
+
+library(lmtest)
+# add AIC, BIC, AICc and adj-R2
+aic <- AIC(best_univ_model_rds_no_stadium)
+bic <- BIC(best_univ_model_rds_no_stadium)
+aic_c <- AICc(best_univ_model_rds_no_stadium)
+adj_r_sq <- rsq::rsq(best_univ_model_rds_no_stadium, adj = T)
+# create the table
+table <- data.frame(Coefficient = coefficients, `Std. Error` = std_errors,`z value` = z_score ,`P-value` = pvalues)
+#sapply(table, class)
+table$Coefficient <- round(table$Coefficient.Estimate, 4)
+table$StdError <- round(table$Coefficient.Std..Error, 4)
+table$z_score <-round(table$Coefficient.z.value, digits = 2)
+table$Pvalue <- format.pval(table$P.value, digits = 2)
+
+
+table = table[,-c(1,2,3,4,5,6,7)]
+
+
+#table <- cbind(table, adjr2 = adj_r_sq, BIC = bic, AIC = aic, AICc = aic_c)
+
+
+
+
+library(kableExtra)
+# print the table
+kable(table, caption = "Best Univariate (No Stadium) Poisson Regression Model") %>%
+  kable_styling() %>% footnote(c(paste("Adjusted R-squared =", round(adj_r_sq,4)), paste("BIC =", round(bic,4)), paste("AIC =", round(aic,4)), paste("AICc =", round(aic_c,4))))
+
+```
+
+
+
+
+# Best Lower Body (No Stadium) Model
+```{r}
+
+best_lb_model_rds_no_stadium = readRDS("Independent Study/final_files/rds_models/best_lb_model_no_stadium.rds")
+# extract the model summary information
+best_lb_model_summ_no_stadium <- summary(best_lb_model_rds_no_stadium)
+coefficients <- coef(best_lb_model_summ_no_stadium)
+z_score <- summary(best_lb_model_rds_no_stadium)$coefficients[,3]
+pvalues <- summary(best_lb_model_rds_no_stadium)$coefficients[, 4]
+std_errors <- summary(best_lb_model_rds_no_stadium)$coefficients[, 2]
+
+library(lmtest)
+# add AIC, BIC, AICc and adj-R2
+aic <- AIC(best_lb_model_rds_no_stadium)
+bic <- BIC(best_lb_model_rds_no_stadium)
+aic_c <- AICc(best_lb_model_rds_no_stadium)
+adj_r_sq <- rsq::rsq(best_lb_model_rds_no_stadium, adj = T)
+# create the table
+table <- data.frame(Coefficient = coefficients, `Std. Error` = std_errors, `z value` = z_score,`P-value` = pvalues)
+#sapply(table, class)
+table$Coefficient <- round(table$Coefficient.Estimate, 4)
+table$StdError <- round(table$Coefficient.Std..Error, 4)
+table$z_score <-round(table$Coefficient.z.value, digits = 2)
+table$Pvalue <- format.pval(table$P.value, digits = 2)
+
+
+table = table[,-c(1,2,3,4,5,6,7)]
+
+
+#table <- cbind(table, adjr2 = adj_r_sq, BIC = bic, AIC = aic, AICc = aic_c)
+
+
+
+
+library(kableExtra)
+# print the table
+kable(table, caption = "Best Univariate (No Stadium) Lower Body Poisson Regression Model") %>%
+  kable_styling() %>% footnote(c(paste("Adjusted R-squared =", round(adj_r_sq,4)), paste("BIC =", round(bic,4)), paste("AIC =", round(aic,4)), paste("AICc =", round(aic_c,4))))
+
+```
+
+# Best Home (No Stadium) Model
+
+```{r}
+
+best_home_model_rds_no_stadium = readRDS("Independent Study/final_files/rds_models/best_home_model_no_stadium.rds")
+# extract the model summary information
+best_home_model_summ_no_stadium <- summary(best_home_model_rds_no_stadium)
+coefficients <- coef(best_home_model_summ_no_stadium)
+z_score <- summary(best_home_model_rds_no_stadium)$coefficients[,3]
+pvalues <- summary(best_home_model_rds_no_stadium)$coefficients[, 4]
+std_errors <- summary(best_home_model_rds_no_stadium)$coefficients[, 2]
+
+library(lmtest)
+# add AIC, BIC, AICc and adj-R2
+aic <- round(AIC(best_home_model_rds_no_stadium),4)
+bic <- round(BIC(best_home_model_rds_no_stadium),4)
+aic_c <- round(AICc(best_home_model_rds_no_stadium),4)
+adj_r_sq <- round(rsq::rsq(best_home_model_rds_no_stadium, adj = T),4)
+# create the table
+table <- data.frame(Coefficient = coefficients, `Std. Error` = std_errors,`z value` = z_score ,`P-value` = pvalues)
+#sapply(table, class)
+table$Coefficient <- round(table$Coefficient.Estimate, 4)
+table$StdError <- round(table$Coefficient.Std..Error, 4)
+table$z_score <-round(table$Coefficient.z.value, digits = 2)
+table$Pvalue <- format.pval(table$P.value, digits = 2)
+
+
+table = table[,-c(1,2,3,4,5,6,7)]
+
+
+#table <- cbind(table, adjr2 = adj_r_sq, BIC = bic, AIC = aic, AICc = aic_c)
+
+
+
+
+library(kableExtra)
+# print the table
+kable(table, caption = "Best Univariate (No Stadium) Home Poisson Regression Model") %>%
+  kable_styling() %>% footnote(c(paste("Adjusted R-squared =", round(adj_r_sq,4)), paste("BIC =", round(bic,4)), paste("AIC =", round(aic,4)), paste("AICc =", round(aic_c,4))))
+
+```
+
+# Best Away (No Stadium) Model
+
+```{r}
+
+best_away_model_rds_no_stadium = readRDS("Independent Study/final_files/rds_models/best_away_model_no_stadium.rds")
+# extract the model summary information
+best_away_model_summ_no_stadium <- summary(best_away_model_rds_no_stadium)
+coefficients <- coef(best_away_model_summ_no_stadium)
+z_score <- summary(best_away_model_rds_no_stadium)$coefficients[,3]
+pvalues <- summary(best_away_model_rds_no_stadium)$coefficients[, 4]
+std_errors <- summary(best_away_model_rds_no_stadium)$coefficients[, 2]
+
+library(lmtest)
+# add AIC, BIC, AICc and adj-R2
+aic <- round(AIC(best_away_model_rds_no_stadium),4)
+bic <- round(BIC(best_away_model_rds_no_stadium),4)
+aic_c <- round(AICc(best_away_model_rds_no_stadium),4)
+adj_r_sq <- round(rsq::rsq(best_away_model_rds_no_stadium, adj = T),4)
+# create the table
+table <- data.frame(Coefficient = coefficients, `Std. Error` = std_errors,`z value` = z_score ,`P-value` = pvalues)
+#sapply(table, class)
+table$Coefficient <- round(table$Coefficient.Estimate, 4)
+table$StdError <- round(table$Coefficient.Std..Error, 4)
+table$z_score <-round(table$Coefficient.z.value, digits = 2)
+table$Pvalue <- format.pval(table$P.value, digits = 2)
+
+
+table = table[,-c(1,2,3,4,5,6,7)]
+
+
+#table <- cbind(table, adjr2 = adj_r_sq, BIC = bic, AIC = aic, AICc = aic_c)
+
+
+
+
+library(kableExtra)
+# print the table
+kable(table, caption = "Best Univariate (No Stadium) Away Poisson Regression Model") %>%
+  kable_styling() %>% footnote(c(paste("Adjusted R-squared =", round(adj_r_sq,4)), paste("BIC =", round(bic,4)), paste("AIC =", round(aic,4)), paste("AICc =", round(aic_c,4))))
+```
+
+# Best Non-Contact Model
+
+```{r}
+
+best_nc_model_rds = readRDS("Independent Study/final_files/rds_models/best_nc_model_no_stadium.rds")
+# extract the model summary information
+best_nc_model_summ <- summary(best_nc_model_rds)
+coefficients <- coef(best_nc_model_summ)
+z_score <- summary(best_nc_model_rds)$coefficients[,3]
+pvalues <- summary(best_nc_model_rds)$coefficients[, 4]
+std_errors <- summary(best_nc_model_rds)$coefficients[, 2]
+
+library(lmtest)
+# add AIC, BIC, AICc and adj-R2
+aic <- AIC(best_nc_model_rds)
+bic <- BIC(best_nc_model_rds)
+aic_c <- AICc(best_nc_model_rds)
+adj_r_sq <- rsq::rsq(best_nc_model_rds, adj = T)
+# create the table
+table <- data.frame(Coefficient = coefficients, `Std. Error` = std_errors, `z value` = z_score,`P-value` = pvalues)
+#sapply(table, class)
+table$Coefficient <- round(table$Coefficient.Estimate, 4)
+table$StdError <- round(table$Coefficient.Std..Error, 4)
+table$z_score <-round(table$Coefficient.z.value, digits = 2)
+table$Pvalue <- format.pval(table$P.value, digits = 2)
+
+
+table = table[,-c(1,2,3,4,5,6,7)]
+
+
+#table <- cbind(table, adjr2 = adj_r_sq, BIC = bic, AIC = aic, AICc = aic_c)
+
+
+
+
+library(kableExtra)
+# print the table
+kable(table, caption = "Best Univariate Non-Contact Poisson Regression Model") %>%
+  kable_styling() %>% footnote(c(paste("Adjusted R-squared =", round(adj_r_sq,4)), paste("BIC =", round(bic,4)), paste("AIC =", round(aic,4)), paste("AICc =", round(aic_c,4))))
+```
+
+# Best Contact Model
+```{r}
+best_c_model_rds = readRDS("Independent Study/final_files/rds_models/best_c_model_no_stadium.rds")
+# extract the model summary information
+best_c_model_summ <- summary(best_c_model_rds)
+coefficients <- coef(best_c_model_summ)
+z_score <- summary(best_c_model_rds)$coefficients[,3]
+pvalues <- summary(best_c_model_rds)$coefficients[, 4]
+std_errors <- summary(best_c_model_rds)$coefficients[, 2]
+
+library(lmtest)
+# add AIC, BIC, AICc and adj-R2
+aic <- AIC(best_c_model_rds)
+bic <- BIC(best_c_model_rds)
+aic_c <- AICc(best_c_model_rds)
+adj_r_sq <- rsq::rsq(best_c_model_rds, adj = T)
+# create the table
+table <- data.frame(Coefficient = coefficients, `Std. Error` = std_errors, `z value` = z_score,`P-value` = pvalues)
+#sapply(table, class)
+table$Coefficient <- round(table$Coefficient.Estimate, 4)
+table$StdError <- round(table$Coefficient.Std..Error, 4)
+table$z_score <-round(table$Coefficient.z.value, digits = 2)
+table$Pvalue <- format.pval(table$P.value, digits = 2)
+
+
+table = table[,-c(1,2,3,4,5,6,7)]
+
+
+#table <- cbind(table, adjr2 = adj_r_sq, BIC = bic, AIC = aic, AICc = aic_c)
+
+
+
+
+library(kableExtra)
+# print the table
+kable(table, caption = "Best Univariate Contact Poisson Regression Model") %>%
+  kable_styling() %>% footnote(c(paste("Adjusted R-squared =", round(adj_r_sq,4)), paste("BIC =", round(bic,4)), paste("AIC =", round(aic,4)), paste("AICc =", round(aic_c,4))))
+  
+```
