@@ -13,7 +13,7 @@ Data: Contains csv data files of all information that we collected and used in o
 
 Models: Contains the models that we created based on the data
 
-PowerBI: Contains PowerBI files that we used to visualize the data
+Visualizations: Contains files that we used to visualize the data
 
 Schedule: Contains information on the schedule of NFL seasons between '19'-20 and '22-'23
 
