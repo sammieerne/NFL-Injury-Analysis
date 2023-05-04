@@ -13,11 +13,11 @@ Data: Contains csv data files of all information that we collected and used in o
 
 Models: Contains the models that we created based on the data
 
-Visualizations: Contains files that we used to visualize the data
-
 Schedule: Contains information on the schedule of NFL seasons between '19'-20 and '22-'23
 
 Scripts: Contains scripts of our R data files and RMarkdown files
+
+Visualizations: Contains files that we used to visualize the data
 
 
 We showcased our research at the Miami University Undergraduate Research Forum in mid-April. An article
