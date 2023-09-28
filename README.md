@@ -26,7 +26,6 @@ https://miamioh.edu/fsb/news-events/2023/04/fsb-undergrads-show-off-research-ski
 
 <img src=https://user-images.githubusercontent.com/89548548/220659703-a34e79a9-116d-4ced-859a-5b54594f49c9.jpg width=75% height=75%>
 <img src=https://user-images.githubusercontent.com/89548548/234596162-d6a15411-43f1-4f95-8828-3e19c888c2ac.jpg width=75% height=75%>
-<img src=https://github.com/sammieerne/NFL-Injury-Analysis/blob/810c4fc4f1c859a3dac2b4ed813a3021e997abb2/Other/Screenshot%202023-05-02%20at%2010.01.29%20PM.png width=75% height=75%>
 
 Peter Walsh- walshpd2@miamioh.edu
 
