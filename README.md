@@ -17,12 +17,11 @@ detailing our findings.
 
 [Scripts](https://github.com/sammieerne/NFL-Injury-Analysis/tree/3d1315ae8e4f3e563def6dda69dc3abde08e6cc5/Scripts): Contains scripts of our R data files and RMarkdown files
 
-Visualizations: Contains files that we used to visualize the data
+[Visualizations](https://github.com/sammieerne/NFL-Injury-Analysis/tree/b95b48a2c020415143d6db1d133607bcbf1118e1/Visualizations): Contains files that we used to visualize the data
 
 
 We showcased our research at the Miami University Undergraduate Research Forum in mid-April. An article
-featuring our team is linked here.
-https://miamioh.edu/fsb/news-events/2023/04/fsb-undergrads-show-off-research-skills-at-miami-university-forum.html
+featuring our team is linked [here](https://miamioh.edu/fsb/news-events/2023/04/fsb-undergrads-show-off-research-skills-at-miami-university-forum.html).
 
 <img src=https://user-images.githubusercontent.com/89548548/220659703-a34e79a9-116d-4ced-859a-5b54594f49c9.jpg width=75% height=75%>
 <img src=https://github.com/sammieerne/NFL-Injury-Analysis/blob/810c4fc4f1c859a3dac2b4ed813a3021e997abb2/Other/Screenshot%202023-05-02%20at%2010.01.29%20PM.png width=75% height=75%>
