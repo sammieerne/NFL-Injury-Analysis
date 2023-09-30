@@ -13,7 +13,7 @@ detailing our findings.
 
 [Models](https://github.com/sammieerne/NFL-Injury-Analysis/tree/968d26845c0960541664daf492b4c760e01091e5/Models): Contains the models that we created based on the data
 
-Schedule: Contains information on the schedule of NFL seasons between '19'-20 and '22-'23
+[Schedule](https://github.com/sammieerne/NFL-Injury-Analysis/tree/208896039e853489bd02fbe869282b3e67ead59a/Schedule): Contains information on the schedule of NFL seasons between '19'-20 and '22-'23
 
 Scripts: Contains scripts of our R data files and RMarkdown files
 
