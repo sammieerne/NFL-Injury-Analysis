@@ -7,7 +7,7 @@ We will also analyze the data and search for patterns that lead to injury based 
 We are currently writing a research paper to submit to the American Journal of Sports Medicine
 detailing our findings.
 
-##Folder Descriptions
+## Folder Descriptions
 
 [Data](https://github.com/sammieerne/NFL-Injury-Analysis/tree/af8f7c5f95f21eb9f5504dba73fea8992b69268e/Data): Contains csv data files of all information that we collected and used in our analysis
 
