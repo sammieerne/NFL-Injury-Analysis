@@ -11,7 +11,7 @@ detailing our findings.
 
 [Data](https://github.com/sammieerne/NFL-Injury-Analysis/tree/af8f7c5f95f21eb9f5504dba73fea8992b69268e/Data): Contains csv data files of all information that we collected and used in our analysis
 
-Models: Contains the models that we created based on the data
+[Models](https://github.com/sammieerne/NFL-Injury-Analysis/tree/968d26845c0960541664daf492b4c760e01091e5/Models): Contains the models that we created based on the data
 
 Schedule: Contains information on the schedule of NFL seasons between '19'-20 and '22-'23
 
