@@ -9,7 +9,7 @@ detailing our findings.
 
 **Folder Descriptions** 
 
-Data: Contains csv data files of all information that we collected and used in our analysis
+[Data](https://github.com/sammieerne/NFL-Injury-Analysis/tree/af8f7c5f95f21eb9f5504dba73fea8992b69268e/Data): Contains csv data files of all information that we collected and used in our analysis
 
 Models: Contains the models that we created based on the data
 
